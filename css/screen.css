@@ -1,0 +1,69 @@
+/*** BSP: @extend %reset;***/
+/*** Mixins & Placeholders ***/
+/**** caret ****/
+/* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
+/* Mediaqueries breakpoints */
+.colGrey {
+  fill: #A6ABAE; }
+
+.colRed {
+  fill: #6D3332; }
+
+.colBG {
+  fill: #fff; }
+
+/* Carousel*/
+#carousel {
+  height: 100vH;
+  overflow: hidden; }
+
+.item {
+  border: 2px dotted #6D3332;
+  margin: 20px 0; }
+  .item aside img {
+    max-width: 100%;
+    height: auto; }
+
+/**** Portfolio ****/
+#portfolio {
+  margin: 0 -1em; }
+
+.portfolio {
+  position: relative;
+  margin: 1em;
+  width: 235px;
+  height: 235px;
+  overflow: hidden;
+  float: left;
+  display: inline-block; }
+  .portfolio > [class*="portfolio_"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000; }
+  .portfolio > .portfolio_content {
+    overflow: hidden;
+    left: -100%;
+    padding: 2em;
+    width: 235px;
+    height: 235px;
+    z-index: 99; }
+    .portfolio > .portfolio_content * {
+      font-size: small; }
+    .portfolio > .portfolio_content * {
+      color: white !important; }
+  .portfolio:hover {
+    overflow: visible; }
+    .portfolio:hover > .portfolio_thumbnail {
+      padding: 5px; }
+    .portfolio:hover > .portfolio_content {
+      left: calc(100%);
+      width: calc(100% + 2em); }
+  .portfolio:nth-child(4n) > .portfolio_content {
+    right: -100%;
+    left: auto; }
+  .portfolio:nth-child(4n):hover > .portfolio_content {
+    right: calc(100%);
+    left: auto; }
+
+/*# sourceMappingURL=screen.css.map */
