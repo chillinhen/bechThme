@@ -1,4 +1,11 @@
+@charset "UTF-8";
 /*** BSP: @extend %reset;***/
+#header nav ul:before, #header nav ul:after {
+  content: "";
+  display: table; }
+#header nav ul:after {
+  clear: both; }
+
 /*** Mixins & Placeholders ***/
 /**** caret ****/
 /* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
@@ -12,6 +19,170 @@
 .colBG {
   fill: #fff; }
 
+/*.colDarkRed{
+    fill:$primary-color-darker;
+}
+.colDarkgrey{
+    fill:$dark-color-grey;
+}*/
+#logo > * {
+  fill: red !important; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02.03.2016, 15:34:27
+    Author     : chilliscope
+*/
+html,
+body {
+  font-size: 100%;
+  /*prevents ios safari from zooming on orientation change (maybe)*/
+  -webkit-text-size-adjust: none; }
+
+body {
+  color: #000;
+  font-family: "Source Sans Pro", Arial, sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.75rem;
+  color: #000;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  line-height: 1.1;
+  font-weight: 400; }
+  hgroup.logo h1, hgroup.logo
+  h2, hgroup.logo
+  h3, hgroup.logo
+  h4, hgroup.logo
+  h5, hgroup.logo
+  h6 {
+    margin: 0; }
+
+p {
+  margin: 0 0 0.75rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 150%; }
+  p.lead, blockquote p {
+    font-size: 1.125rem;
+    line-height: 1.33; }
+
+ul,
+ol {
+  padding-left: 1.5rem; }
+  ul li,
+  ol li {
+    line-height: 150%; }
+  ul.unstyled,
+  ol.unstyled {
+    padding: 0;
+    list-style: none; }
+  ul.inline,
+  ol.inline {
+    margin: 0 1rem 0.75rem -1rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+    ul.inline > li,
+    ol.inline > li {
+      display: block;
+      float: left;
+      margin-left: 1rem;
+      list-style: none; }
+
+dl {
+  margin: 0 0 0.75rem;
+  line-height: 150%; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 0 0.5rem; }
+
+blockquote {
+  position: relative;
+  margin: 1.5rem 1rem 1.5rem 3rem; }
+  blockquote:before {
+    content: "“";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    color: #404040;
+    font-size: 5rem;
+    line-height: 1; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-muted {
+  color: #404040; }
+
+.text-smaller {
+  font-size: smaller; }
+
+/*** tables ****/
+table {
+  width: 100%;
+  margin-bottom: 2em; }
+
+/* --------------------------- Specials --------------------------- */
+.leftalign {
+  float: left; }
+
+.rightalign {
+  float: right; }
+
+body.home {
+  background: rgba(0, 0, 0, 0.5); }
+  body.home .logo svg > * {
+    fill: white; }
+
+#header {
+  padding-top: 32px; }
+  #header .logo {
+    float: right; }
+
+#header nav {
+  text-transform: uppercase;
+  font-size: 1.125rem; }
+  #header nav ul {
+    list-style: none; }
+    #header nav ul li {
+      float: left;
+      display: inline-block;
+      width: 25%; }
+  #header nav li.menu-item a {
+    display: block;
+    padding-top: 2rem;
+    text-align: center;
+    color: #52595F;
+    font-weight: bold;
+    border-top: 2px solid transparent; }
+    #header nav li.menu-item a:hover {
+      text-decoration: none;
+      color: #6D3332;
+      border-color: #6D3332; }
+  #header nav li.menu-item.current-menu-item a {
+    color: #6D3332;
+    border-top: 2px solid #6D3332; }
+
 /* Carousel*/
 #carousel {
   height: 100vH;
@@ -19,7 +190,7 @@
 
 .item {
   border: 2px dotted #6D3332;
-  margin: 20px 0; }
+  margin: 32px 0; }
   .item aside img {
     max-width: 100%;
     height: auto; }
@@ -66,10 +237,8 @@
     right: calc(100%);
     left: auto; }
 
-.leftalign {
-  float: left; }
-
-.rightalign {
-  float: right; }
+/** {
+    border:1px dashed red;
+}*/
 
 /*# sourceMappingURL=screen.css.map */

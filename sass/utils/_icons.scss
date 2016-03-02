@@ -1,0 +1,19 @@
+.colGrey{
+    fill:$base-color-grey;
+}
+.colRed{
+    fill:$primary-color;
+}
+.colBG{
+    fill:$base-color-white;
+}
+
+/*.colDarkRed{
+    fill:$primary-color-darker;
+}
+.colDarkgrey{
+    fill:$dark-color-grey;
+}*/
+#logo > *{
+    fill:red !important;
+}

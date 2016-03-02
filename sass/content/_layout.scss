@@ -1,0 +1,13 @@
+body.home{
+    background:rgba(0,0,0,.5);
+    .logo svg > * {
+        fill:white;
+    }
+}
+#header {
+    padding-top:$vgrid;
+    .logo {
+        float: right;
+    }
+}
+

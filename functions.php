@@ -1,5 +1,5 @@
 <?php
-//require_once('inc/custom-posts.php');
+require_once('inc/custom-posts.php');
 require_once('inc/customizer.php');
 //
 //ACF Theme Options

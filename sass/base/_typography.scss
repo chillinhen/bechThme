@@ -1,0 +1,133 @@
+$text-color:                #000;
+$base-font-size:            100% !default;
+$base-line-height:          150% !default;
+$rem-base:                  14px !default;
+
+$paragraph-margin:          0.75rem;
+
+$headings-font-family:    "Source Sans Pro", Arial, sans-serif !default;
+$body-font-family:        "Source Sans Pro", Arial, sans-serif !default;
+
+$heading-text-color:        $text-color;
+$body-text-color:           $text-color;
+$text-muted-color:          lighten($text-color,25%);
+
+html,
+body {
+font-size: 100%;
+/*prevents ios safari from zooming on orientation change (maybe)*/
+ -webkit-text-size-adjust: none;
+}
+
+// body typography
+body {
+  color: $body-text-color;
+  font-family: $body-font-family;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $paragraph-margin;
+  color: $heading-text-color;
+  font-family: $headings-font-family;
+  line-height: 1.1;
+  font-weight:400;
+  hgroup.logo &{
+      margin:0;
+  }
+}
+
+// paragraph text
+p {
+  margin: 0 0 $paragraph-margin;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: $base-line-height;
+
+  &.lead {
+    font-size: 1rem * 1.125;
+    line-height: 1.33;
+  }
+}
+a{}
+
+// lists
+ul,
+ol {
+  padding-left: 1.5rem;
+
+  li {
+    line-height: $base-line-height;
+  }
+
+  &.unstyled {
+    padding: 0;
+    list-style: none;
+  }
+
+  &.inline {
+    margin: 0 1rem $paragraph-margin -1rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    
+    & > li {
+      display: block;
+      float: left;
+      margin-left: 1rem;
+      list-style: none;
+    }
+  }
+}
+
+dl {
+  margin: 0 0 $paragraph-margin;
+  line-height: $base-line-height;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 0.5rem;
+}
+
+// blockquotes
+blockquote {
+  position: relative;
+  margin: 1.5rem 1rem 1.5rem 3rem;
+
+  p {
+    @extend .lead;
+  }
+
+  &:before {
+    content: "“";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    color: $text-muted-color;
+    font-size: 5rem;
+    line-height: 1;
+  }
+}
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-muted { color: $text-muted-color; }
+.text-smaller {font-size: smaller;}
+
+/*** tables ****/
+table {
+    width:100%;
+    margin-bottom:2em;
+}
+
+/* --------------------------- Specials --------------------------- */
