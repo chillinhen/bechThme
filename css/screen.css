@@ -66,4 +66,10 @@
     right: calc(100%);
     left: auto; }
 
+.leftalign {
+  float: left; }
+
+.rightalign {
+  float: right; }
+
 /*# sourceMappingURL=screen.css.map */

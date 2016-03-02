@@ -1,10 +1,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('item row'); ?>>
     <section class="post_content col-md-6">
         <hgroup class="">
-        <h2><?php the_title(); ?></h2>
-        <h2 class="subtitle">the Subtitle</h2>
+        <?php get_template_part('partials/headline');?>
         <?php the_content(); ?>
-        <?php edit_post_link(); ?>
+            <span class="rightalign"><?php edit_post_link(); ?></span>
         </hgroup>
     </section>
     <aside class="col-md-6">

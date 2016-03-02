@@ -4,7 +4,7 @@
     <!-- section -->
     <section>
         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+                
                 <!-- article -->
                 <?php get_template_part('partials/article', get_post_format()); ?>
 
@@ -35,7 +35,6 @@
                     </div>
                     <?php elseif (is_page(5)) : ?>
                         <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
-                            <h1>Leistungen</h1>
                             <?php get_template_part('partials/article', 'leistungen'); ?>
                         <?php endwhile;
                         wp_reset_postdata();
