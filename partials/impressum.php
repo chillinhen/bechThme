@@ -1,29 +1,29 @@
-<?php
+<section class="impressum">
+    <div class="row">
+<?php $contact = get_field('kontaktdaten');?>
+<?php if ($contact) : ?>
+    <div><?php echo $contact;?></div>
+<?php endif; ?>
 
-$contact = get_field('kontaktdaten','option');
-if ($contact) :
-    echo $contact;
-endif;
+<?php $inhaber = get_field('inhaberdaten');?>
+<?php if ($inhaber) :?>
+    <div><?php echo $inhaber;?></div>
+<?php endif; ?>
 
-$inhaber = get_field('inhaberdaten','option');
-if ($inhaber) :
-    echo $inhaber;
-endif;
+<?php $kammer = get_field('handwerkskammer');?>
+<?php if ($kammer) : ?>
+    <div><?php echo $kammer;?></div>
+<?php endif; ?>
 
-$kammer = get_field('handwerkskammer','option');
-if ($kammer) :
-    echo $kammer;
-endif;
-
-$innung = get_field('innung','option');
-if ($innung) :
-    echo $innung;
-endif;
-
-//$agb = get_field('agb','option');
-//if ($agb) :
-//    setup_postdata($post);
-//    the_title();
-//endif;
-//wp_reset_postdata();
-?>
+<?php $innung = get_field('innung');?>
+<?php if ($innung) : ?>
+    <div><?php echo $innung;?></div>
+<?php endif; ?>
+    </div>
+    <div class="row">
+        <?php $agb = get_field('agb');?>
+<?php if ($agb) : ?>
+    <div><?php echo $agb;?></div>
+<?php endif; ?>
+    </div>
+</section>

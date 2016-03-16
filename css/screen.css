@@ -19,24 +19,82 @@
 .colBG {
   fill: #fff; }
 
-/*.colDarkRed{
-    fill:$primary-color-darker;
-}
-.colDarkgrey{
-    fill:$dark-color-grey;
-}*/
-#logo > * {
-  fill: red !important; }
+.colDarkRed {
+  fill: #623636; }
 
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 02.03.2016, 15:34:27
-    Author     : chilliscope
-*/
+.colDarkgrey {
+  fill: #52595F; }
+
+#logo svg .st0 {
+  fill: red; }
+
+#pfeil-xs .dots {
+  fill: #6D3332; }
+
+/*$fg-column: 60px;             // Column Width
+$fg-gutter: 25px;             // Gutter Width
+$fg-max-columns: 12;          // Total Columns For Main Container
+
+div {
+  width: flex-grid(4);        // returns (315px / 1020px) = 30.882353%;
+  margin-left: flex-gutter(); // returns (25px / 1020px) = 2.45098%;
+
+  p {
+    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
+    float: left;
+    margin: flex-gutter(4);   // returns (25px / 315px) = 7.936508%;
+  }
+
+  blockquote {
+    float: left;
+    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
+  }
+}*/
+.row {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  .row > div {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
 html,
 body {
   font-size: 100%;
@@ -53,8 +111,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.75rem;
-  color: #000;
+  margin: 0 0 1rem;
+  color: #52595F;
   font-family: "Source Sans Pro", Arial, sans-serif;
   line-height: 1.1;
   font-weight: 400; }
@@ -65,11 +123,46 @@ h6 {
   h5, hgroup.logo
   h6 {
     margin: 0; }
+  article h1, .page h1, article
+  h2, .page
+  h2, article
+  h3, .page
+  h3, article
+  h4, .page
+  h4, article
+  h5, .page
+  h5, article
+  h6, .page
+  h6 {
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -.025em;
+    font-weight: 900; }
+    article h1 > span, .page h1 > span, article
+    h2 > span, .page
+    h2 > span, article
+    h3 > span, .page
+    h3 > span, article
+    h4 > span, .page
+    h4 > span, article
+    h5 > span, .page
+    h5 > span, article
+    h6 > span, .page
+    h6 > span {
+      color: #6D3332; }
+  .contact h1, .contact
+  h2, .contact
+  h3, .contact
+  h4, .contact
+  h5, .contact
+  h6 {
+    text-align: center; }
 
 p {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   font-family: inherit;
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: normal;
   line-height: 150%; }
   p.lead, blockquote p {
@@ -88,7 +181,7 @@ ol {
     list-style: none; }
   ul.inline,
   ol.inline {
-    margin: 0 1rem 0.75rem -1rem;
+    margin: 0 1rem 1rem -1rem;
     padding: 0;
     list-style: none;
     overflow: hidden; }
@@ -100,7 +193,7 @@ ol {
       list-style: none; }
 
 dl {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   line-height: 150%; }
 
 dt {
@@ -142,7 +235,6 @@ table {
   width: 100%;
   margin-bottom: 2em; }
 
-/* --------------------------- Specials --------------------------- */
 .leftalign {
   float: left; }
 
@@ -158,6 +250,15 @@ body.home {
   padding-top: 32px; }
   #header .logo {
     float: right; }
+
+.item [class*="col-"] {
+  padding: 0 !important; }
+
+/**** Footer ****/
+body > footer {
+  background: #6D3332; }
+  body > footer * {
+    color: white; }
 
 #header nav {
   text-transform: uppercase;
@@ -183,17 +284,109 @@ body.home {
     color: #6D3332;
     border-top: 2px solid #6D3332; }
 
+.contact-map .iframe-elastic iframe {
+  pointer-events: none; }
+
+.contact-buttons {
+  text-align: center; }
+  .contact-buttons .row > div {
+    border: 1px dotted #eee; }
+  .contact-buttons .icon {
+    max-width: 128px;
+    max-height: 128px; }
+
 /* Carousel*/
+/*svg {
+    .colGrey{
+        fill:#A6ABAE;
+    }
+    .colWhite{
+        fill:#ffffff;
+    }
+    
+}*/
 #carousel {
-  height: 100vH;
+  height: 567px;
   overflow: hidden; }
 
 .item {
-  border: 2px dotted #6D3332;
   margin: 32px 0; }
   .item aside img {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    float: right; }
+
+.carousel-control {
+  height: 100%;
+  width: 50px;
+  background-color: transparent !important;
+  background-image: none !important;
+  opacity: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+  .carousel-control > .handle {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    display: block; }
+    .carousel-control > .handle svg {
+      width: 40%;
+      margin: 30%;
+      height: 40%; }
+    .carousel-control > .handle span {
+      display: inline-block;
+      text-indent: -999999999px;
+      overflow: hidden; }
+  .carousel-control.left {
+    left: calc(50% + 4em); }
+    .carousel-control.left .handle {
+      -webkit-transform: scale(1) rotate(90deg);
+      -moz-transform: scale(1) rotate(90deg);
+      -ms-transform: scale(1) rotate(90deg);
+      -o-transform: scale(1) rotate(90deg);
+      transform: scale(1) rotate(90deg);
+      float: left; }
+  .carousel-control.right {
+    right: 1em; }
+    .carousel-control.right .handle {
+      -webkit-transform: scale(1) rotate(-90deg);
+      -moz-transform: scale(1) rotate(-90deg);
+      -ms-transform: scale(1) rotate(-90deg);
+      -o-transform: scale(1) rotate(-90deg);
+      transform: scale(1) rotate(-90deg);
+      float: right; }
 
 /**** Portfolio ****/
 #portfolio {
@@ -236,6 +429,20 @@ body.home {
   .portfolio:nth-child(4n):hover > .portfolio_content {
     right: calc(100%);
     left: auto; }
+
+.iframe-elastic {
+  position: relative;
+  padding-bottom: 55%;
+  /* ratio width/height in % Bsp. (450 ÷ 500 = 0.9 = 90%) */
+  padding-top: 15px;
+  height: 0;
+  overflow: hidden; }
+  .iframe-elastic iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 /** {
     border:1px dashed red;

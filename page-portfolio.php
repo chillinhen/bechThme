@@ -11,7 +11,6 @@ $filter = array(
 );
 $portfolioQuery = new WP_Query($filter);
 ?>
-<main role="main">
     <!-- section -->
     <?php if (have_posts()): ?>
         <section class="clearfix">
@@ -52,6 +51,5 @@ $portfolioQuery = new WP_Query($filter);
     </section>
     <?php get_template_part('pagination'); ?>
     <!-- /section -->
-</main>
 
 <?php get_footer(); ?>

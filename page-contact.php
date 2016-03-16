@@ -1,17 +1,16 @@
 <?php /* Template Name: Kontakt */ get_header(); ?>
 
-<main role="main">
-    <!-- section -->
-    <section>
+<!-- section -->
+<section class="contact">
 
-        
 
-        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                
+
+    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+            <div class="container">
                 <!-- article -->
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <?php get_template_part('partials/headline'); ?>
-                    
+
                     <?php the_content(); ?>
 
 
@@ -21,8 +20,8 @@
 
                 </article>
                 <!-- /article -->
-                <?php get_template_part('partials/contact','buttons');?>
-                <?php get_template_part('partials/contact','map');?>
+                <?php get_template_part('partials/contact', 'buttons'); ?>
+                <?php get_template_part('partials/contact', 'map'); ?>
 
             <?php endwhile; ?>
 
@@ -31,13 +30,10 @@
             <article>
                 <?php get_template_part('partials/article', '404'); ?>
             </article>
+        </div>
+    <?php endif; ?>
 
-        <?php endif; ?>
-
-    </section>
-    <!-- /section -->
-</main>
-
-<?php #get_sidebar(); ?>
+</section>
+<!-- /section -->
 
 <?php get_footer(); ?>

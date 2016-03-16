@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
     
     //elastic iframes
     $('iframe').wrap('<div class="iframe-elastic"></div>');
-    $('.page-template-page-standorte-php iframe').attr('id', 'map');
+    $('.page-template-page-contact iframe').attr('id', 'map');
     
        //enable pointer events by clicking on parent
        $('.iframe-elastic').click(function(){

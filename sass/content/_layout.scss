@@ -10,4 +10,16 @@ body.home{
         float: right;
     }
 }
+[class*="col-"]{
+    .item & {
+        padding:0 !important;
+    }
+}
 
+/**** Footer ****/
+body > footer{
+    background: $primary-color;
+    * {
+        color:white;
+    }
+}

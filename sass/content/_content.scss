@@ -1,0 +1,17 @@
+.contact-map{
+    .iframe-elastic{
+        iframe{
+            pointer-events: none;
+        }
+    }
+}
+.contact-buttons{
+    text-align: center;
+    .row > div {
+        border:1px dotted #eee;
+    }
+    .icon{
+        max-width: 128px;
+        max-height:128px;
+    }
+}

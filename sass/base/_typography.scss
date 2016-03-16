@@ -1,14 +1,14 @@
 $text-color:                #000;
 $base-font-size:            100% !default;
 $base-line-height:          150% !default;
-$rem-base:                  14px !default;
+$rem-base:                  16px !default;
 
-$paragraph-margin:          0.75rem;
+$paragraph-margin:          1rem;
 
 $headings-font-family:    "Source Sans Pro", Arial, sans-serif !default;
 $body-font-family:        "Source Sans Pro", Arial, sans-serif !default;
 
-$heading-text-color:        $text-color;
+$heading-text-color:        $dark-color-grey;
 $body-text-color:           $text-color;
 $text-muted-color:          lighten($text-color,25%);
 
@@ -18,7 +18,6 @@ font-size: 100%;
 /*prevents ios safari from zooming on orientation change (maybe)*/
  -webkit-text-size-adjust: none;
 }
-
 // body typography
 body {
   color: $body-text-color;
@@ -38,13 +37,23 @@ h6 {
   hgroup.logo &{
       margin:0;
   }
+  article &, .page & {
+      font-size:$rem-base * 3.125;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: -.025em;
+      font-weight:900;
+      > span {color:$primary-color;}
+  }
+  .contact &{
+      text-align: center;
+  }
 }
-
 // paragraph text
 p {
   margin: 0 0 $paragraph-margin;
   font-family: inherit;
-  font-size: 0.875rem;
+  font-size: $rem-base;
   font-weight: normal;
   line-height: $base-line-height;
 
@@ -129,5 +138,3 @@ table {
     width:100%;
     margin-bottom:2em;
 }
-
-/* --------------------------- Specials --------------------------- */

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main role="main">
+
     <!-- section -->
     <section id="portfolio" class="clearfix">
         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -19,6 +19,6 @@
     </section>
     <?php get_template_part('pagination'); ?>
     <!-- /section -->
-</main>
+
 
 <?php get_footer(); ?>

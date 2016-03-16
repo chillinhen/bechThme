@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="<?php bloginfo('description'); ?>">
 
-<?php wp_head(); ?>
+        <?php wp_head(); ?>
         <script>
             // conditionizr.com
             // configure environment tests
@@ -29,17 +29,15 @@
 
     </head>
     <body <?php body_class(); ?>>
-        <!-- wrapper -->
-        <div class="container">
-
-            <!-- header -->
-            <header id="header" class="row" role="banner">
-
+        <?php get_template_part('svg/inline','icons.svg');?>
+        <!-- header -->
+        <header id="header" class="row" role="banner">
+            <div class="container">
                 <!-- logo -->
                 <hgroup class="col-md-6 logo">
                     <h1>
                         <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-                            <svg><use xlink:href="<?php echo plugins_url(); ?>/svg-spritemap/defs.svg#logo"></svg>                 <span><?php bloginfo('name'); ?></span>
+                            <svg><use xlink:href="#logo"></use></svg>  <span><?php bloginfo('name'); ?></span>
                         </a>
                     </h1>
                     <h2><?php bloginfo('description'); ?></h2>
@@ -49,9 +47,10 @@
 
                 <!-- nav -->
                 <nav class="nav col-md-6" role="navigation">
-<?php html5blank_nav(); ?>
+                    <?php html5blank_nav(); ?>
                 </nav>
                 <!-- /nav -->
-
-            </header>
-            <!-- /header -->
+            </div>
+        </header>
+        <!-- /header -->
+        <main role="main">

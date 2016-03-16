@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<main role="main">
     <!-- section -->
-    <section class="top-fold">
+    <section class="top-fold row">
         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('item row'); ?>>
                     <section class="post_content col-md-6">
@@ -38,7 +37,7 @@
         $related_items = new WP_Query($args);
 // loop over query
         if ($related_items->have_posts()) : ?>
-    <section class="bottom-fold related">
+    <section class="bottom-fold related row">
             <?php while ($related_items->have_posts()) : $related_items->the_post();
                 ?>
                 <?php get_template_part('partials/loop', 'portfolio'); ?>
@@ -52,8 +51,5 @@
         ?>
    
     <!-- /section -->
-</main>
-
-<?php #get_sidebar(); ?>
 
 <?php get_footer(); ?>
