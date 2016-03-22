@@ -28,28 +28,34 @@
         </script>
 
     </head>
-    <body <?php body_class(); ?>>
-        <?php get_template_part('svg/inline','icons.svg');?>
+    <?php if (is_front_page()) : ?>
+        <?php if (get_theme_mod('bechhold_BG')) : ?>
+            <body <?php body_class(); ?> style="background-image: url(<?php echo esc_url(get_theme_mod('bechhold_BG')); ?>)">
+            <?php endif; ?>
+        <?php else : ?>
+        <body <?php body_class(); ?>>
+        <?php endif; ?>
+
+        <?php get_template_part('svg/inline', 'icons.svg'); ?>
         <!-- header -->
         <header id="header" class="row" role="banner">
             <div class="container">
-                <!-- logo -->
-                <hgroup class="col-md-6 logo">
-                    <h1>
-                        <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-                            <svg><use xlink:href="#logo"></use></svg>  <span><?php bloginfo('name'); ?></span>
-                        </a>
-                    </h1>
-                    <h2><?php bloginfo('description'); ?></h2>
-                </hgroup>
-
-                <!-- /logo -->
-
                 <!-- nav -->
-                <nav class="nav col-md-6" role="navigation">
+                <nav class="nav col-md-7" role="navigation">
                     <?php html5blank_nav(); ?>
                 </nav>
                 <!-- /nav -->
+                <!-- logo -->
+                <hgroup class="col-md-5 text-right">
+                    <h1 class="logo">
+                        <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
+                            <svg><use xlink:href="#logo"></use></svg>
+                            <span class="name"><?php bloginfo('name'); ?></span>
+                            <span class="description"><?php bloginfo('description'); ?></span>
+                        </a>
+                    </h1>
+                </hgroup>
+                <!-- /logo -->
             </div>
         </header>
         <!-- /header -->

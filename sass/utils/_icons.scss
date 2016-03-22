@@ -10,9 +10,15 @@
 
 .colDarkRed{
     fill:$primary-color-darker;
+    body.home & {
+        fill:#ffffff;
+    }
 }
 .colDarkgrey{
     fill:$dark-color-grey;
+    body.home & {
+        fill:#ffffff;
+    }
 }
 #logo svg .st0{
     fill:red;
@@ -21,4 +27,7 @@
     #pfeil-xs &{
         fill:$primary-color;
     }
+}
+.st0{
+   fill:$base-color-grey; 
 }

@@ -1,27 +1,35 @@
-Scherbstraße 80
-52072 Aachen (Horbach)
-Telefon +49 (0) 24 07 - 34 38
-Telefax +49 (0)2407- 96230
 
+<!-- footer --></main>
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <?php 
+        if (is_page_template('page-home.php')) :
+            if (have_posts()): while (have_posts()) : the_post();?>
+            <div class="container"><?php the_content(); ?></div>
+            <?php endwhile;
+        endif;?>
+      
+        <?php if (is_page_template('page-contact.php')) :
+            get_template_part('partials/impressum');?>
+                    <!-- copyright -->
+        <p class="copyright">
+            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+        </p>
+        <?php else :?>
 
-Jürgen Bechhold
-Scherbstraße 80
-52072 Aachen (Horbach)
+        <!-- copyright -->
+        <p class="copyright">
+            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+        </p>
+        <?php endif;?>
+        <!-- /copyright -->
+    </div>
+</footer>
+<!-- /footer -->
 
-Ustid-Nr.
-DE-258.503.356
+<!-- /wrapper -->
 
+<?php wp_footer(); ?>
 
-Handwerkskammer Aachen
-Sandkaulbach 21
-52062 Aachen (Mitglieds-Nr. 30002439)
-
-
-Tischlerinnung Aachen
-Kreishandwerkerschaft Aachen
-Heinrichsallee 72
-52062 Aachen
-(Mitglieds-Nr. 48102)
-
-Berufsordnung
-Handwerksordnung der Handwerkskammer Aachen Fundort
+</body>
+</html>

@@ -27,40 +27,23 @@ function bechhold_theme_customizer( $wp_customize ) {
         'settings' => 'bechhold_second_color',
     ) ) );
 
-    // Logo upload
-    $wp_customize->add_section( 'bechhold_logo_section' , array(
-	    'title'       => __( 'Logo', 'becholdTheme' ),
+    // BG Image upload
+    $wp_customize->add_section( 'bechhold_background_section' , array(
+	    'title'       => __( 'Background Image', 'becholdTheme' ),
 	    'priority'    => 30,
-	    'description' => 'Upload a logo to replace the default site name and description in the header',
+	    'description' => 'Upload a Background-Image',
 	) );
 
-	$wp_customize->add_setting( 'bechhold_logo', array(
+	$wp_customize->add_setting( 'bechhold_BG', array(
 		'sanitize_callback' => 'esc_url_raw',
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bechhold_logo', array(
-		'label'    => __( 'Logo', 'becholdTheme' ),
-		'section'  => 'bechhold_logo_section',
-		'settings' => 'bechhold_logo',
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bechhold_BG', array(
+		'label'    => __( 'Background Image', 'becholdTheme' ),
+		'section'  => 'bechhold_background_section',
+		'settings' => 'bechhold_BG',
 	) ) );
     
-
-    // Home-Logo upload
-    $wp_customize->add_section( 'bechhold_home_logo_section' , array(
-	    'title'       => __( 'Home-Logo', 'becholdTheme' ),
-	    'priority'    => 30,
-	    'description' => 'Upload a logo to replace the default site name and description in the header',
-	) );
-
-	$wp_customize->add_setting( 'bechhold_home_logo', array(
-		'sanitize_callback' => 'esc_url_raw',
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bechhold_home_logo', array(
-		'label'    => __( 'Home-Logo', 'becholdTheme' ),
-		'section'  => 'bechhold_home_logo_section',
-		'settings' => 'bechhold_home_logo',
-	) ) );
     
 
 	// Set site name and description to be previewed in real-time

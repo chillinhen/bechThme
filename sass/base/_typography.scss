@@ -30,12 +30,17 @@ h4,
 h5,
 h6 {
   margin: 0 0 $paragraph-margin;
-  color: $heading-text-color;
   font-family: $headings-font-family;
   line-height: 1.1;
   font-weight:400;
-  hgroup.logo &{
+  color: $heading-text-color;
+  body.home &{
+      color:white !important;
+  }
+  &.logo span{
       margin:0;
+      font-weight: 300;
+      font-size: 14px;
   }
   article &, .page & {
       font-size:$rem-base * 3.125;
@@ -61,8 +66,22 @@ p {
     font-size: 1rem * 1.125;
     line-height: 1.33;
   }
+  body.home > footer & {
+      font-family: $headings-font-family;
+      font-size: 1.6em;
+      text-transform: uppercase;
+      font-weight: bold !important;
+      line-height: 1;
+      margin-bottom: 0;
+  }
 }
-a{}
+a{
+    color:$primary-color;
+    .logo &{
+        color:$dark-color-grey;
+        body.home & {color:#fff;}
+    }
+}
 
 // lists
 ul,

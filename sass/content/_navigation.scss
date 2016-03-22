@@ -22,7 +22,10 @@
             &:hover {
                 text-decoration: none;
                 color:$primary-color;
-                border-color:$primary-color;
+                border-color:currentColor;
+            }
+            body.home &, body.home &:hover {
+                color:white;
             }
         }
         &.current-menu-item{

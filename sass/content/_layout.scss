@@ -1,13 +1,40 @@
-body.home{
-    background:rgba(0,0,0,.5);
-    .logo svg > * {
-        fill:white;
+/*html {
+    position: relative;
+    min-height: 100%;
+}*/
+body{
+    &.home{
+        background:{
+            color:rgba(0,0,0,.5);
+            position: center bottom;
+            repeat:no-repeat;
+            size:cover;
+        }
+        margin-bottom: $footerHomeHeight;
+        > footer {height:$footerHomeHeight;}
     }
+/*    margin-bottom: $footerHeight;
+    > footer{
+        height:$footerHeight;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }*/
 }
+
 #header {
     padding-top:$vgrid;
     .logo {
-        float: right;
+        position:relative;
+        span.name {
+            display:none;
+        }
+        span.description{
+            position: absolute;
+            right:125px;
+            bottom: 35px;
+            letter-spacing: .01em;
+        }
     }
 }
 [class*="col-"]{
@@ -17,9 +44,13 @@ body.home{
 }
 
 /**** Footer ****/
-body > footer{
-    background: $primary-color;
+body > footer {
     * {
         color:white;
     }
+}
+
+body:not(.home) > footer{
+    background: $primary-color;
+    
 }
