@@ -1,9 +1,10 @@
-/*html {
+html {
     position: relative;
     min-height: 100%;
-}*/
+}
 body{
     &.home{
+/*        height:100vH;*/
         background:{
             color:rgba(0,0,0,.5);
             position: center bottom;
@@ -11,16 +12,26 @@ body{
             size:cover;
         }
         margin-bottom: $footerHomeHeight;
-        > footer {height:$footerHomeHeight;}
+        > footer {
+            height:$footerHomeHeight;
+        }
     }
-/*    margin-bottom: $footerHeight;
+    margin-bottom: $footerHeight;
     > footer{
         height:$footerHeight;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }*/
+        width: 100vW;
+                    position: absolute;
+            bottom: 0;
+    }
 }
+
+.container{
+    #header &,
+    &#portfolio {
+        padding:0;
+    }
+}
+
 
 #header {
     padding-top:$vgrid;
@@ -37,12 +48,12 @@ body{
         }
     }
 }
-[class*="col-"]{
-    .item & {
-        padding:0 !important;
+main {
+    body.leistungen > &{
+        background: #eee;
+        padding-top: 6em;
     }
 }
-
 /**** Footer ****/
 body > footer {
     * {

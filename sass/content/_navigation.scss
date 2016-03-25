@@ -4,10 +4,11 @@
     ul{
         list-style: none;
         @extend %clearfix;
+        @extend %reset;
         li {
             float:left;
             display: inline-block;
-            width:25%;
+            width:20%;
         }
 
     }

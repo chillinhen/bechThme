@@ -2,6 +2,30 @@ article{
     body.home &{
         h1 { margin:0 5em;}
     }
+    body.leistungen &{
+        text-align: center;
+        .thumbnail{
+            background: transparent;
+            border:0;
+            img{
+                width: auto;
+                height:75px;
+                max-width: none;
+            }
+        }
+        &:nth-child(even){
+            padding-left: 3em;
+        }
+        &:nth-child(odd){
+            padding-right: 3em;
+        }
+        &:last-child{
+            float:none;
+            clear:both;
+            width:100%;
+            padding: 0;
+        }
+    }
 }
 .contact-map{
     .iframe-elastic{

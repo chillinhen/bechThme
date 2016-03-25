@@ -2,7 +2,7 @@
 
 
     <!-- section -->
-    <section>
+    <section class="container">
         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 
                 <!-- submenu -->
@@ -23,13 +23,16 @@
                 <div id="carousel" class="carousel slide" data-interval="5000" data-ride="" data-pause="hover">
                     <div class="carousel-inner" role="listbox">
                         <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
-                            <?php get_template_part('partials/article', 'unternehmen'); ?>
+                            <?php get_template_part('partials/article', 'carousel'); ?>
                         <?php endwhile;
                         wp_reset_postdata(); ?>
                     </div>
                     <?php get_template_part('partials/carousel','controls');?>
                     </div>
                     <?php elseif (is_page(5)) : ?>
+                <div class="col-sm-12 text-center"><?php get_template_part('partials/headline'); ?></div>
+                <div class="col-sm-12 text-center"><?php the_content();?></div>
+                       
                         <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
                             <?php get_template_part('partials/article', 'leistungen'); ?>
                         <?php endwhile;

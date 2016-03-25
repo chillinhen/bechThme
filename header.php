@@ -59,4 +59,4 @@
             </div>
         </header>
         <!-- /header -->
-        <main role="main">
+        <main role="main" class="row">

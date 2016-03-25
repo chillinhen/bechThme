@@ -27,11 +27,11 @@ function bechhold_theme_customizer( $wp_customize ) {
         'settings' => 'bechhold_second_color',
     ) ) );
 
-    // BG Image upload
-    $wp_customize->add_section( 'bechhold_background_section' , array(
+    // Background Image upload
+    $wp_customize->add_section( 'bechhold_BG_section' , array(
 	    'title'       => __( 'Background Image', 'becholdTheme' ),
 	    'priority'    => 30,
-	    'description' => 'Upload a Background-Image',
+	    'description' => 'Upload a bg to replace the default site name and description in the header',
 	) );
 
 	$wp_customize->add_setting( 'bechhold_BG', array(
@@ -40,10 +40,9 @@ function bechhold_theme_customizer( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bechhold_BG', array(
 		'label'    => __( 'Background Image', 'becholdTheme' ),
-		'section'  => 'bechhold_background_section',
+		'section'  => 'bechhold_BG_section',
 		'settings' => 'bechhold_BG',
 	) ) );
-    
     
 
 	// Set site name and description to be previewed in real-time

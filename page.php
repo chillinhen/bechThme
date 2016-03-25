@@ -1,35 +1,35 @@
 <?php get_header(); ?>
-		<!-- section -->
-		<section>
-
-                <?php get_template_part('partials/headline');?>
-
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<?php the_content(); ?>
+<!-- section -->
+<section class="top-fold container">
 
 
-				<br class="clear">
 
-				<?php edit_post_link(); ?>
+    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			</article>
-			<!-- /article -->
+            <!-- article -->
+            <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+                <div class="col-sm-6">
+                    <?php get_template_part('partials/headline'); ?>
+                    <?php the_content(); ?>
+                </div>
+                <aside class="col-sm-6">
+                    <?php get_template_part('partials/gallery', 'carousel'); ?>
+                </aside>
+            </article>
+            <!-- /article -->
+            <?php edit_post_link(); ?>
 
-		<?php endwhile; ?>
+        <?php endwhile; ?>
 
-                        <?php else: ?>
+    <?php else: ?>
 
-                            <article>
-                                <?php get_template_part('partials/article', '404'); ?>
-                            </article>
+        <article>
+            <?php get_template_part('partials/article', '404'); ?>
+        </article>
 
-                        <?php endif; ?>
+    <?php endif; ?>
 
-		</section>
+</section>
 
 <?php #get_sidebar(); ?>
 

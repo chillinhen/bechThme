@@ -1,6 +1,6 @@
 <?php
 require_once('inc/custom-posts.php');
-require_once('inc/customizer.php');
+#require_once('inc/customizer.php');
 //
 //ACF Theme Options
 if( function_exists('acf_add_options_page') ) {

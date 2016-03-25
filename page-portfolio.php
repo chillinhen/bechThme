@@ -13,11 +13,10 @@ $portfolioQuery = new WP_Query($filter);
 ?>
     <!-- section -->
     <?php if (have_posts()): ?>
-        <section class="clearfix">
+        <section class="container intro">
             <?php while (have_posts()) : the_post(); ?>
-                <?php get_template_part('partials/headline'); ?>
-                <?php the_content(); ?>
-
+            <div class="col-sm-12" style="padding-left:0;"><?php get_template_part('partials/headline'); ?></div>
+            <div class="col-sm-6" style="padding-left:0;"><?php the_content(); ?></div>
             <?php endwhile; ?>
         </section>
 
@@ -34,12 +33,14 @@ $portfolioQuery = new WP_Query($filter);
     <?php endif; ?>
 
 
-    <?php if ($portfolioQuery->have_posts()): while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
-            <section id="portfolio" class="clearfix">
+    <?php if ($portfolioQuery->have_posts()):?>
+            <section id="portfolio" class="container">
+                <?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
                 <?php get_template_part('partials/loop', 'portfolio'); ?>
                 <?php get_template_part('partials/loop', 'portfolio'); ?>
                 <?php get_template_part('partials/loop', 'portfolio'); ?>
             <?php endwhile; ?>
+            <?php get_template_part('pagination'); ?>
 
         <?php else: ?>
             <!-- article -->
@@ -49,7 +50,7 @@ $portfolioQuery = new WP_Query($filter);
         <?php endif; ?>
 
     </section>
-    <?php get_template_part('pagination'); ?>
+    
     <!-- /section -->
 
 <?php get_footer(); ?>

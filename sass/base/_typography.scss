@@ -53,6 +53,14 @@ h6 {
   .contact &{
       text-align: center;
   }
+  .portfolio_content &{
+      font-size: 1.25em;
+      margin:0;
+  }
+  body.leistungen article &{
+      font-size: 1.2em;
+      color:$primary-color;
+  }
 }
 // paragraph text
 p {
@@ -73,6 +81,9 @@ p {
       font-weight: bold !important;
       line-height: 1;
       margin-bottom: 0;
+  }
+  body.leistungen > main &{
+      text-align: center;
   }
 }
 a{
