@@ -1,17 +1,20 @@
 <?php
-$images = get_field('gallery');
-
-if ($images):
-    ?>
-    <div id="carousel" class="carousel slide" data-interval="5000" data-ride="" data-pause="hover">
-        <div class="carousel-inner" role="listbox">
+$images = get_field('gallery');?>
+    <div class="<?php echo ($images) ? "flexslider" : "";?>">
+       <?php if ($images):?>
+        <ul class="slides">
+            
+            <li><?php endif; ?>
+            <?php if (has_post_thumbnail()) : // Check if thumbnail exists ?>
+                <?php the_post_thumbnail('thumb-detail'); // Declare pixel size you need inside the array  ?>
+            <?php endif; ?>
+             <?php if ($images):?></li>
             <?php foreach ($images as $image): ?>
-                <div class="item">
+                <li class="item-img">
                     <img src="<?php echo $image['sizes']['thumb-detail']; ?>" alt="<?php echo $image['alt']; ?>" />
                     <p><?php echo $image['caption']; ?></p>
-                </div>
+                </li>
             <?php endforeach; ?>
-        </div>
-        <?php get_template_part('partials/carousel','controls');?>
+        </ul>
     </div>
 <?php endif; ?>

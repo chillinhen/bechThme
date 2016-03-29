@@ -1,6 +1,7 @@
 #header nav {
     text-transform: uppercase;
     font-size: 1rem * 1.125;
+    margin-top:3*$vgrid - 16px;
     ul{
         list-style: none;
         @extend %clearfix;
@@ -8,31 +9,31 @@
         li {
             float:left;
             display: inline-block;
-            width:20%;
+            width:auto;
         }
 
     }
     li.menu-item{
         a {
             display: block;
-            padding-top: 2rem;
-            text-align:center;
+            line-height: 1;
+            padding:1rem 1.2em 0 1.2em;
             color:$dark-color-grey;
             font-weight:bold;
-            border-top:2px solid transparent;
+            border-top:3px solid transparent;
+            body.home &, body.home &:hover {
+                color:white;
+            }
             &:hover {
                 text-decoration: none;
                 color:$primary-color;
                 border-color:currentColor;
             }
-            body.home &, body.home &:hover {
-                color:white;
-            }
         }
         &.current-menu-item{
             a{
                 color:$primary-color;
-                border-top:2px solid $primary-color;
+                border-top:3px solid currentColor;
             }
         }
 

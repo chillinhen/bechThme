@@ -1,6 +1,4 @@
-<section class="contact-buttons">
-    <div class="container">
-        <div class="row">
+<section class="contact-buttons container">
             <?php
             // ToDO Repeater ???
             $iconPhone = get_field('icon-phone');
@@ -40,6 +38,4 @@
                 endif;
                 ?>
             </div>
-        </div>
-    </div>
 </section>

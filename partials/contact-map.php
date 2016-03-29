@@ -5,7 +5,7 @@
     $contactAddress = get_field('adresse');
     $contactMap = get_field('map');
     ?>  
-    <div class="container">
+    <div class="container text-center">
         <?php if ($contactHeadline): ?>
             <h2><?php echo $contactHeadline; ?></h2>
         <?php endif; ?>

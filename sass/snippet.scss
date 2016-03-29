@@ -1,0 +1,24 @@
+.portfolio-item{
+
+    
+    > [class*="portfolio_"]{
+
+    }
+    > .portfolio_content{
+        
+        
+
+        overflow: hidden;
+        z-index: 99;
+        
+        
+        line-height: 0;
+    }
+    > .portfolio_thumbnail img{
+        height:105%;
+        width: auto;
+    }
+
+
+    
+}   

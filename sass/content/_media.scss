@@ -1,130 +1,40 @@
-#carousel{
-    height:567px;
-    overflow: hidden;
+.flexslider{
+    border:0;
 }
-.carousel-inner{
-    margin-left: 2em;
-}
-.item{
-    margin:$vgrid 0;
-    aside {
-        img {
-            width: 100%;
-            height:auto;
-            float:right;
+.flex-control-nav{
+    bottom:1em;
+    body.page & {display:none;}
+    &.flex-control-paging li a{
+        background:rgba(255,255,255,.5) !important;
+        &.flex-active{
+            background:rgba(255,255,255,1)!important;
         }
     }
 }
-.carousel-control{
-    height:100%;
-    width:50px;
-    background-color: transparent !important;
-    background-image: none !important;
-    opacity:0;
-    position: absolute;
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(center);
-    > .handle{
+
+[class*="flex-nav"]{
+    > a{
+        &:before{
+            content:'' !important;
+            background: rgba(255,255,255,.5) url("../svg/flex-nav.svg") no-repeat center center;
+            background-size: 25%;
+            height:100%;
+            width:100%;
+
+        }
+        &.flex-prev{
+            .single & {left:0;}
+            [class*="subpages"] & {left:calc(50% + 24px) !important;}
+        }
+        &.flex-prev:before{
+            @include rotate(180deg);
+        }
         @include circle(50px);
-        background: rgba(255,255,255,.75);
-        @include transform-origin(center center);
-        display:block;
-        svg {
-            width:40%;
-            margin:30%;
-            height:40%;
-        }
-        span {
-            display:inline-block;
-            text-indent: -999999999px;
-            overflow:hidden;
-        }
-    }
-    &.left {
-        left:2em;
-        .handle{
-            @include transform(scale(1) rotate(90deg));
-            float:left;
-        }
-    }
-    body[class*="-subpages"] &.left{
-        left:calc(50% + 2.8em);
-    }
-    &.right {
-        right:0.4em;
-        .handle{
-            @include transform(scale(1) rotate(-90deg)); 
-            float:right;
-        }
-    }
-
-}
-
-/**** Portfolio ****/
-.portfolio-item{
-    position:relative;
-    margin:1em;
-    width:235px;
-    height:235px;
-    overflow:hidden;
-    float:left;
-    display:inline-block;
-    > [class*="portfolio_"]{
-        position:absolute;
-        top:0;
-        left:0;
-        background: #000;
-    }
-    > .portfolio_content{
-        overflow: hidden;
-        left:-100%;
-        padding:2em;
-        width:235px;
-        height:235px;
-        z-index: 99;
-        text-align: center;
-        *{color:white !important;}
-        svg {
-            height: 3px;
-            width: 100%;
-            margin: 1em 0;
-        }
-        p {
-            font-size: 1em;
-    line-height: 1.2;
-        }
-        .view-article{display: none;}
-/*        .portfolio_title a:hover{
-            text-decoration: none;
-            opacity: .5;
-        }*/
-    }
-    &:hover{
-        overflow:visible;
-        > .portfolio_thumbnail{
-            padding:5px;
-
-        }
-        > .portfolio_content{
-            left:calc(100%);
-            width:calc(100% + 2em);
-        }
-
-    }
-    &:nth-child(4n){
-        > .portfolio_content{
-            right:-100%;
-            left:auto;
-        }
-        &:hover{
-            > .portfolio_content{
-                right:calc(100%);  
-                left:auto;
-            }
-        }
+        font-size: 0;
+        line-height: 0;
     }
 }
+
 //Iframe Elastic
 .iframe-elastic {
     position: relative;

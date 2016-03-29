@@ -7,12 +7,12 @@
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
             <!-- article -->
-            <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-                <div class="col-sm-6">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <section class="post_content">
                     <?php get_template_part('partials/headline'); ?>
                     <?php the_content(); ?>
-                </div>
-                <aside class="col-sm-6">
+                </section>
+                <aside>
                     <?php get_template_part('partials/gallery', 'carousel'); ?>
                 </aside>
             </article>

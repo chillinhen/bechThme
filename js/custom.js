@@ -1,10 +1,13 @@
 jQuery(document).ready(function ($) {
     //alert('hallo');
-        //carousel tweaks
-    //give active-class to first carousel item
-    $('.carousel-inner').each(function () {
-        $(this).children('.item:first-child').addClass('active');
-    });
+    //portfolio height
+    var portfolioItem = $('.portfolio-item');
+    var portfolioSize = portfolioItem.width();
+    portfolioItem.css('height',portfolioSize);
+
+$('.flexslider').flexslider({
+    animation: "slide"
+  });
     
     //elastic iframes
     $('iframe').wrap('<div class="iframe-elastic"></div>');
@@ -18,5 +21,8 @@ jQuery(document).ready(function ($) {
         $("#map").mouseleave(function () {
             $('#map').css('pointer-events','none'); // set the pointer events to none when mouse leaves the map area
         });
-
+    
+    //edit post link
+    $('.post-edit-link')
+            .wrapInner('<span></span>');
 });

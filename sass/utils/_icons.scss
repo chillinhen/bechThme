@@ -20,8 +20,15 @@
         fill:#ffffff;
     }
 }
-#logo svg .st0{
-    fill:red;
+#logo svg {
+    @media screen and (min-width:$screen-md){
+        height:171px;
+        width:356px;
+    }
+    margin-right:25px;
+    .st0{
+        fill:red;
+    }
 }
 .dots {
     #pfeil-xs &{

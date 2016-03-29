@@ -28,8 +28,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  margin: 0 0 $paragraph-margin;
+h6{
+  margin: 0 0 3 * $paragraph-margin;
   font-family: $headings-font-family;
   line-height: 1.1;
   font-weight:400;
@@ -61,6 +61,17 @@ h6 {
       font-size: 1.2em;
       color:$primary-color;
   }
+  .impressum &{
+      color:white;
+      font-size: 1.25em;
+      margin: 0 0 1 * $paragraph-margin;
+  }
+}
+.copyright{
+    color:white;
+    font-size: 1.25em;
+    font-family: $headings-font-family;
+    font-weight:600;
 }
 // paragraph text
 p {
@@ -87,7 +98,7 @@ p {
   }
 }
 a{
-    color:$primary-color;
+    color:$text-color;
     .logo &{
         color:$dark-color-grey;
         body.home & {color:#fff;}

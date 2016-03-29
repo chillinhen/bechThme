@@ -1,21 +1,22 @@
-/*$fg-column: 60px;             // Column Width
-$fg-gutter: 25px;             // Gutter Width
-$fg-max-columns: 12;          // Total Columns For Main Container
+// Neat Overrides
+$column: 68px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1024px;
 
-div {
-  width: flex-grid(4);        // returns (315px / 1020px) = 30.882353%;
-  margin-left: flex-gutter(); // returns (25px / 1020px) = 2.45098%;
-
-  p {
-    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
-    float: left;
-    margin: flex-gutter(4);   // returns (25px / 315px) = 7.936508%;
-  }
-
-  blockquote {
-    float: left;
-    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
-  }
-}*/
-
-///Flexbox
+.container {
+    @include outer-container;
+    @extend %clearfix;
+    body > header &{
+        > nav{@include span-columns(7);}
+        > hgroup{@include span-columns(5);}
+    }
+    &.columns{
+        > div {@include span-columns(3);}
+    }
+}
+.contact-buttons {
+    @extend %clearfix;
+    margin-bottom:4.5 * $paragraph-margin;
+    > div {@include span-columns(4);}
+}

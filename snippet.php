@@ -1,18 +1,21 @@
-</main>
-<!-- footer -->
-<footer class="footer" role="contentinfo">
-    <div class="container">
-        <?php if (is_page_template('page-home.php')) : the_content(); ?>
-        <?php
-        elseif (is_page_template('page-contact.php')) :
-            get_template_part('partials/impressum');?>
-         <p class="copyright">
-            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
-        </p>
-       <?php  else :?>
-         <p class="copyright">
-            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
-        </p>
-        <?php endif;?>
-    </div>
-</footer>
+<!-- Place somewhere in the <body> of your page -->
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="slide1.jpg" />
+      <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+    </li>
+    <li>
+      <img src="slide2.jpg" />
+      <p class="flex-caption">Adventurer Lemon</p>
+    </li>
+    <li>
+      <img src="slide3.jpg" />
+      <p class="flex-caption">Adventurer Donut</p>
+    </li>
+    <li>
+      <img src="slide4.jpg" />
+      <p class="flex-caption">Adventurer Caramel</p>
+    </li>
+  </ul>
+</div>

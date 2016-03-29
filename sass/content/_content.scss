@@ -1,12 +1,23 @@
 article{
+    .post_content{
+      padding-top: 6.6rem;
+      @include span-columns(6 of 12);
+      + aside{
+          @include span-columns(6 of 12);
+          margin:0;
+      }
+    }
     body.home &{
-        h1 { margin:0 5em;}
+        h1 { margin:12vH 5em;}
     }
     body.leistungen &{
         text-align: center;
+        @include span-columns(6 of 12);
         .thumbnail{
             background: transparent;
             border:0;
+            display:block;
+            margin-bottom:1em;
             img{
                 width: auto;
                 height:75px;
@@ -15,15 +26,27 @@ article{
         }
         &:nth-child(even){
             padding-left: 3em;
+            margin:0;
         }
         &:nth-child(odd){
             padding-right: 3em;
         }
         &:last-child{
+            @include fill-parent();
             float:none;
             clear:both;
             width:100%;
             padding: 0;
+        }
+    }
+
+    .flexslider & {
+        > section,> aside {
+            @include span-columns(6);
+
+        }
+        > section{
+            padding-left: 1.2em;
         }
     }
 }
@@ -36,11 +59,21 @@ article{
 }
 .contact-buttons{
     text-align: center;
-    .row > div {
-        border:1px dotted #eee;
-    }
     .icon{
         max-width: 128px;
         max-height:128px;
+        margin-bottom: 1em;
+    }
+    p > strong{
+        text-transform: uppercase;
+        color:$primary-color;
+    }
+}
+.post-edit-link{
+    background: transparent url(../svg/pen.svg) no-repeat left center;
+    display:block;
+    @include size(20px);
+    > span {
+        @extend %text-indent;
     }
 }

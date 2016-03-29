@@ -33,23 +33,25 @@ $portfolioQuery = new WP_Query($filter);
     <?php endif; ?>
 
 
-    <?php if ($portfolioQuery->have_posts()):?>
-            <section id="portfolio" class="container">
-                <?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
-                <?php get_template_part('partials/loop', 'portfolio'); ?>
-                <?php get_template_part('partials/loop', 'portfolio'); ?>
-                <?php get_template_part('partials/loop', 'portfolio'); ?>
-            <?php endwhile; ?>
-            <?php get_template_part('pagination'); ?>
+        <?php if ($portfolioQuery->have_posts()): ?>
+            <section class="container">
+                <div id="portfolio">
+                    <?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
+                        <?php get_template_part('partials/loop', 'portfolio'); ?>
+                        <?php get_template_part('partials/loop', 'portfolio'); ?>
+                        <?php get_template_part('partials/loop', 'portfolio'); ?>
+                    <?php endwhile; ?>
+                    <?php get_template_part('pagination'); ?>
 
-        <?php else: ?>
-            <!-- article -->
-            <?php get_template_part('partials/article', '404'); ?>
-            <!-- /article -->
+                <?php else: ?>
+                    <!-- article -->
+                    <?php get_template_part('partials/article', '404'); ?>
+                    <!-- /article -->
 
+
+                </div>
+            </section>
         <?php endif; ?>
-
-    </section>
     
     <!-- /section -->
 
