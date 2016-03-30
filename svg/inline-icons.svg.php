@@ -221,42 +221,91 @@
 </symbol>
 
 <!-- gepunktete Linie -->
-<symbol id="dotted-line" viewBox="-316 590.7 208.1 3">
-    <circle class="colBG" cx="-314.5" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-308.5" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-302.4" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-296.4" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-290.4" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-284.3" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-278.3" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-272.3" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-266.2" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-260.2" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-254.2" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-248.1" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-242.1" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-236.1" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-230" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-224" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-218" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-211.9" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-205.9" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-199.9" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-193.9" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-187.8" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-181.8" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-175.8" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-169.7" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-163.7" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-157.7" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-151.6" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-145.6" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-139.6" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-133.5" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-127.5" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-121.5" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-115.4" cy="592.2" r="1.5"/>
-    <circle class="colBG" cx="-109.4" cy="592.2" r="1.5"/>
+<symbol id="dotted-line" viewBox="0 0 480 3">
+<g>
+	<circle class="colDarkGrey" cx="1.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="7.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="13.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="19.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="25.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="30.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="36.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="42.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="48.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="54.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="60.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="66.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="72.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="78.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="83.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="89.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="95.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="101.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="107.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="113.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="119.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="125.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="131.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="136.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="142.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="148.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="154.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="160.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="166.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="172.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="178.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="184.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="189.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="195.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="201.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="207.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="213.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="219.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="225.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="231.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="237.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="242.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="248.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="254.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="260.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="266.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="272.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="278.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="284.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="290.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="295.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="301.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="307.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="313.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="319.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="325.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="331.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="337.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="343.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="348.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="354.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="360.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="366.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="372.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="378.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="384.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="390.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="396.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="401.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="407.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="413.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="419.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="425.5" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="431.4" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="437.3" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="443.2" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="449.1" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="454.9" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="460.8" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="466.7" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="472.6" cy="1.5" r="1.5"/>
+	<circle class="colDarkGrey" cx="478.5" cy="1.5" r="1.5"/>
+</g>
 </symbol>
 
 <!-- Portfolio Linie -->
@@ -296,5 +345,23 @@
     <circle class="colBG" cx="-656.5" cy="991.2" r="1.5"/>
     <circle class="colBG" cx="-650.4" cy="991.2" r="1.5"/>
     <circle class="colBG" cx="-644.4" cy="991.2" r="1.5"/>
+</symbol>
+    <!-- edit Button -->
+    <symbol id="edit" viewBox="0 0 30.9 30.9">
+        <g>
+            <path class="colGrey" d="M30.9,5.8v19.3c0,1.6-0.6,3-1.7,4.1s-2.5,1.7-4.1,1.7H5.8c-1.6,0-3-0.6-4.1-1.7S0,26.7,0,25.1V5.8c0-1.6,0.6-3,1.7-4.1
+		C2.8,0.6,4.2,0,5.8,0h19.3c1.6,0,3,0.6,4.1,1.7C30.3,2.8,30.9,4.2,30.9,5.8z M10.9,25.7l10.9-10.9L16.1,9L5.1,19.9v5.8H10.9z
+		 M8.1,19.7l3.1,3.1l-1,1H9v-1.9H7.1v-1.1L8.1,19.7z M16.4,11.9c0.2,0.2,0.2,0.4-0.1,0.6l-5.8,5.8c-0.2,0.2-0.4,0.2-0.6,0.1
+		C9.7,18.2,9.8,18,10,17.8l5.8-5.8C16.1,11.7,16.3,11.7,16.4,11.9z M23.1,13.5l1.8-1.8c0.4-0.4,0.6-0.8,0.6-1.4s-0.2-1-0.6-1.4
+		l-3.1-3.1c-0.4-0.4-0.8-0.6-1.4-0.6s-1,0.2-1.4,0.6l-1.8,1.8L23.1,13.5z"/>
+        </g>
+    </symbol>   
+    <!-- menuBar -->
+<symbol id="menu" viewBox="-625 390.1 28 21.9">
+    <path class="colRed" d="M-625 390.1h28v2h-28zM-625 400h28v2h-28zM-625 410h28v2h-28z"/>
+</symbol>
+    <!-- homeBtn -->
+    <symbol id="homeBtn" viewBox="-630 388.2 19 24.8">
+  <path class="colRed" d="M-611 413h-19v-15.3l9.5-9.5 9.5 9.5V413zm-18-1h17v-13.9l-8.5-8.5-8.5 8.5V412z"/>
 </symbol>
 </svg>

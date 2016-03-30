@@ -2,17 +2,29 @@
 $column: 68px;
 $gutter: 30px;
 $grid-columns: 12;
-$max-width: 1024px;
+
+
 
 .container {
-    @include outer-container;
-    @extend %clearfix;
-    body > header &{
-        > nav{@include span-columns(7);}
-        > hgroup{@include span-columns(5);}
+    @media screen and (min-width:$screen-md){
+        @include outer-container(1024px);   
     }
-    &.columns{
-        > div {@include span-columns(3);}
+    @media screen and (max-width:$screen-xs){
+        @include outer-container(100%);   
+    }
+    @extend %clearfix;
+    
+    body > header &{
+        @media screen and (min-width:$screen-md){
+            > nav{@include span-columns(7);}
+            > hgroup{@include span-columns(5);}
+        }
+        &.columns{
+            > div {@include span-columns(3);}
+        }
+    }
+    @media screen and (max-width:$screen-xs){
+        
     }
 }
 .contact-buttons {

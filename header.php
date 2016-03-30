@@ -1,5 +1,4 @@
 <!doctype html>
-<?php #require 'img/icons.svg'; ?>
 <html <?php language_attributes(); ?> class="no-js">
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -40,21 +39,27 @@
         <!-- header -->
         <header id="header" class="row" role="banner">
             <div class="container">
+                <div class="home-btn mobile-layout">
+                    <a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>">
+                        <svg><use xlink:href="#homeBtn"></use></svg>
+                    </a>          
+                </div>
                 <!-- nav -->
-                <nav class="nav col-md-7" role="navigation">
+                <nav class="nav" role="navigation">
                     <?php html5blank_nav(); ?>
                 </nav>
                 <!-- /nav -->
+                <div class="navbar-toggle">
+                    <svg><use xlink:href="#menu"></use></svg>
+                </div>
                 <!-- logo -->
-                <hgroup class="col-md-5 text-right">
-                    <h1 class="logo">
-                        <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-                            <svg><use xlink:href="#logo"></use></svg>
-                            <span class="name"><?php bloginfo('name'); ?></span>
-                            <span class="description"><?php bloginfo('description'); ?></span>
-                        </a>
-                    </h1>
-                </hgroup>
+                <h1 class="logo text-right">
+                    <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
+                        <svg><use xlink:href="#logo"></use></svg>
+                        <span class="name"><?php bloginfo('name'); ?></span>
+                        <span class="description"><?php bloginfo('description'); ?></span>
+                    </a>
+                </h1>
                 <!-- /logo -->
             </div>
         </header>

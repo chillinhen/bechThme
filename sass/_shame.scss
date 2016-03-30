@@ -1,57 +1,42 @@
-/**** Portfolio ****/
-#portfolio{
-    margin:0 -1%;
+nav.nav.open {
+    @include transition;
+    height:320px;
 }
-.portfolio-item{
-    position: relative;
-    float:left;
-    width: 23%;
-    margin:1%;
-    overflow: hidden;
-    > [class*="portfolio_"]{
+nav.nav {
+    @media screen and (max-width:$screen-xs){
+        &,&.closed{
+            @include transition;
+            height:0px;
+            overflow: hidden;
+        }  
+    }
+}
+@media screen and (min-width:$screen-sm+1){
+    .home-btn.mobile-layout,
+    .navbar-toggle,
+    .nav li svg{
+            display:none;
+        }
+}
+@media screen and (max-width:$screen-xs){
+/*    #header{background: red;}*/
+    .home-btn.mobile-layout,
+    .navbar-toggle{
+        display:block;
         position:absolute;
-        top:0;
-        bottom: 0;
-        left:0;
-        right: 0;
-        background: rgba(0,0,0,1);
-    }
-    > .portfolio_content{
-        *{color:white !important;}
-        text-align: center;
-        padding:2em;
-        left:-100%;
-        right:100%;
-        z-index:99;
-        h2 {@include ellipsis(100%);}
+        z-index: 999;
         svg {
-            height: 3px;
-            width: 100%;
-            margin-top:1em;
-            margin-bottom: 1em;
-        }
-        p {
-            font-size: 1em;
-            line-height: 1.2;
-        }
-        .view-article{display: none;}
-    }
-    &:hover{
-        overflow:visible;
-        > .portfolio_content{
-            left:100%;
-            right:calc(-109%);
-            z-index: 999;
-        }
-        > .portfolio_thumbnail{
-            padding:5px;
+            @include size(40px);
+            padding:.5em;
+            background:$base-color-white;
         }
     }
-    &:nth-child(4n):hover{
-        .portfolio_content{
-            left:-109%;
-            right:100%;
-        }
+    .home-btn.mobile-layout{
+        top:0;
+        left:0;
     }
-    
+        .navbar-toggle{
+        top:0;
+        right:0;
+    }
 }

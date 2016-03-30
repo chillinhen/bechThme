@@ -2,27 +2,64 @@
     text-transform: uppercase;
     font-size: 1rem * 1.125;
     margin-top:3*$vgrid - 16px;
+    @media screen and (max-width:$screen-xs){
+        background:white;
+        &:before{
+            content:' ';
+            display: block;
+            background: white;
+            position: absolute;
+            top:0;
+            left:44px;
+            right:44px;
+            height:40px;
+        }
+    }
     ul{
         list-style: none;
         @extend %clearfix;
         @extend %reset;
         li {
-            float:left;
-            display: inline-block;
-            width:auto;
+            @media screen and (max-width:$screen-xs){
+                display:block;
+                float:none;
+                line-height:100% !important;
+                a{
+                    padding:.5em;
+                }
+                svg {
+                    width: 100%;
+                    margin: .2em 0;
+                    padding: 0;
+                    height: 3px;
+/*                    body.home &{
+                        fill:white !important;
+                    }*/
+                }
+
+            }
+            @media screen and (min-width:$screen-md){
+                float:left;
+                display: inline-block;
+                width:auto;
+            }
         }
 
     }
     li.menu-item{
         a {
             display: block;
-            line-height: 1;
-            padding:1rem 1.2em 0 1.2em;
             color:$dark-color-grey;
             font-weight:bold;
-            border-top:3px solid transparent;
-            body.home &, body.home &:hover {
-                color:white;
+            @media screen and (min-width:$screen-md){
+                line-height: 1;
+                padding:1rem 1.2em 0 1.2em;
+                border-top:3px solid transparent;
+            }
+            @media screen and (min-width:$screen-md){
+                body.home &, body.home &:hover {
+                    color:white;
+                }
             }
             &:hover {
                 text-decoration: none;
@@ -31,9 +68,12 @@
             }
         }
         &.current-menu-item{
+            svg {fill:$primary-color;}
             a{
                 color:$primary-color;
-                border-top:3px solid currentColor;
+                @media screen and (min-width:$screen-md){
+                    border-top:3px solid currentColor;
+                }
             }
         }
 

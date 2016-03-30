@@ -247,8 +247,6 @@ table {
     #logo svg {
       height: 171px;
       width: 356px; } }
-  #logo svg .st0 {
-    fill: red; }
 
 #pfeil-xs .dots {
   fill: #6D3332; }
@@ -256,14 +254,25 @@ table {
 .st0 {
   fill: #A6ABAE; }
 
-.container {
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: table; }
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto; }
+    .container::after {
+      clear: both;
+      content: "";
+      display: table; } }
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    .container::after {
+      clear: both;
+      content: "";
+      display: table; } }
+@media screen and (min-width: 992px) {
   body > header .container > nav {
     float: left;
     display: block;
@@ -277,14 +286,14 @@ table {
     margin-right: 2.35765%;
     width: 40.29137%; }
     body > header .container > hgroup:last-child {
-      margin-right: 0; }
-  .container.columns > div {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    .container.columns > div:last-child {
-      margin-right: 0; }
+      margin-right: 0; } }
+body > header .container.columns > div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  body > header .container.columns > div:last-child {
+    margin-right: 0; }
 
 .contact-buttons {
   margin-bottom: 4.5rem; }
@@ -359,28 +368,63 @@ body:not(.home) > footer {
   text-transform: uppercase;
   font-size: 1.125rem;
   margin-top: 44px; }
+  @media screen and (max-width: 480px) {
+    #header nav {
+      background: white; }
+      #header nav:before {
+        content: ' ';
+        display: block;
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 44px;
+        right: 44px;
+        height: 40px; } }
   #header nav ul {
     list-style: none; }
-    #header nav ul li {
-      float: left;
-      display: inline-block;
-      width: auto; }
+    @media screen and (max-width: 480px) {
+      #header nav ul li {
+        display: block;
+        float: none;
+        line-height: 100% !important; }
+        #header nav ul li a {
+          padding: .5em; }
+        #header nav ul li svg {
+          width: 100%;
+          margin: .2em 0;
+          padding: 0;
+          height: 3px;
+          /*                    body.home &{
+                                  fill:white !important;
+                              }*/ } }
+    @media screen and (min-width: 992px) {
+      #header nav ul li {
+        float: left;
+        display: inline-block;
+        width: auto; } }
   #header nav li.menu-item a {
     display: block;
-    line-height: 1;
-    padding: 1rem 1.2em 0 1.2em;
     color: #52595F;
-    font-weight: bold;
-    border-top: 3px solid transparent; }
-    body.home #header nav li.menu-item a, body.home #header nav li.menu-item a:hover {
-      color: white; }
+    font-weight: bold; }
+    @media screen and (min-width: 992px) {
+      #header nav li.menu-item a {
+        line-height: 1;
+        padding: 1rem 1.2em 0 1.2em;
+        border-top: 3px solid transparent; } }
+    @media screen and (min-width: 992px) {
+      body.home #header nav li.menu-item a, body.home #header nav li.menu-item a:hover {
+        color: white; } }
     #header nav li.menu-item a:hover {
       text-decoration: none;
       color: #6D3332;
       border-color: currentColor; }
+  #header nav li.menu-item.current-menu-item svg {
+    fill: #6D3332; }
   #header nav li.menu-item.current-menu-item a {
-    color: #6D3332;
-    border-top: 3px solid currentColor; }
+    color: #6D3332; }
+    @media screen and (min-width: 992px) {
+      #header nav li.menu-item.current-menu-item a {
+        border-top: 3px solid currentColor; } }
 
 article .post_content {
   padding-top: 6.6rem;
@@ -559,5 +603,46 @@ body.leistungen article {
   .portfolio-item:nth-child(4n):hover .portfolio_content {
     left: -109%;
     right: 100%; }
+
+nav.nav.open {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  height: 320px; }
+
+@media screen and (max-width: 480px) {
+  nav.nav, nav.nav.closed {
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    height: 0px;
+    overflow: hidden; } }
+
+@media screen and (min-width: 769px) {
+  .home-btn.mobile-layout,
+  .navbar-toggle,
+  .nav li svg {
+    display: none; } }
+@media screen and (max-width: 480px) {
+  /*    #header{background: red;}*/
+  .home-btn.mobile-layout,
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    z-index: 999; }
+    .home-btn.mobile-layout svg,
+    .navbar-toggle svg {
+      height: 40px;
+      width: 40px;
+      padding: .5em;
+      background: #fff; }
+
+  .home-btn.mobile-layout {
+    top: 0;
+    left: 0; }
+
+  .navbar-toggle {
+    top: 0;
+    right: 0; } }
 
 /*# sourceMappingURL=screen.css.map */
