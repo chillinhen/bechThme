@@ -3,13 +3,22 @@ html {
     min-height: 100%;
 }
 body{
+    @media screen and (max-width:$screen-xs){
+        background:#000;
+    }
     &.home{
-/*        height:100vH;*/
+        /*        height:100vH;*/
         background:{
-            color:rgba(0,0,0,.5);
-            position: 50% 25%;
+            color:rgba(0,0,0,1);
             repeat:no-repeat;
-            size:cover;
+        }
+        @media screen and (max-width:$screen-xs){
+            background-size:contain;
+            background-position:50% 70%;
+        }
+        @media screen and (min-width:$screen-md){
+            background-size:cover;
+            background-position:50% 25%;
         }
         margin-bottom: $footerHomeHeight;
         > footer {
@@ -21,10 +30,28 @@ body{
     }
 
     &:not(.kontakt) > footer{
-        height:$footerHeight;
+/*        height:$footerHeight;*/
         width: 100vW;
-                    position: absolute;
-            bottom: 0;
+        position: absolute;
+        bottom: 0;
+    }
+    &:not(.home){
+        > main {
+           background: white; 
+        }
+        #header {
+            @media screen and (min-width:$screen-md){
+                background: white;
+            }
+            .logo {
+               background: white; 
+            }
+        }
+        main {
+            @media screen and (max-width:$screen-xs){
+            margin-top:198px;
+            }
+        }
     }
 }
 
@@ -37,8 +64,31 @@ body{
 
 
 #header {
-/*    padding-top:$vgrid;*/
+    @media screen and (max-width:$screen-xs){
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 40px;
+        width: 100%;
+        z-index: 10;
+        .container:before{
+            content:' ';
+            display: block;
+            background: white;
+            position: absolute;
+            top:0;
+            left:44px;
+            right:44px;
+            height:40px;
+        }
+    }
     .logo {
+        @media screen and (max-width:$screen-xs){
+            svg {
+                padding: 0px 22px 0 0;
+                width:calc(100% - 44px);
+            }
+        }
         position:relative;
         span.name {
             display:none;
@@ -74,3 +124,4 @@ body:not(.home) > footer{
     background: $primary-color;
     padding:$vgrid 0;
 }
+

@@ -4,16 +4,6 @@
     margin-top:3*$vgrid - 16px;
     @media screen and (max-width:$screen-xs){
         background:white;
-        &:before{
-            content:' ';
-            display: block;
-            background: white;
-            position: absolute;
-            top:0;
-            left:44px;
-            right:44px;
-            height:40px;
-        }
     }
     ul{
         list-style: none;
@@ -52,9 +42,14 @@
             color:$dark-color-grey;
             font-weight:bold;
             @media screen and (min-width:$screen-md){
-                line-height: 1;
-                padding:1rem 1.2em 0 1.2em;
+                line-height: 1; 
                 border-top:3px solid transparent;
+            }
+            @media screen and (min-width:$screen-md)and (max-width:$screen-lg){
+                padding:1rem .6em 0 .6em;
+            }
+            @media screen and (min-width:$screen-lg){
+                padding:1rem 1.2em 0 1.2em;
             }
             @media screen and (min-width:$screen-md){
                 body.home &, body.home &:hover {
@@ -78,5 +73,48 @@
         }
 
 
+    }
+}
+
+nav.nav.open {
+    @include transition;
+    min-height:300px;
+}
+nav.nav {
+    @media screen and (max-width:$screen-xs){
+        &,&.closed{
+            @include transition;
+            min-height:0px;
+            max-height: 0;
+            overflow: hidden;
+        }  
+    }
+}
+@media screen and (min-width:$screen-sm+1){
+    .home-btn.mobile-layout,
+    .navbar-toggle,
+    .nav li svg{
+            display:none;
+        }
+}
+@media screen and (max-width:$screen-xs){
+        .home-btn.mobile-layout,
+    .navbar-toggle{
+        display:block;
+        position:absolute;
+        z-index: 999;
+        svg {
+            @include size(40px);
+            padding:.5em;
+            background:$base-color-white;
+        }
+    }
+    .home-btn.mobile-layout{
+        top:0;
+        left:0;
+    }
+        .navbar-toggle{
+        top:0;
+        right:0;
     }
 }

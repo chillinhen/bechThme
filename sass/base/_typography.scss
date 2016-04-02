@@ -40,10 +40,20 @@ h6{
   &.logo span{
       margin:0;
       font-weight: 300;
+      @media screen and (min-width:$screen-md) and (max-width:$screen-lg){
+         font-size: 13px; 
+      }
+      @media screen and (min-width:$screen-lg){
       font-size: 14px;
+      }
   }
   article &, .page & {
-      font-size:$rem-base * 3.125;
+      @media screen and (max-width:$screen-xs){
+          font-size:$rem-base * 1.75;
+      }
+      @media screen and (min-width:$screen-md){
+          font-size:$rem-base * 3.125;
+      }
       text-transform: uppercase;
       line-height: 1;
       letter-spacing: -.025em;
@@ -92,6 +102,12 @@ p {
       font-weight: bold !important;
       line-height: 1;
       margin-bottom: 0;
+      @media screen and (max-width:$screen-xs){
+          font-size:$rem-base;
+      }
+      @media screen and (min-width:$screen-md){
+          font-size:$rem-base * 1.5;
+      }
   }
   body.leistungen > main &{
       text-align: center;

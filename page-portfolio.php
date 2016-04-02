@@ -15,8 +15,8 @@ $portfolioQuery = new WP_Query($filter);
     <?php if (have_posts()): ?>
         <section class="container intro">
             <?php while (have_posts()) : the_post(); ?>
-            <div class="col-sm-12" style="padding-left:0;"><?php get_template_part('partials/headline'); ?></div>
-            <div class="col-sm-6" style="padding-left:0;"><?php the_content(); ?></div>
+            <div style="padding-left:0;"><?php get_template_part('partials/headline'); ?></div>
+            <div style="padding-left:0;"><?php the_content(); ?></div>
             <?php endwhile; ?>
         </section>
 
