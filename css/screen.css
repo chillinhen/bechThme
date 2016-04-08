@@ -5,41 +5,12 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
-  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
-  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  opacity: 0.4;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: 9999; }
-
 /*** BSP: @extend %reset;***/
 .container:before, .contact-buttons:before, #header nav ul:before, .container:after, .contact-buttons:after, #header nav ul:after {
   content: "";
   display: table; }
 .container:after, .contact-buttons:after, #header nav ul:after {
   clear: both; }
-
-#header nav ul {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important; }
-
-.post-edit-link > span {
-  text-indent: -9999px;
-  display: block;
-  overflow: hidden; }
 
 /*** Mixins & Placeholders ***/
 /**** caret ****/
@@ -61,11 +32,18 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 3rem;
   font-family: "Source Sans Pro", Arial, sans-serif;
   line-height: 1.1;
   font-weight: 400;
   color: #52595F; }
+  @media screen and (min-width: 992px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0 0 3rem; } }
   body.home h1, body.home
   h2, body.home
   h3, body.home
@@ -124,7 +102,7 @@ h6 {
       h5, article
       h6, .page
       h6 {
-        font-size: 28px; } }
+        font-size: 22px; } }
     @media screen and (min-width: 992px) {
       article h1, .page h1, article
       h2, .page
@@ -207,7 +185,7 @@ p {
     margin-bottom: 0; }
     @media screen and (max-width: 480px) {
       body.home > footer p {
-        font-size: 16px; } }
+        font-size: 14px; } }
     @media screen and (min-width: 992px) {
       body.home > footer p {
         font-size: 24px; } }
@@ -319,16 +297,6 @@ table {
 .st0 {
   fill: #A6ABAE; }
 
-@media screen and (max-width: 600px) {
-  .container {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5%; }
-    .container::after {
-      clear: both;
-      content: "";
-      display: table; } }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .container {
     max-width: 900px;
@@ -348,48 +316,50 @@ table {
       content: "";
       display: table; } }
 @media screen and (max-width: 480px) {
-  body > header .container > hgroup, body > header .container > nav {
-    width: 100%;
+  body > header .container hgroup, body > header .container nav {
+    /*                @include fill-parent();*/
     position: absolute;
     left: 0;
-    right: 0; }
-  body > header .container > hgroup {
-    top: 40px;
-    z-index: 5; }
-    body > header .container > hgroup .logo {
+    right: 0;
+    overflow: hidden; }
+  body > header .container hgroup {
+    top: 41px;
+    z-index: 5;
+    height: 150px; }
+    body > header .container hgroup .logo {
       margin-top: 4px; }
-  body > header .container > nav {
+  body > header .container nav {
     top: 0px;
     z-index: 10; } }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
-  body > header .container > nav {
+  body > header .container nav {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%; }
-    body > header .container > nav:last-child {
+    body > header .container nav:last-child {
       margin-right: 0; }
-  body > header .container > hgroup {
+  body > header .container hgroup {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%; }
-    body > header .container > hgroup:last-child {
+    body > header .container hgroup:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 1200px) {
-  body > header .container > nav {
+  body > header .container nav {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%; }
-    body > header .container > nav:last-child {
+    body > header .container nav:last-child {
       margin-right: 0; }
-  body > header .container > hgroup {
+  body > header .container hgroup {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%; }
-    body > header .container > hgroup:last-child {
+    body > header .container hgroup:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 992px) {
   body > header .container.columns > div, body > footer .container.columns > div {
@@ -417,96 +387,13 @@ table {
 .rightalign {
   float: right; }
 
-html {
-  position: relative;
-  min-height: 100%; }
-
 @media screen and (max-width: 480px) {
-  body {
-    background: #000; } }
-body.home {
-  /*        height:100vH;*/
-  background-color: black;
-  background-repeat: no-repeat;
-  margin-bottom: 87px; }
-  @media screen and (max-width: 480px) {
-    body.home {
-      background-size: contain;
-      background-position: 50% 70%; } }
-  @media screen and (min-width: 992px) {
-    body.home {
-      background-size: cover;
-      background-position: 50% 25%; } }
-  body.home > footer {
-    height: 87px; }
-body:not(.kontakt) {
-  margin-bottom: 40px; }
-body:not(.kontakt) > footer {
-  /*        height:$footerHeight;*/
-  width: 100vW;
-  position: absolute;
-  bottom: 0; }
-body:not(.home) > main {
-  background: white; }
-@media screen and (min-width: 992px) {
-  body:not(.home) #header {
-    background: white; } }
-body:not(.home) #header .logo {
-  background: white; }
-@media screen and (max-width: 480px) {
-  body:not(.home) main {
-    margin-top: 198px; } }
+  .hidden-xs {
+    display: none; } }
 
-#header .container, .container#portfolio {
-  padding: 0; }
-
-@media screen and (max-width: 480px) {
-  #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 40px;
-    width: 100%;
-    z-index: 10; }
-    #header .container:before {
-      content: ' ';
-      display: block;
-      background: white;
-      position: absolute;
-      top: 0;
-      left: 44px;
-      right: 44px;
-      height: 40px; } }
-#header .logo {
-  position: relative; }
-  @media screen and (max-width: 480px) {
-    #header .logo svg {
-      padding: 0px 22px 0 0;
-      width: calc(100% - 44px); } }
-  #header .logo span.name {
-    display: none; }
-  #header .logo span.description {
-    position: absolute; }
-    @media screen and (min-width: 992px) {
-      #header .logo span.description {
-        right: 125px;
-        bottom: 43px;
-        letter-spacing: .01em;
-        width: 375px; } }
-
-body.leistungen > main, body.kontakt > main {
-  background: #eee;
-  padding-top: 85px; }
-
-/**** Footer ****/
-body > footer * {
-  color: white; }
-body > footer .impressum {
-  padding: 20px 0; }
-
-body:not(.home) > footer {
-  background: #6D3332;
-  padding: 20px 0; }
+@media screen and (min-width: 1200px) {
+  .hidden-lg {
+    display: none; } }
 
 #header nav {
   text-transform: uppercase;
@@ -517,21 +404,26 @@ body:not(.home) > footer {
       background: white; } }
   #header nav ul {
     list-style: none; }
+    @media screen and (min-width: 992px) {
+      #header nav ul {
+        margin: 0;
+        padding: 0; } }
+    @media screen and (max-width: 480px) {
+      #header nav ul {
+        margin: 0;
+        padding: .5em 0 0 0; } }
     @media screen and (max-width: 480px) {
       #header nav ul li {
         display: block;
         float: none;
         line-height: 100% !important; }
         #header nav ul li a {
-          padding: .5em; }
+          padding: .5em 1em; }
         #header nav ul li svg {
           width: 100%;
           margin: .2em 0;
           padding: 0;
-          height: 3px;
-          /*                    body.home &{
-                                  fill:white !important;
-                              }*/ } }
+          height: 3px; } }
     @media screen and (min-width: 992px) {
       #header nav ul li {
         float: left;
@@ -606,203 +498,106 @@ nav.nav.open {
   .navbar-toggle {
     top: 0;
     right: 0; } }
-@media screen and (max-width: 480px) {
-  article > post_content, article > aside {
-    width: 100%; } }
-@media screen and (min-width: 480px) and (max-width: 1200px) {
-  article > post_content, article > aside {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    article > post_content:last-child, article > aside:last-child {
-      margin-right: 0; } }
-@media screen and (max-width: 480px) {
-  body.home article h1 {
-    margin: 40vH 0 0 0; } }
-@media screen and (min-width: 992px) {
-  body.home article h1 {
-    margin: 12vH 5em; } }
-body.leistungen article {
-  text-align: center;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  body.leistungen article:last-child {
-    margin-right: 0; }
-  body.leistungen article .thumbnail {
-    background: transparent;
-    border: 0;
-    display: block;
-    margin-bottom: 1em; }
-    body.leistungen article .thumbnail img {
-      width: auto;
-      height: 75px;
-      max-width: none; }
-  body.leistungen article:nth-child(even) {
-    padding-left: 3em;
-    margin: 0; }
-  body.leistungen article:nth-child(odd) {
-    padding-right: 3em; }
-  body.leistungen article:last-child {
-    width: 100%;
-    float: none;
-    clear: both;
-    width: 100%;
-    padding: 0; }
-.flexslider article > section.flexcaption {
-  padding-right: 1.2em; }
-.flexslider article > aside {
-  float: right;
-  /*            margin-right: -1.2em;*/ }
-
-.contact-map .iframe-elastic iframe {
-  pointer-events: none; }
-
-.contact-buttons {
-  text-align: center; }
-  .contact-buttons .icon {
-    max-width: 128px;
-    max-height: 128px;
-    margin-bottom: 1em; }
-  .contact-buttons p > strong {
-    text-transform: uppercase;
-    color: #6D3332; }
-
-.post-edit-link {
-  background: transparent url(../svg/pen.svg) no-repeat left center;
-  display: block;
-  height: 20px;
-  width: 20px; }
-
-.flexslider {
-  border: 0; }
-  @media screen and (max-width: 480px) {
-    .flexslider {
-      /*        height:calc(100vH - 198px);*/ } }
-
-.flex-control-nav {
-  bottom: 1em; }
-  body.page .flex-control-nav {
-    display: none; }
-  .flex-control-nav.flex-control-paging li a {
-    background: rgba(255, 255, 255, 0.5) !important; }
-    .flex-control-nav.flex-control-paging li a.flex-active {
-      background: white !important; }
-
-[class*="flex-nav"] > a {
-  width: 50px !important;
-  height: 50px !important;
-  line-height: 50px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  font-size: 0;
-  line-height: 0; }
-  [class*="flex-nav"] > a:before {
-    content: '' !important;
-    background: rgba(255, 255, 255, 0.5) url("../svg/flex-nav.svg") no-repeat center center;
-    background-size: 25%;
-    height: 100%;
-    width: 100%; }
-  [class*="flex-nav"] > a.flex-prev {
-    top: 50%;
-    bottom: auto; }
-    @media screen and (min-width: 992px) {
-      .single [class*="flex-nav"] > a.flex-prev {
-        left: 0; }
-      [class*="subpages"] [class*="flex-nav"] > a.flex-prev {
-        left: calc(50% + 24px) !important; } }
-  [class*="flex-nav"] > a.flex-prev:before {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
-
-.iframe-elastic {
+html {
   position: relative;
-  padding-bottom: 55%;
-  /* ratio width/height in % Bsp. (450 ÷ 500 = 0.9 = 90%) */
-  padding-top: 15px;
-  height: 0;
-  overflow: hidden; }
-  .iframe-elastic iframe {
+  min-height: 100%; }
+  @media screen and (max-width: 480px) {
+    html {
+      background: #6D3332; } }
+
+body.home {
+  /*        height:100vH;*/
+  background-color: black;
+  background-repeat: no-repeat;
+  margin-bottom: 87px; }
+  @media screen and (max-width: 480px) {
+    body.home {
+      background-size: contain;
+      background-position: 50% 70%; } }
+  @media screen and (min-width: 992px) {
+    body.home {
+      background-size: cover;
+      background-position: 50% 25%; } }
+  body.home > footer {
+    height: 87px; }
+body:not(.kontakt) {
+  margin-bottom: 66px; }
+  body:not(.kontakt) > footer {
+    height: 66px;
+    width: 100vW;
     position: absolute;
+    bottom: 0; }
+body:not(.home) > main {
+  background: white; }
+  @media screen and (max-width: 480px) {
+    body:not(.home) > main {
+      margin-top: 198px; } }
+@media screen and (min-width: 992px) {
+  body:not(.home) > header {
+    background: white; } }
+body:not(.home) > header .logo {
+  background: white; }
+
+#header .container, .container#portfolio {
+  padding: 0; }
+
+@media screen and (max-width: 480px) {
+  #header {
+    position: fixed;
     top: 0;
     left: 0;
+    min-height: 40px;
     width: 100%;
-    height: 100%; }
-
-/**** Portfolio ****/
-@media screen and (min-width: 992px) {
-  #portfolio {
-    margin: 0 -1%; } }
-
-.portfolio-item {
+    z-index: 10;
+    /** white block above **/ }
+    #header .container:before {
+      content: ' ';
+      display: block;
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 44px;
+      right: 44px;
+      height: 40px; } }
+#header .logo a {
   position: relative;
-  overflow: hidden; }
-  @media screen and (max-width: 480px) {
-    .portfolio-item {
-      margin-bottom: 1em; } }
-  @media screen and (min-width: 992px) {
-    .portfolio-item {
-      float: left;
-      width: 23%;
-      margin: 1%; } }
-  .portfolio-item > [class*="portfolio_"] {
-    position: absolute;
-    top: 0;
+  width: 100%;
+  display: block; }
+@media screen and (max-width: 480px) {
+  #header .logo {
+    /*            &.smaller{
+                    svg {
+                        height:70%;
+                    }
+                }*/ }
+    #header .logo svg {
+      position: relative;
+      left: auto;
+      right: 2em;
+      width: calc(80% - 4em);
+      top: -1em; } }
+#header .logo span.name {
+  display: none; }
+#header .logo span.description {
+  position: absolute; }
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  #header .logo span.description {
     bottom: 0;
     left: 0;
-    right: 0;
-    background: black; }
-  .portfolio-item > .portfolio_content {
-    text-align: center;
-    padding: 2em;
-    z-index: 99; }
-    .portfolio-item > .portfolio_content * {
-      color: white !important; }
-    @media screen and (max-width: 480px) {
-      .portfolio-item > .portfolio_content {
-        top: 100%;
-        bottom: -100%; } }
-    @media screen and (min-width: 992px) {
-      .portfolio-item > .portfolio_content {
-        left: -100%;
-        right: 100%; } }
-    .portfolio-item > .portfolio_content h2 {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 100%; }
-    .portfolio-item > .portfolio_content svg {
-      height: 3px;
-      width: 100%;
-      margin-top: 1em;
-      margin-bottom: 1em; }
-    .portfolio-item > .portfolio_content p {
-      font-size: 1em;
-      line-height: 1.2; }
-    .portfolio-item > .portfolio_content .view-article {
-      display: none; }
-  .portfolio-item:hover {
-    overflow: visible; }
-    .portfolio-item:hover > .portfolio_content {
-      z-index: 999; }
-      @media screen and (min-width: 992px) {
-        .portfolio-item:hover > .portfolio_content {
-          left: 100%;
-          right: calc(-109%); } }
-      @media screen and (max-width: 480px) {
-        .portfolio-item:hover > .portfolio_content {
-          /*                top:100%;
-                          bottom:0;*/ } }
-    .portfolio-item:hover > .portfolio_thumbnail {
-      padding: 5px; }
+    right: 120px;
+    font-size: 12px;
+    top: 70px;
+    font-size: 9.04px; } }
+
   @media screen and (min-width: 992px) {
-    .portfolio-item:nth-child(4n):hover .portfolio_content {
-      left: -109%;
-      right: 100%; } }
+    #header .logo span.description {
+      right: 125px;
+      bottom: 43px;
+      letter-spacing: .01em;
+      width: 375px; } }
+
+/*@import "content/_content";
+@import "content/_media";
+@import "_shame.scss";*/
 
 /*# sourceMappingURL=screen.css.map */

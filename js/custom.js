@@ -8,11 +8,22 @@ jQuery(document).ready(function ($) {
     //some tweaks for smaller windowa
 
     function checkSize() {
-        if ($(".nav li").css("float") == "none") {
-                
-            }
+//        if ($(".nav li").css("float") == "none") {
+//            // Scrolling
+//            jQuery(window).scroll(function () {
+//                if (jQuery(this).scrollTop() > 100) {
+//                    jQuery('.logo').addClass('smaller');
+//                } else {
+//                    jQuery('.logo').removeClass('smaller');
+//                }
+//            });
+//            }
     }
+    //use svg as instead of border-bottom
     $(".nav li").append('<svg><use xlink:href="#dotted-line"></use></svg>');
+    
+    
+    //portfolio tweaks
     var portfolioItem = $('.portfolio-item');
     var portfolioSize = portfolioItem.width();
     portfolioItem.css('height', portfolioSize);
@@ -46,4 +57,23 @@ jQuery(document).ready(function ($) {
     //edit post link
     $('.post-edit-link')
             .wrapInner('<span></span>');
+    
+    //responsive hover tweaks
+    var tapped=false;
+   // var tapEvent = $('.portfolio_thumbnail');
+
+    tapEvent.on("touchstart", function (e) {
+        if (!tapped) { //if tap is not set, set up single tap
+            tapped = setTimeout(function () {
+                e.preventDefault();
+                $(this).siblings('.portfolio_content').addClass('show');
+                //insert things you want to do when single tapped
+            }, 300);   //wait 300ms then run single click code
+        } else {    //tapped within 300ms of last tap. double tap
+            clearTimeout(tapped); //stop single tap callback
+            window.location.href = $(this).attr('href');
+            //insert things you want to do when double tapped
+        }
+        e.preventDefault()
+    });
 });

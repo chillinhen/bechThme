@@ -1,0 +1,39 @@
+
+
+
+
+
+#header {
+
+    .logo {
+
+        position:relative;
+
+    }
+}
+main {
+    body.leistungen > &,body.kontakt > &{
+        background: $base-bg_color;
+        @media screen and (max-width:$screen-xs){
+            padding-top: 1.5 * $vgrid;
+        }
+        @media screen and (min-width:$screen-md){
+            padding-top: 4.25 * $vgrid;
+        }
+    }
+}
+/**** Footer ****/
+body > footer {
+    * {
+        color:white;
+    }
+    .impressum {
+        padding:$vgrid 0;
+    }
+}
+
+body:not(.home) > footer{
+    background: $primary-color;
+    padding:$vgrid 0;
+}
+

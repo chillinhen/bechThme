@@ -4,7 +4,7 @@ article{
             @include fill-parent();
         }
     }
-    @media screen and (min-width:$screen-xs) and (max-width:$screen-lg){
+    @media screen and (min-width:$screen-xs) and (max-width:$screen-md - 1){
         > post_content, > aside{
             @include span-columns(6);
         }
@@ -21,7 +21,13 @@ article{
     }
     body.leistungen &{
         text-align: center;
+        @media screen and (max-width:$screen-xs){
+            @include fill-parent();
+            padding-top:$vgrid;
+        }
+        @media screen and (min-width:$screen-md){
         @include span-columns(6 of 12);
+        }
         .thumbnail{
             background: transparent;
             border:0;
@@ -33,19 +39,21 @@ article{
                 max-width: none;
             }
         }
-        &:nth-child(even){
-            padding-left: 3em;
-            margin:0;
-        }
-        &:nth-child(odd){
-            padding-right: 3em;
-        }
-        &:last-child{
-            @include fill-parent();
-            float:none;
-            clear:both;
-            width:100%;
-            padding: 0;
+        @media screen and (min-width:$screen-md){
+            &:nth-child(even){
+                padding-left: 3em;
+                margin:0;
+            }
+            &:nth-child(odd){
+                padding-right: 3em;
+            }
+            &:last-child{
+                @include fill-parent();
+                float:none;
+                clear:both;
+                width:100%;
+                padding: 0;
+            }
         }
     }
 

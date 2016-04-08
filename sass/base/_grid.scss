@@ -3,15 +3,13 @@ $column: 68px;
 $gutter: 30px;
 $grid-columns: 12;
 
-
-
 .container {
-    @media screen and (max-width:$screen-smallPad){
-        @include outer-container(100%);
-        @include pad(5%);
-    }
-    @media screen and (min-width:$screen-smallPad) and (max-width:$screen-md){
-        
+    @extend %clearfix;
+    
+    main > & {
+        @media screen and (max-width:$screen-xs){
+            
+        }
     }
     @media screen and (min-width:$screen-smallPad) and (max-width:$screen-lg){
         @include outer-container(900px);
@@ -19,39 +17,37 @@ $grid-columns: 12;
     @media screen and (min-width:$screen-lg){
         @include outer-container(1024px);   
     }
-
-    @extend %clearfix;
-    
-    body > header &{
+    body > header & {
         @media screen and (max-width:$screen-xs){
-            > hgroup, > nav{
-                @include fill-parent();
+            hgroup, nav{
+/*                @include fill-parent();*/
                 position: absolute;
                 left:0;
                 right: 0;
+                overflow: hidden;
             }
-            > hgroup{
-                top:40px;
+            hgroup{
+                top:41px;
                 z-index: 5;
+                height: 150px;
                 .logo{
                     margin-top:4px;
                 }
             }
-            > nav {
+            nav {
                 top:0px;
                 z-index: 10;
             }
-
         }
         @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-lg){
-            > nav{@include span-columns(7);}
-            > hgroup{
+            nav{@include span-columns(7);}
+            hgroup{
                 @include span-columns(5);
             }
         }
         @media screen and (min-width:$screen-lg){
-            > nav{@include span-columns(7);}
-            > hgroup{
+            nav{@include span-columns(7);}
+            hgroup{
                 @include span-columns(5);
             }
         }
@@ -64,6 +60,7 @@ $grid-columns: 12;
         }
     }
 }
+
 .contact-buttons {
     @extend %clearfix;
     @media screen and (min-width:$screen-md){

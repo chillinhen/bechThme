@@ -4,3 +4,13 @@
 .rightalign{
     float:right;
 }
+.hidden-xs{
+    @media screen and (max-width:$screen-xs){
+        display:none;
+    }
+}
+.hidden-lg{
+    @media screen and (min-width:$screen-lg){
+        display:none;
+    }
+}

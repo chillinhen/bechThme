@@ -8,23 +8,24 @@
     ul{
         list-style: none;
         @extend %clearfix;
-        @extend %reset;
+        @media screen and (min-width:$screen-md){margin:0;padding:0;}
+        @media screen and (max-width:$screen-xs){
+            margin:0;
+            padding:.5em 0 0 0;
+        }
         li {
             @media screen and (max-width:$screen-xs){
                 display:block;
                 float:none;
                 line-height:100% !important;
                 a{
-                    padding:.5em;
+                    padding:.5em 1em;
                 }
                 svg {
                     width: 100%;
                     margin: .2em 0;
                     padding: 0;
                     height: 3px;
-/*                    body.home &{
-                        fill:white !important;
-                    }*/
                 }
 
             }

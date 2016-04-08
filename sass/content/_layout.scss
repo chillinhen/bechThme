@@ -1,11 +1,11 @@
 html {
     position: relative;
     min-height: 100%;
-}
-body{
     @media screen and (max-width:$screen-xs){
-        background:#000;
+        background:$primary-color;
     }
+}
+body {
     &.home{
         /*        height:100vH;*/
         background:{
@@ -26,43 +26,37 @@ body{
         }
     }
     &:not(.kontakt){
-      margin-bottom: $footerHeight;  
-    }
-
-    &:not(.kontakt) > footer{
-/*        height:$footerHeight;*/
-        width: 100vW;
-        position: absolute;
-        bottom: 0;
+        margin-bottom: $footerHeight;  
+        > footer{
+            height:$footerHeight;
+            width: 100vW;
+            position: absolute;
+            bottom: 0;
+        }
     }
     &:not(.home){
         > main {
-           background: white; 
+            background: white; 
+            @media screen and (max-width:$screen-xs){
+                margin-top:198px;
+            }
         }
-        #header {
+        > header{
             @media screen and (min-width:$screen-md){
                 background: white;
             }
             .logo {
-               background: white; 
-            }
-        }
-        main {
-            @media screen and (max-width:$screen-xs){
-            margin-top:198px;
+                background: white; 
             }
         }
     }
 }
-
 .container{
     #header &,
     &#portfolio {
         padding:0;
     }
 }
-
-
 #header {
     @media screen and (max-width:$screen-xs){
         position: fixed;
@@ -71,6 +65,7 @@ body{
         min-height: 40px;
         width: 100%;
         z-index: 10;
+        /** white block above **/
         .container:before{
             content:' ';
             display: block;
@@ -83,18 +78,40 @@ body{
         }
     }
     .logo {
+        a {
+            position: relative;
+            width: 100%;
+            display: block;
+        }
         @media screen and (max-width:$screen-xs){
             svg {
-                padding: 0px 22px 0 0;
-                width:calc(100% - 44px);
+                position: relative;
+                left: auto;
+                right: 2em;
+                width: calc(80% - 4em);
+                top: -1em;
             }
+/*            &.smaller{
+                svg {
+                    height:70%;
+                }
+            }*/
         }
-        position:relative;
         span.name {
             display:none;
         }
         span.description{
             position: absolute;
+            @media screen and (max-width:$screen-xs){
+                @media screen and (orientation:portrait){
+                    bottom: 0;
+                    left: 0;
+                    right: 120px;
+                    font-size: 12px;
+                    top: 70px;
+                    font-size: $rem-base * 0.565;
+                }
+            }
             @media screen and (min-width:$screen-md){
                 right:125px;
                 bottom: 43px;
@@ -104,24 +121,3 @@ body{
         }
     }
 }
-main {
-    body.leistungen > &,body.kontakt > &{
-        background: #eee;
-        padding-top: 4.25 * $vgrid;
-    }
-}
-/**** Footer ****/
-body > footer {
-    * {
-        color:white;
-    }
-    .impressum {
-        padding:$vgrid 0;
-    }
-}
-
-body:not(.home) > footer{
-    background: $primary-color;
-    padding:$vgrid 0;
-}
-

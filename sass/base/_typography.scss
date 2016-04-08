@@ -29,11 +29,13 @@ h3,
 h4,
 h5,
 h6{
-  margin: 0 0 3 * $paragraph-margin;
   font-family: $headings-font-family;
   line-height: 1.1;
   font-weight:400;
   color: $heading-text-color;
+  @media screen and (min-width:$screen-md){
+      margin: 0 0 3 * $paragraph-margin;   
+  }
   body.home &{
       color:white !important;
   }
@@ -49,8 +51,9 @@ h6{
   }
   article &, .page & {
       @media screen and (max-width:$screen-xs){
-          font-size:$rem-base * 1.75;
+          font-size:$rem-base * 1.375;
       }
+      
       @media screen and (min-width:$screen-md){
           font-size:$rem-base * 3.125;
       }
@@ -103,7 +106,7 @@ p {
       line-height: 1;
       margin-bottom: 0;
       @media screen and (max-width:$screen-xs){
-          font-size:$rem-base;
+          font-size:$rem-base * 0.875;
       }
       @media screen and (min-width:$screen-md){
           font-size:$rem-base * 1.5;

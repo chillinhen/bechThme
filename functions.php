@@ -20,12 +20,12 @@ add_action('after_setup_theme', 'bechold_theme_setup');
 function bechold_theme_setup() {
 
 //remove scrap
-    remove_filter('show_admin_bar', 'remove_admin_bar');
+    //remove_filter('show_admin_bar', 'remove_admin_bar');
     remove_action('init', 'create_post_type_html5');
     
   //new Image Formats
-    add_image_size('full', 1680, 560, array( 'center', 'center' ));
-    add_image_size('thumb-loop', 250, 250, true);
+    add_image_size('full', 1680, 1280, array( 'center', 'center' ));
+    add_image_size('thumb-loop', 325, 325, true);
     add_image_size('thumb-detail',500,645,true);
     
     // Adding Translation Option
