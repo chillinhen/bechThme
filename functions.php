@@ -26,7 +26,8 @@ function bechold_theme_setup() {
   //new Image Formats
     add_image_size('full', 1680, 1280, array( 'center', 'center' ));
     add_image_size('thumb-loop', 325, 325, true);
-    add_image_size('thumb-detail',500,645,true);
+    add_image_size('thumb-subpages',500,645,true);
+    add_image_size('thumb-detail',570,455,true);
     
     // Adding Translation Option
     load_theme_textdomain('bechholdTheme', get_stylesheet_directory_uri() . '/languages');

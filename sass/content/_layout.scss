@@ -7,20 +7,23 @@ html {
 }
 body {
     &.home{
-        /*        height:100vH;*/
+        height:100vH;
+        position: relative;
+                    overflow:hidden;
         background:{
             color:rgba(0,0,0,1);
             repeat:no-repeat;
         }
         @media screen and (max-width:$screen-xs){
             background-size:contain;
-            background-position:50% 70%;
+            background-position:50% 70%; 
         }
         @media screen and (min-width:$screen-md){
             background-size:cover;
             background-position:50% 25%;
+            margin-bottom: $footerHomeHeight;
         }
-        margin-bottom: $footerHomeHeight;
+        
         > footer {
             height:$footerHomeHeight;
         }
@@ -31,14 +34,17 @@ body {
             height:$footerHeight;
             width: 100vW;
             position: absolute;
-            bottom: 0;
+            bottom: 0;       
         }
     }
     &:not(.home){
         > main {
             background: white; 
             @media screen and (max-width:$screen-xs){
-                margin-top:198px;
+                margin-top:160px;
+                .post_content{
+                    padding:1em 2em;
+                }
             }
         }
         > header{
@@ -49,12 +55,35 @@ body {
                 background: white; 
             }
         }
+        > footer {
+            background:$primary-color;
+            @media screen and (min-width:$screen-md){
+                padding-top:2 * $vgrid;
+            }
+            
+            * {color:$base-color-white;}
+            @media screen and (max-width:$screen-xs){
+            padding:0 2em;
+            }
+        }
     }
 }
 .container{
-    #header &,
-    &#portfolio {
+    #header &{
         padding:0;
+    }
+    #portfolio {
+        @media screen and (max-width:$screen-xs){
+            padding:0 2em;
+        }
+        @media screen and (min-width:$screen-md){
+            padding:0;
+            > div {
+                @media screen and (min-width:$screen-md){
+                    padding:0;
+                }
+            }
+        }
     }
 }
 #header {

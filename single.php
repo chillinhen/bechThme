@@ -1,28 +1,24 @@
 <?php get_header(); ?>
-
 <!-- section -->
 <section class="top-fold container">
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class('item'); ?>>
-                <section class="post_content">
-                    <hgroup class="">
-                        <?php get_template_part('partials/headline'); ?>
-                        <?php the_content(); ?>
-                        <span class="rightalign"><?php edit_post_link(); ?></span>
-                    </hgroup>
-                </section>
-                <aside>
-                    <?php get_template_part('partials/gallery', 'carousel'); ?>
-                </aside>
-            </article>
-        <?php endwhile; ?>
-    <?php else : ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('item'); ?>>
+    <section class="post_content">
+        <?php get_template_part('partials/headline'); ?>
+        <?php the_content(); ?>
+        <span class="rightalign"><?php edit_post_link(); ?></span>
+     </section>
+     <aside>
+        <?php get_template_part('partials/gallery', 'carousel'); ?>
+     </aside>
+</article>
+    <?php endwhile; ?>
+     <?php else : ?>
         <article>
             <?php get_template_part('partials/article', '404'); ?>
         </article>
     <?php endif; ?>
 </section>
-
 <?php
 $args = array(
     'post_type' => 'post',
@@ -50,7 +46,4 @@ endif;
 // Reset Post Data
 wp_reset_postdata();
 ?>
-
-<!-- /section -->
-
 <?php get_footer(); ?>

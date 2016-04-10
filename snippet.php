@@ -1,26 +1,56 @@
-<symbol id="dotted-line" viewBox="130 994.5 1232.5 1">
-    <g>
-	<g>
-		<g>
-			<defs>
-				<rect id="SVGID_1_" x="130" y="994.5" width="1232.5" height="1"/>
-			</defs>
-			<clipPath id="SVGID_2_">
-				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-			</clipPath>
-			<line class="st0" x1="132.5" y1="995" x2="1361" y2="995"/>
-		</g>
-	</g>
-	<g>
-		<g>
-			<defs>
-				<rect id="SVGID_3_" x="130" y="994.5" width="1232.5" height="1"/>
-			</defs>
-			<clipPath id="SVGID_4_">
-				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-			</clipPath>
-			<path class="st1" d="M1362,995L1362,995 M130.5,995L130.5,995"/>
-		</g>
-	</g>
-</g>
-</symbol>
+
+
+<!-- section -->
+<section class="top-fold container">
+    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class('item'); ?>>
+                <section class="post_content">
+                    <hgroup class="">
+                        <?php get_template_part('partials/headline'); ?>
+                    </hgroup>
+                    <?php the_content(); ?>
+                    <span class="rightalign"><?php edit_post_link(); ?></span>
+                </section>
+                <aside>
+                    <?php get_template_part('partials/gallery', 'carousel'); ?>
+                </aside>
+            </article>
+        <?php endwhile; ?>
+    <?php else : ?>
+        <article>
+            <?php get_template_part('partials/article', '404'); ?>
+        </article>
+    <?php endif; ?>
+</section>
+
+<?php
+$args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'category_name' => 'portfolio',
+    'posts_per_page' => -1, // you may edit this number
+    'orderby' => 'rand',
+    'post__not_in' => array($post->ID),
+);
+$related_items = new WP_Query($args);
+// loop over query
+if ($related_items->have_posts()) :
+    ?>
+        <section class="bottom-fold related container">
+        <div id="portfolio">
+            <?php while ($related_items->have_posts()) : $related_items->the_post();
+                ?>
+                <?php get_template_part('partials/loop', 'portfolio'); ?>
+            <?php endwhile;
+            ?>
+        </div>
+    </section>
+<?php
+endif;
+// Reset Post Data
+wp_reset_postdata();
+?>
+
+<!-- /section -->
+
+

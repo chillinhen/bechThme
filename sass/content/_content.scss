@@ -1,23 +1,47 @@
 article{
-    @media screen and (max-width:$screen-xs){
-        > post_content, > aside{
+    > .post_content, > aside{
+        @media screen and (max-width:$screen-xs){
             @include fill-parent();
         }
-    }
-    @media screen and (min-width:$screen-xs) and (max-width:$screen-md - 1){
-        > post_content, > aside{
-            @include span-columns(6);
+        @media screen and (min-width:$screen-sm + 1) {
+            body:not(.single) & {
+                @include span-columns(6);
+            }
         }
     }
-
-    body.home &{
+    > .post_content{
+        @media screen and (min-width:$screen-sm + 1) {
+            body.single & {
+                @include span-columns(5);
+            }
+        }
+    }
+    > aside {
         @media screen and (max-width:$screen-xs){
-             h1 { margin:40vH 0 0 0;}
+            height:50vH;
+            overflow:hidden;
         }
-        @media screen and (min-width:$screen-md){
-             h1 { margin:12vH 5em;}
+        @media screen and (min-width:$screen-sm + 1) {
+            body.single & {
+                @include span-columns(7);
+            }
+            body.page &, body.single & {
+                float: right;
+            }
         }
-       
+    }
+    body.home &{
+        @media screen and (orientation:portrait){
+            @media screen and (max-width:$screen-xs){
+                h1 { margin:40vH 0 0 0;}
+            }
+            @media screen and (min-width:$screen-xs) and (max-width:$screen-pad-landscape){
+                h1 { margin:6vH 3em;}
+            }
+            @media screen and (min-width:$screen-pad-landscape + 1){
+                h1 { margin:12vH 5em;}
+            }
+        }
     }
     body.leistungen &{
         text-align: center;
@@ -26,7 +50,7 @@ article{
             padding-top:$vgrid;
         }
         @media screen and (min-width:$screen-md){
-        @include span-columns(6 of 12);
+            @include span-columns(6 of 12);
         }
         .thumbnail{
             background: transparent;
@@ -61,11 +85,19 @@ article{
         > section.flexcaption{
             padding-right: 1.2em;
         }
-        > aside {
-            float:right;
-/*            margin-right: -1.2em;*/
-        }
     }
+    
+/*    &.category-portfolio{
+        @include display(flex);
+        @include flex-direction(row);
+        @include align-items(flex-end);
+        > .post_content {
+            @include flex-basis(40%);
+        }
+        > aside {
+           @include flex-basis(60%); 
+        }
+    }*/
 }
 .contact-map{
     .iframe-elastic{

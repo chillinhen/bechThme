@@ -105,12 +105,16 @@ p {
       font-weight: bold !important;
       line-height: 1;
       margin-bottom: 0;
+      color:$base-color-white;
       @media screen and (max-width:$screen-xs){
           font-size:$rem-base * 0.875;
       }
       @media screen and (min-width:$screen-md){
           font-size:$rem-base * 1.5;
       }
+  }
+  body:not(.home) > footer & {
+      padding:1em 0;
   }
   body.leistungen > main &{
       text-align: center;

@@ -19,8 +19,10 @@ jQuery(document).ready(function ($) {
 //            });
 //            }
     }
-    //use svg as instead of border-bottom
-    $(".nav li").append('<svg><use xlink:href="#dotted-line"></use></svg>');
+    //use svg as instead of border-bottom or background-images
+    $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
+    $(".nav li.close-menu").append('<svg><use xlink:href="#pfeil-xs"></use></svg>');
+    
     
     
     //portfolio tweaks

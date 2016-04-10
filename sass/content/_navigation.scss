@@ -18,6 +18,24 @@
                 display:block;
                 float:none;
                 line-height:100% !important;
+                &.close-menu{
+                   text-align: center;
+                   height:44px;
+                   a {
+                       text-indent: -99999px;
+                       overflow:hidden;
+                       width:100%;
+                       height:0;
+                   }
+                   svg{
+                       margin:0 !important;
+                       height:22px !important;
+                       padding:0;
+                       @include transform(rotate(-180deg));
+                       @include transform-origin(center center);
+                       &:hover {cursor: pointer;}
+                   }
+                }
                 a{
                     padding:.5em 1em;
                 }
@@ -33,7 +51,11 @@
                 float:left;
                 display: inline-block;
                 width:auto;
+                &.close-menu{
+                    display:none;
+                }
             }
+            
         }
 
     }
@@ -79,7 +101,7 @@
 
 nav.nav.open {
     @include transition;
-    min-height:300px;
+    min-height:340px;
 }
 nav.nav {
     @media screen and (max-width:$screen-xs){
