@@ -5,7 +5,6 @@ $grid-columns: 12;
 
 .container {
     @extend %clearfix;
-    
     @media screen and (min-width:$screen-smallPad) and (max-width:$screen-lg){
         @include outer-container(900px);
     }

@@ -30,6 +30,9 @@ jQuery(document).ready(function ($) {
     var portfolioSize = portfolioItem.width();
     portfolioItem.css('height', portfolioSize);
 
+    if($('body.single').hasClass('portfolio')){
+        $('li.portfolio').addClass('current-menu-item');
+    }
     $('.flexslider').flexslider({
         animation: "slide"
     });

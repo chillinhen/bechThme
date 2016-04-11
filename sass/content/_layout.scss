@@ -91,6 +91,9 @@ body {
             }
         }
     }
+    &.related.bottom-fold {
+        margin-top:2em;
+    }
 }
 #header {
     @media screen and (max-width:$screen-md){
@@ -134,8 +137,8 @@ body {
                 svg {
                     position: relative;
                     left: auto;
-                    right: 2em;
-                    width: calc(80% - 4em);
+                    right: .8em;
+                    width: calc(80% - 1.6em);
                     top: -1em;
                 }
                 /*            &.smaller{
@@ -163,10 +166,9 @@ body {
                     @media screen and (max-width:$screen-xs){
                         bottom: 0;
                         left: 0;
-                        right: 120px;
-                        font-size: 12px;
-                        top: 70px;
-                        font-size: $rem-base * 0.565;
+                        right: 34%;
+                        top: 47%;
+                        font-size: $rem-base * 0.5;
                     }
                     @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
                         bottom: auto;

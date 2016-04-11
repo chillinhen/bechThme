@@ -600,6 +600,8 @@ body:not(.home) > footer {
     padding: 0; }
     .container #portfolio > div {
       padding: 0; } }
+.container.related.bottom-fold {
+  margin-top: 2em; }
 
 @media screen and (max-width: 992px) {
   #header {
@@ -645,8 +647,8 @@ body:not(.home) > footer {
       #header .logo a svg {
         position: relative;
         left: auto;
-        right: 2em;
-        width: calc(80% - 4em);
+        right: .8em;
+        width: calc(80% - 1.6em);
         top: -1em; } }
   @media screen and (min-width: 480px) and (max-width: 992px) {
     #header .logo a {
@@ -664,10 +666,9 @@ body:not(.home) > footer {
   #header .logo a span.description {
     bottom: 0;
     left: 0;
-    right: 120px;
-    font-size: 12px;
-    top: 70px;
-    font-size: 9.04px; } }
+    right: 34%;
+    top: 47%;
+    font-size: 8px; } }
 @media screen and (orientation: portrait) and (min-width: 480px) and (max-width: 992px) {
   #header .logo a span.description {
     bottom: auto;
@@ -726,7 +727,9 @@ article {
       body.single article > aside:last-child {
         margin-right: 0; }
     body.page article > aside, body.single article > aside {
-      float: right; } }
+      float: right; }
+      body.page article > aside img, body.single article > aside img {
+        float: right; } }
   @media screen and (max-width: 480px) {
     body.home article h1 {
       margin: 40vH 2em 0 2em; } }
@@ -787,6 +790,10 @@ article {
     text-transform: uppercase;
     color: #6D3332; }
 
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .post_content {
+    padding: 0 2em; } }
+
 .post-edit-link {
   background: transparent url(../svg/pen.svg) no-repeat left center;
   display: block;
@@ -798,7 +805,7 @@ article {
   margin: 0; }
   @media screen and (max-width: 480px) {
     .flexslider {
-      /*        height:calc(100vH - 198px);*/ } }
+      min-height: 100vH; } }
 
 .flex-control-nav {
   bottom: 1em; }
@@ -832,8 +839,15 @@ article {
       [class*="subpages"] [class*="flex-nav"] > a.flex-prev {
         left: calc(50% + 24px) !important; } }
   @media screen and (max-width: 480px) {
-    [class*="flex-nav"] > a.flex-prev, [class*="flex-nav"] > a.flex-next {
-      top: 15%; } }
+    body.portfolio [class*="flex-nav"] > a.flex-prev, body.portfolio [class*="flex-nav"] > a.flex-next {
+      top: 45%; }
+    body.team [class*="flex-nav"] > a.flex-prev, body.team [class*="flex-nav"] > a.flex-next {
+      top: 20%; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    body.portfolio [class*="flex-nav"] > a.flex-prev, body.portfolio [class*="flex-nav"] > a.flex-next {
+      top: 45%; }
+    body.team [class*="flex-nav"] > a.flex-prev, body.team [class*="flex-nav"] > a.flex-next {
+      top: 40%; } }
   [class*="flex-nav"] > a.flex-prev:before {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -856,6 +870,9 @@ article {
     height: 100%; }
 
 /**** Portfolio ****/
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  #portfolio {
+    margin: 0 -2%; } }
 @media screen and (min-width: 992px) {
   #portfolio {
     margin: 0 -1%; } }
@@ -866,6 +883,13 @@ article {
   @media screen and (max-width: 480px) {
     .portfolio-item {
       margin-bottom: 2em; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .portfolio-item {
+      float: left;
+      width: 46%;
+      margin: 2%; }
+      .portfolio-item .portfolio_content {
+        display: none; } }
   @media screen and (min-width: 992px) {
     .portfolio-item {
       float: left;
@@ -878,9 +902,10 @@ article {
     left: 0;
     right: 0;
     background: black; }
-  .portfolio-item > .portfolio_thumbnail img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); }
+  @media screen and (min-width: 992px) {
+    .portfolio-item > .portfolio_thumbnail img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); } }
   .portfolio-item > .portfolio_content {
     text-align: center;
     padding: 2em;
@@ -891,7 +916,7 @@ article {
       .portfolio-item > .portfolio_content {
         top: 100%;
         bottom: -100%; } }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 481px) {
       .portfolio-item > .portfolio_content {
         left: -100%;
         right: 100%; } }
@@ -911,7 +936,9 @@ article {
     .portfolio-item > .portfolio_content .view-article {
       display: none; }
   .portfolio-item:hover, .portfolio-item:focus {
-    overflow: visible; }
+    overflow: visible;
+    z-index: 9;
+    cursor: pointer; }
     .portfolio-item:hover > .portfolio_content, .portfolio-item:focus > .portfolio_content {
       z-index: 999; }
       @media screen and (min-width: 992px) {
@@ -924,21 +951,21 @@ article {
           bottom: calc(-100% - 1em); } }
     .portfolio-item:hover > .portfolio_thumbnail, .portfolio-item:focus > .portfolio_thumbnail {
       padding: 5px; }
-      .portfolio-item:hover > .portfolio_thumbnail img, .portfolio-item:focus > .portfolio_thumbnail img {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%); }
-  .portfolio-item:last-child .portfolio_content {
-    color: red !important;
-    /*                top:-100%;
-                    bottom:100%;*/ }
+      @media screen and (min-width: 992px) {
+        .portfolio-item:hover > .portfolio_thumbnail img, .portfolio-item:focus > .portfolio_thumbnail img {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%); } }
+  @media screen and (max-width: 480px) {
+    .portfolio-item:last-child:hover .portfolio_content, .portfolio-item:last-child:focus .portfolio_content {
+      top: calc(-100% - 2em);
+      bottom: 100%; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .portfolio-item:nth-child(2n):hover .portfolio_content {
+      left: -109%;
+      right: 100%; } }
   @media screen and (min-width: 992px) {
     .portfolio-item:nth-child(4n):hover .portfolio_content {
       left: -109%;
-      right: 100%; }
-    .portfolio-item.hentry:nth-last-child(1) {
-      opacity: .2; }
-      .portfolio-item.hentry:nth-last-child(1) .portfolio_content {
-        top: -100%;
-        bottom: calc(100% + 1em); } }
+      right: 100%; } }
 
 /*# sourceMappingURL=screen.css.map */

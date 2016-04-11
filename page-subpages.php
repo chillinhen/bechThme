@@ -31,8 +31,8 @@
                             </ul>
                         </div>
                 <?php elseif (is_page(5)) : ?>
-                    <div class="text-center"><?php get_template_part('partials/headline'); ?></div>
-                    <div class="text-center"><?php the_content(); ?></div>
+                    <div class="text-center post_content"><?php get_template_part('partials/headline'); ?></div>
+                    <div class="text-center post_content"><?php the_content(); ?></div>
 
                     <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
                         <?php get_template_part('partials/article', 'leistungen'); ?>

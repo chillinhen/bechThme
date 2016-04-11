@@ -27,6 +27,7 @@ article{
             }
             body.page &, body.single & {
                 float: right;
+                img {float:right;}
             }
         }
     }
@@ -117,6 +118,11 @@ article{
     p > strong{
         text-transform: uppercase;
         color:$primary-color;
+    }
+}
+.post_content{
+    @media screen and (max-width:$screen-sm) and (orientation:portrait){
+        padding:0 2em;
     }
 }
 .post-edit-link{

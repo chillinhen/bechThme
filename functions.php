@@ -14,9 +14,18 @@ if( function_exists('acf_add_options_page') ) {
         'redirect' => false
     ));
 }
+// add category nicenames in body and post class
+function category_id_class( $classes ) {
+	global $post;
+	foreach ( get_the_category( $post->ID ) as $category ) {
+		$classes[] = $category->category_nicename;
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'category_id_class' );
+add_filter( 'body_class', 'category_id_class' );
 // Childtheme Setup
 add_action('after_setup_theme', 'bechold_theme_setup');
-
 function bechold_theme_setup() {
 
 //remove scrap
