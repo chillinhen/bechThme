@@ -6,11 +6,6 @@ $grid-columns: 12;
 .container {
     @extend %clearfix;
     
-    main > & {
-        @media screen and (max-width:$screen-xs){
-            
-        }
-    }
     @media screen and (min-width:$screen-smallPad) and (max-width:$screen-lg){
         @include outer-container(900px);
     }
@@ -18,36 +13,15 @@ $grid-columns: 12;
         @include outer-container(1024px);   
     }
     body > header & {
-        @media screen and (max-width:$screen-xs){
-            hgroup, nav{
-/*                @include fill-parent();*/
-                position: absolute;
-                left:0;
-                right: 0;
-                overflow: hidden;
-            }
-            hgroup{
-                top:41px;
-                z-index: 5;
-                height: 120px;
-                .logo{
-                    margin-top:4px;
-                }
-            }
-            nav {
-                top:0px;
-                z-index: 10;
-            }
-        }
         @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-lg){
             nav{@include span-columns(7);}
-            hgroup{
+            .logo{
                 @include span-columns(5);
             }
         }
         @media screen and (min-width:$screen-lg){
             nav{@include span-columns(7);}
-            hgroup{
+            .logo{
                 @include span-columns(5);
             }
         }

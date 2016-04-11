@@ -3,18 +3,27 @@
     font-size: 1rem * 1.125;
     margin-top:3*$vgrid - 16px;
     @media screen and (max-width:$screen-xs){
+        nav {
+            top:0px;
+        }
+    }
+    @media screen and (max-width:$screen-md){
         background:white;
+        z-index: 1000;
+    }
+    @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+        width:50%;
     }
     ul{
         list-style: none;
         @extend %clearfix;
         @media screen and (min-width:$screen-md){margin:0;padding:0;}
-        @media screen and (max-width:$screen-xs){
+        @media screen and (max-width:$screen-sm){
             margin:0;
             padding:.5em 0 0 0;
         }
         li {
-            @media screen and (max-width:$screen-xs){
+            @media screen and (max-width:$screen-md){
                 display:block;
                 float:none;
                 line-height:100% !important;
@@ -104,7 +113,7 @@ nav.nav.open {
     min-height:340px;
 }
 nav.nav {
-    @media screen and (max-width:$screen-xs){
+    @media screen and (max-width:$screen-md){
         &,&.closed{
             @include transition;
             min-height:0px;
@@ -113,14 +122,14 @@ nav.nav {
         }  
     }
 }
-@media screen and (min-width:$screen-sm+1){
+@media screen and (min-width:$screen-md+1){
     .home-btn.mobile-layout,
     .navbar-toggle,
     .nav li svg{
             display:none;
         }
 }
-@media screen and (max-width:$screen-xs){
+@media screen and (max-width:$screen-md){
         .home-btn.mobile-layout,
     .navbar-toggle{
         display:block;

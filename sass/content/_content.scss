@@ -31,18 +31,19 @@ article{
         }
     }
     body.home &{
-        @media screen and (orientation:portrait){
+
             @media screen and (max-width:$screen-xs){
-                h1 { margin:40vH 0 0 0;}
+                h1 { margin:40vH 2em 0 2em;}
+
             }
-            @media screen and (min-width:$screen-xs) and (max-width:$screen-pad-landscape){
-                h1 { margin:6vH 3em;}
+            @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+                h1 { margin:45vH 3em;}
             }
-            @media screen and (min-width:$screen-pad-landscape + 1){
-                h1 { margin:12vH 5em;}
+            @media screen and (min-width:$screen-md){
+                h1 { margin:12vH 3em;}
             }
         }
-    }
+
     body.leistungen &{
         text-align: center;
         @media screen and (max-width:$screen-xs){

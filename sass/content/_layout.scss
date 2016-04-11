@@ -1,7 +1,7 @@
 html {
     position: relative;
     min-height: 100%;
-    @media screen and (max-width:$screen-xs){
+    @media screen and (max-width:$screen-sm){
         background:$primary-color;
     }
 }
@@ -9,12 +9,20 @@ body {
     &.home{
         height:100vH;
         position: relative;
-                    overflow:hidden;
+        overflow:hidden;
         background:{
             color:rgba(0,0,0,1);
             repeat:no-repeat;
         }
-        @media screen and (max-width:$screen-xs){
+        @media screen and (max-width:$screen-smallPad){
+            background-size:contain;
+            background-position:50% 70%; 
+        }
+        @media screen and (min-width:$screen-smallPad) and (max-width:$screen-sm) and (orientation:landscape){
+            background-size:120% auto;
+            background-position:50% 10%; 
+        }
+        @media screen and (min-width:$screen-smallPad) and (max-width:$screen-md) and (orientation:portrait){
             background-size:contain;
             background-position:50% 70%; 
         }
@@ -23,7 +31,7 @@ body {
             background-position:50% 25%;
             margin-bottom: $footerHomeHeight;
         }
-        
+
         > footer {
             height:$footerHomeHeight;
         }
@@ -60,10 +68,10 @@ body {
             @media screen and (min-width:$screen-md){
                 padding-top:2 * $vgrid;
             }
-            
+
             * {color:$base-color-white;}
             @media screen and (max-width:$screen-xs){
-            padding:0 2em;
+                padding:0 2em;
             }
         }
     }
@@ -73,21 +81,19 @@ body {
         padding:0;
     }
     #portfolio {
-        @media screen and (max-width:$screen-xs){
+        @media screen and (max-width:$screen-md){
             padding:0 2em;
         }
-        @media screen and (min-width:$screen-md){
+        @media screen and (min-width:$screen-lg){
             padding:0;
             > div {
-                @media screen and (min-width:$screen-md){
                     padding:0;
-                }
             }
         }
     }
 }
 #header {
-    @media screen and (max-width:$screen-xs){
+    @media screen and (max-width:$screen-md){
         position: fixed;
         top: 0;
         left: 0;
@@ -105,47 +111,76 @@ body {
             right:44px;
             height:40px;
         }
+        .logo, nav{
+            position: absolute;
+            overflow: hidden;
+            left:0;
+            right: 0;
+            width: 100%;
+        }
     }
     .logo {
-        a {
-            position: relative;
-            width: 100%;
-            display: block;
-        }
         @media screen and (max-width:$screen-xs){
-            svg {
-                position: relative;
-                left: auto;
-                right: 2em;
-                width: calc(80% - 4em);
-                top: -1em;
-            }
-/*            &.smaller{
+            top:41px;
+            z-index: 5;
+            height: 120px;
+            margin-top:4px;
+        }
+        a {
+            display: block;
+            position: relative;
+            @media screen and (max-width:$screen-xs){
+                width: 100%;
+                svg {
+                    position: relative;
+                    left: auto;
+                    right: 2em;
+                    width: calc(80% - 4em);
+                    top: -1em;
+                }
+                /*            &.smaller{
                 svg {
                     height:70%;
                 }
             }*/
-        }
-        span.name {
-            display:none;
-        }
-        span.description{
-            position: absolute;
-            @media screen and (max-width:$screen-xs){
-                @media screen and (orientation:portrait){
-                    bottom: 0;
-                    left: 0;
-                    right: 120px;
-                    font-size: 12px;
-                    top: 70px;
-                    font-size: $rem-base * 0.565;
+            }
+            @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+                width:50%;
+                float:right;
+                svg {
+                    width: 100%;
+                    padding:1em 2em 0 1em;
                 }
             }
-            @media screen and (min-width:$screen-md){
-                right:125px;
-                bottom: 43px;
+
+            span.name {
+                display:none;
+            }
+            span.description{
+                position: absolute;
                 letter-spacing: .01em;
-                width: 375px;
+                @media screen and (orientation:portrait){
+                    @media screen and (max-width:$screen-xs){
+                        bottom: 0;
+                        left: 0;
+                        right: 120px;
+                        font-size: 12px;
+                        top: 70px;
+                        font-size: $rem-base * 0.565;
+                    }
+                    @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+                        bottom: auto;
+                        left: -100px;
+                        right: 187px;
+                        top: 132px;
+                        font-size: $rem-base * 0.75;
+                    }
+                }
+                @media screen and (min-width:$screen-md){
+                    right:125px;
+                    bottom: 43px;
+                    width: 375px;
+                }
             }
         }
     }
