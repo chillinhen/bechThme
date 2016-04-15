@@ -10,9 +10,7 @@
         <h3><?php the_title(); ?></h3>
 
         <?php html5wp_excerpt('html5wp_index'); ?>
-
-        <br class="clear">
-
-        <span class="rightalign"><?php edit_post_link(); ?></span>
+        <?php edit_post_link(); ?>
+        
     </div>
 </article>

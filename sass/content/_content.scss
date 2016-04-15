@@ -1,38 +1,5 @@
 article{
-    > .post_content, > aside{
-        @media screen and (max-width:$screen-xs){
-            @include fill-parent();
-        }
-        @media screen and (min-width:$screen-sm + 1) {
-            body:not(.single) & {
-                @include span-columns(6);
-            }
-        }
-    }
-    > .post_content{
-        @media screen and (min-width:$screen-sm + 1) {
-            body.single & {
-                @include span-columns(5);
-            }
-        }
-    }
-    > aside {
-        @media screen and (max-width:$screen-xs){
-            height:50vH;
-            overflow:hidden;
-        }
-        @media screen and (min-width:$screen-sm + 1) {
-            body.single & {
-                @include span-columns(7);
-            }
-            body.page &, body.single & {
-                float: right;
-                img {float:right;}
-            }
-        }
-    }
     body.home &{
-
             @media screen and (max-width:$screen-xs){
                 h1 { margin:40vH 2em 0 2em;}
 
@@ -46,14 +13,6 @@ article{
         }
 
     body.leistungen &{
-        text-align: center;
-        @media screen and (max-width:$screen-xs){
-            @include fill-parent();
-            padding-top:$vgrid;
-        }
-        @media screen and (min-width:$screen-md){
-            @include span-columns(6 of 12);
-        }
         .thumbnail{
             background: transparent;
             border:0;
@@ -61,45 +20,21 @@ article{
             margin-bottom:1em;
             img{
                 width: auto;
-                height:75px;
+                height:50px;
                 max-width: none;
             }
         }
-        @media screen and (min-width:$screen-md){
-            &:nth-child(even){
-                padding-left: 3em;
-                margin:0;
-            }
-            &:nth-child(odd){
-                padding-right: 3em;
-            }
-            &:last-child{
-                @include fill-parent();
-                float:none;
-                clear:both;
-                width:100%;
-                padding: 0;
-            }
-        }
     }
-
     .flexslider & {
         > section.flexcaption{
             padding-right: 1.2em;
         }
     }
-    
-/*    &.category-portfolio{
-        @include display(flex);
-        @include flex-direction(row);
-        @include align-items(flex-end);
-        > .post_content {
-            @include flex-basis(40%);
-        }
-        > aside {
-           @include flex-basis(60%); 
-        }
-    }*/
+}
+.post_content{
+    @media screen and (max-width:$screen-xs) and (orientation:portrait){
+        padding:0 2em;
+    }
 }
 .contact-map{
     .iframe-elastic{
@@ -111,25 +46,12 @@ article{
 .contact-buttons{
     text-align: center;
     .icon{
-        max-width: 128px;
-        max-height:128px;
+        max-width: 125px;
+        max-height:125px;
         margin-bottom: 1em;
     }
     p > strong{
         text-transform: uppercase;
         color:$primary-color;
-    }
-}
-.post_content{
-    @media screen and (max-width:$screen-sm) and (orientation:portrait){
-        padding:0 2em;
-    }
-}
-.post-edit-link{
-    background: transparent url(../svg/pen.svg) no-repeat left center;
-    display:block;
-    @include size(20px);
-    > span {
-        @extend %text-indent;
     }
 }

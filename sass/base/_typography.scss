@@ -73,6 +73,7 @@ h6{
   body.leistungen article &{
       font-size: 1.2em;
       color:$primary-color;
+      margin:0 0 0.5 * $paragraph-margin 0;
   }
   .impressum &{
       color:white;

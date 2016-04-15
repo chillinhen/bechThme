@@ -6,9 +6,10 @@
     </aside>
     <section class="post_content flexcaption">
         <hgroup class="">
-        <?php get_template_part('partials/headline');?>
-        <?php the_content(); ?>
-            <span class="rightalign"><?php edit_post_link(); ?></span>
+            <?php get_template_part('partials/headline'); ?>            
+            <?php the_content(); ?>
+            <?php edit_post_link(); ?>
         </hgroup>
     </section>
+    
 </article>

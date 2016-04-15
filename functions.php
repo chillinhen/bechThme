@@ -1,6 +1,6 @@
 <?php
 require_once('inc/custom-posts.php');
-#require_once('inc/customizer.php');
+require_once('inc/customizer.php');
 //
 //ACF Theme Options
 if( function_exists('acf_add_options_page') ) {
@@ -29,12 +29,12 @@ add_action('after_setup_theme', 'bechold_theme_setup');
 function bechold_theme_setup() {
 
 //remove scrap
-    //remove_filter('show_admin_bar', 'remove_admin_bar');
+    remove_filter('show_admin_bar', 'remove_admin_bar');
     remove_action('init', 'create_post_type_html5');
     
   //new Image Formats
     add_image_size('full', 1680, 1280, array( 'center', 'center' ));
-    add_image_size('thumb-loop', 325, 325, true);
+    add_image_size('thumb-loop', 400, 400, true);
     add_image_size('thumb-subpages',500,645,true);
     add_image_size('thumb-detail',570,455,true);
     
@@ -48,8 +48,6 @@ function bechold_theme_setup() {
         wp_register_style('parent-style', get_template_directory_uri() . '/style.css');
         wp_enqueue_style('parent-style'); // Enqueue it!
 
-//        wp_register_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array(), '3.3.6', 'all');
-//        wp_enqueue_style('bootstrap'); // Enqueue it!
         wp_register_style('flexslider',get_stylesheet_directory_uri().'/flexslider/flexslider.css',array(),false,'screen');
         wp_enqueue_style('flexslider');
 
@@ -75,8 +73,6 @@ function bechold_theme_setup() {
     function theme_scripts() {
         if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-//            wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'), '3.3.6'); // Bootstrap
-//            wp_enqueue_script('bootstrap'); // Enqueue it!
             wp_register_script('flexslider',get_stylesheet_directory_uri().'/flexslider/jquery.flexslider.js',array('jquery'),false,true);
             wp_enqueue_script('flexslider');
 
@@ -106,6 +102,15 @@ function bechold_theme_setup() {
         unregister_sidebar('Widget Area 1');
         unregister_sidebar('Widget Area 2');
     }
+    
+    // Custom View Article link to Post
+    function bech_view_article($more) {
+        global $post;
+        return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('mehr Infos', 'bechholdTheme') . '</a>';
+    }
+    remove_filter('excerpt_more', 'html5_blank_view_article');
+    add_filter('excerpt_more', 'bech_view_article');
+
 }
 
 ?>

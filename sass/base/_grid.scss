@@ -4,19 +4,24 @@ $gutter: 30px;
 $grid-columns: 12;
 
 .container {
+
     @extend %clearfix;
     @media screen and (min-width:$screen-smallPad) and (max-width:$screen-lg){
         @include outer-container(900px);
     }
+    
     @media screen and (min-width:$screen-lg){
         @include outer-container(1024px);   
     }
+
     body > header & {
+        nav, .logo{}
         @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-lg){
             nav{@include span-columns(7);}
             .logo{
                 @include span-columns(5);
             }
+
         }
         @media screen and (min-width:$screen-lg){
             nav{@include span-columns(7);}
@@ -25,19 +30,104 @@ $grid-columns: 12;
             }
         }
     }
-    body > header &,body > footer & {
+    body > footer & {
         &.columns{
-            @media screen and (min-width:$screen-md){
-            > div {@include span-columns(3);}
+            @media screen and (min-width:960px){
+                > div {@include span-columns(3);}
+            }
+        }
+    }
+    &.contact-buttons {
+        @media screen and (min-width:960px){
+            margin-bottom:4.5 * $paragraph-margin;
+            > div {@include span-columns(4);}
+        }
+    }
+
+}
+article{
+    > .post_content, > aside{
+        @media screen and (max-width:$screen-maxPhone){
+            @include fill-parent();
+            vertical-align:top;
+        }
+        @media screen and (min-width:$screen-maxPhone){
+            @include span-columns(6);
+            margin:0;
+        }
+    }
+    > .post_content{
+        @media screen and (min-width:$screen-maxPhone){
+
+        }
+    }
+    > aside{
+        @media screen and (max-width:$screen-maxPhone){
+            overflow:hidden;
+            @media screen and (orientation:portrait){
+                height:50vH;
+            }
+            @media screen and (orientation:landscape){
+                height:100vH;
+            }
+        }
+        @media screen and (min-width:$screen-maxPhone){
+            body[class*="subpages"] &{
+                float: right;
+                img {float:right;}
+            }
+        }
+    }
+    body.leistungen & {
+        text-align: center;
+        margin-bottom: 1.5 * $vgrid;
+        @media screen and (max-width:$screen-xs){
+            @include fill-parent();
+            padding-top:$vgrid;
+        }
+        @media screen and (min-width:$screen-maxPhone) and (orientation:landscape){
+            @include span-columns(6 of 12);
+            > * {
+                @include fill-parent();
+            }
+            &:nth-child(even){
+                padding-left: 3em;
+                margin:0;
+            }
+            &:nth-child(odd){
+                padding-right: 3em;
+            }
+            &:last-child{
+                @include fill-parent();
+                float:none;
+                clear:both;
+                padding: 0 25%;
             }
         }
     }
 }
-
-.contact-buttons {
-    @extend %clearfix;
-    @media screen and (min-width:$screen-md){
-    margin-bottom:4.5 * $paragraph-margin;
-    > div {@include span-columns(4);}
+#portfolio{
+    @media screen and (min-width:$screen-xs) and (max-width:960px){
+        @include outer-container;
+    }
+    @media screen and (min-width:960px){
+        @include outer-container;
+    }
+    .portfolio-item{
+        @media screen and (max-width:$screen-xs){
+            margin-bottom:2em;
+        }
+        @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
+            @include span-columns(6);
+            @include omega(2n);
+        }
+        @media screen and (min-width:$screen-sm) and (max-width:960px - 1px){
+            @include span-columns(4);
+            @include omega(3n);
+        }
+        @media screen and (min-width:960px){
+            @include span-columns(3);
+            @include omega(4n);
+        }
     }
 }

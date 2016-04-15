@@ -8,27 +8,21 @@ jQuery(document).ready(function ($) {
     //some tweaks for smaller windowa
 
     function checkSize() {
-//        if ($(".nav li").css("float") == "none") {
-//            // Scrolling
-//            jQuery(window).scroll(function () {
-//                if (jQuery(this).scrollTop() > 100) {
-//                    jQuery('.logo').addClass('smaller');
-//                } else {
-//                    jQuery('.logo').removeClass('smaller');
-//                }
-//            });
-//            }
+        if ($(".nav li").css("float") == "none") {
+            var logoHeight = $('.logo').height();
+            var headerHeight = $('#header').height();
+            $('body > main').css('margin-top',logoHeight + headerHeight);
+            }
     }
-    //use svg as instead of border-bottom or background-images
-    $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
-    $(".nav li.close-menu").append('<svg><use xlink:href="#pfeil-xs"></use></svg>');
-    
-    
-    
     //portfolio tweaks
     var portfolioItem = $('.portfolio-item');
     var portfolioSize = portfolioItem.width();
     portfolioItem.css('height', portfolioSize);
+    
+    //use svg as instead of border-bottom or background-images
+    $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
+    $(".nav li.close-menu").append('<svg><use xlink:href="#pfeil-xs"></use></svg></div>');
+    
 
     if($('body.single').hasClass('portfolio')){
         $('li.portfolio').addClass('current-menu-item');

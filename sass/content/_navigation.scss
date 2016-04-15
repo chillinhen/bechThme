@@ -3,16 +3,11 @@
     font-size: 1rem * 1.125;
     margin-top:3*$vgrid - 16px;
     @media screen and (max-width:$screen-xs){
-        nav {
-            top:0px;
-        }
+        top:0px;
     }
     @media screen and (max-width:$screen-md){
         background:white;
         z-index: 1000;
-    }
-    @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
-        width:50%;
     }
     ul{
         list-style: none;
@@ -27,26 +22,28 @@
                 display:block;
                 float:none;
                 line-height:100% !important;
+                width:100%;
+                overflow:hidden;
                 &.close-menu{
-                   text-align: center;
-                   height:44px;
-                   a {
-                       text-indent: -99999px;
-                       overflow:hidden;
-                       width:100%;
-                       height:0;
-                   }
-                   svg{
-                       margin:0 !important;
-                       height:22px !important;
-                       padding:0;
-                       @include transform(rotate(-180deg));
-                       @include transform-origin(center center);
-                       &:hover {cursor: pointer;}
-                   }
+                    text-align: center;
+                    height:44px;
+                    a {
+                        text-indent: -99999px;
+                        overflow:hidden;
+                        width:100%;
+                        height:0;
+                    }
+                    svg{
+                        margin:0 !important;
+                        height:22px !important;
+                        padding:0;
+                        @include transform(rotate(-180deg));
+                        @include transform-origin(center center);
+                        &:hover {cursor: pointer;}
+                    }
                 }
                 a{
-                    padding:.5em 1em;
+                    padding:.5em 2.5em;
                 }
                 svg {
                     width: 100%;
@@ -64,7 +61,12 @@
                     display:none;
                 }
             }
-            
+            &.close-menu{
+                @media screen and (max-width:$screen-md){
+                    svg {width:100%;}
+                }
+            }
+
         }
 
     }
@@ -103,14 +105,15 @@
                 }
             }
         }
-
-
     }
 }
 
 nav.nav.open {
     @include transition;
     min-height:340px;
+        @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+        width:50% !important;
+    }
 }
 nav.nav {
     @media screen and (max-width:$screen-md){
@@ -126,11 +129,11 @@ nav.nav {
     .home-btn.mobile-layout,
     .navbar-toggle,
     .nav li svg{
-            display:none;
-        }
+        display:none;
+    }
 }
 @media screen and (max-width:$screen-md){
-        .home-btn.mobile-layout,
+    .home-btn.mobile-layout,
     .navbar-toggle{
         display:block;
         position:absolute;
@@ -145,7 +148,7 @@ nav.nav {
         top:0;
         left:0;
     }
-        .navbar-toggle{
+    .navbar-toggle{
         top:0;
         right:0;
     }

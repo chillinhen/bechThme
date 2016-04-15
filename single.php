@@ -6,7 +6,6 @@
     <section class="post_content">
         <?php get_template_part('partials/headline'); ?>
         <?php the_content(); ?>
-        <span class="rightalign"><?php edit_post_link(); ?></span>
      </section>
      <aside>
         <?php get_template_part('partials/gallery', 'carousel'); ?>

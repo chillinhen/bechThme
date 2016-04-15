@@ -20,6 +20,7 @@
             if ($subLoop->have_posts()) :
                 ?>
                 <?php if (is_page(701)) : ?>
+            <!--online <?php #if (is_page(1798)) : ?>-->
                         <div class="flexslider">
                             <ul class="slides">
                                 <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
@@ -31,8 +32,9 @@
                             </ul>
                         </div>
                 <?php elseif (is_page(5)) : ?>
-                    <div class="text-center post_content"><?php get_template_part('partials/headline'); ?></div>
-                    <div class="text-center post_content"><?php the_content(); ?></div>
+            <!--online <?php #elseif (is_page(1797)) : ?>-->
+                    <div class="text-center post_content headline"><?php get_template_part('partials/headline'); ?></div>
+                    <div class="text-center post_content intro"><?php the_content(); ?></div>
 
                     <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
                         <?php get_template_part('partials/article', 'leistungen'); ?>

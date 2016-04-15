@@ -15,3 +15,12 @@
     }
 }
 *:hover, *:focus {cursor: pointer;}
+
+.post-edit-link{
+    background: transparent url(../svg/pen.svg) no-repeat left center;
+    display:block;
+    @include size(20px);
+    > span {
+        @extend %text-indent;
+    }
+}

@@ -7,7 +7,8 @@ $filter = array(
     'category_name' => 'portfolio',
     'post_status' => 'publish',
     'posts_per_page' => -1,
-    'orderby' => 'rand'
+    'orderby' => 'date',
+    'order' => 'DESC',
 );
 $portfolioQuery = new WP_Query($filter);
 ?>
@@ -41,8 +42,6 @@ $portfolioQuery = new WP_Query($filter);
                 <div id="portfolio">
                     <?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
                         <?php get_template_part('partials/loop', 'portfolio'); ?>
-                        <?php get_template_part('partials/loop', 'portfolio'); ?>
-                        <?php get_template_part('partials/loop', 'portfolio'); ?>
                     <?php endwhile; ?>
                     <?php get_template_part('pagination'); ?>
 
@@ -50,8 +49,6 @@ $portfolioQuery = new WP_Query($filter);
                     <!-- article -->
                     <?php get_template_part('partials/article', '404'); ?>
                     <!-- /article -->
-
-
                 </div>
             </section>
         <?php endif; ?>
