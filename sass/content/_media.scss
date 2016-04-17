@@ -138,7 +138,7 @@
         }
         &.flex-prev{
             top:50%;
-            bottom:auto
+            bottom:auto;
                 /** ToDO**/
             @media screen and (orientation:landscape){
                 .single & {left:0;}
