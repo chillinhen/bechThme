@@ -16,7 +16,7 @@ $grid-columns: 12;
 
     body > header & {
         nav, .logo{}
-        @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-lg){
+        @media screen and (min-width:$screen-md) and (max-width:$screen-lg){
             nav{@include span-columns(7);}
             .logo{
                 @include span-columns(5);

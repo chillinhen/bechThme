@@ -1,25 +1,27 @@
 /* Sticky Footer */
-/*html{
+html{
     position: relative;
     min-height: 100%;
 }
 body {
-    &.home{
-        margin-bottom: $footerHomeHeight;
-        > footer {
-            height:$footerHomeHeight;
+    @media screen and (min-width:$screen-md){
+        &.home{
+            margin-bottom: $footerHomeHeight;
+            > footer {
+                height:$footerHomeHeight;
+            }
+        }
+        &:not(.kontakt){
+            margin-bottom: $footerHeight;  
+            > footer{
+                height:$footerHeight;
+                width: 100vW;
+                position: absolute;
+                bottom: 0;       
+            }
         }
     }
-    &:not(.kontakt){
-        margin-bottom: $footerHeight;  
-        > footer{
-            height:$footerHeight;
-            width: 100vW;
-            position: absolute;
-            bottom: 0;       
-        }
-    }
-}*/
+}
 /* end sticky footer */
 /*Layout Home */
 body{
@@ -32,25 +34,45 @@ body{
             repeat:no-repeat;
         }
         @media screen and (max-width:$screen-smallPad){
-            background-size:contain;
-            background-position:50% 70%; 
+            @media screen and (orientation:portrait){
+                background-size:contain;
+                 background-position:50% 70%; 
+            }
+             @media screen and (orientation:landscape){
+                 background-size:cover;
+                 background-position:50% 0%; 
+             }
         }
-        @media screen and (min-width:$screen-smallPad) and (max-width:$screen-sm) and (orientation:landscape){
-            background-size:120% auto;
-            background-position:50% 10%; 
+        @media screen and (min-width:$screen-smallPad) and (max-width:$screen-sm){
+            @media screen and (orientation:landscape){
+                background-size:cover;
+                background-position:50% 0%;
+            }
+            @media screen and (orientation:portrait){
+                background-size:contain;
+                background-position:50% 50%;
+            }
         }
-        @media screen and (min-width:$screen-smallPad) and (max-width:$screen-md) and (orientation:portrait){
-            background-size:contain;
-            background-position:50% 70%; 
+        @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-md){
+            background-size:cover;
+            background-position:50% 50%;
         }
-        @media screen and (min-width:$screen-md){
+         @media screen and (min-width:$screen-md){
             background-size:cover;
             background-position:50% 25%;
         }
         > .footer {
             position: absolute;
-            bottom: 2em;
             width: 100%;
+            @media screen and (max-width:$screen-smallPad){
+                bottom:1em;
+                * {font-size:1rem;}
+            }
+
+            @media screen and (min-width:$screen-smallPad) and (max-width:$screen-md){
+                bottom: 1.2em; 
+                * {font-size:1rem;}
+            }
         }
     }
     &:not(.home) {
@@ -112,30 +134,36 @@ body{
             background-color:transparent;
             background-repeat:no-repeat;
             background-position: top right;
-            background-size: contain;
             width:100%;
             height:0;
             padding:0;
-            padding-bottom:calc(100% * 1/3);
+            background-size: contain;
+            @media screen and (min-width:$screen-xs) and (max-width:$screen-md){ 
+                padding-bottom:calc(45% * 1/3);
+            }
+            @media screen and (max-width:$screen-xs){padding-bottom:calc(100% * 1/3);}
+            @media screen and (min-width:$screen-md){ 
+                padding-bottom:calc(100% * 1/3);
+            }
+
             body.home & {
                 background-image: url('../svg/logo-white.svg');
             }
             body:not(.home) & {
                 background-image: url('../svg/logo.svg');
             }
+            @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
+
+            }
+            @media screen and (min-width:$screen-md){
+
+            }
         }
         span{display:none;}
     }
-    @media screen and (max-width:$screen-md ){
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: $mobileHeaderHeight + $headerBorderWidth;
-        width: 100%;
-        z-index: 10;
-        border-bottom:$headerBorderWidth solid #000;
-        /** white block above **/
-        .container:before{
+    /** white block above **/
+    .container:before{
+        @media screen and (max-width:$screen-md ){
             content:' ';
             display: block;
             background: white;
@@ -144,12 +172,19 @@ body{
             left:40px;
             right:40px;
             height:40px;
-            border:{
-                width:0 $headerBorderWidth;
-                color:#000;
-                style:solid;
-            }
+            border-width:0 $headerBorderWidth;
+            border-style:solid;
+            border-color:#000;
         }
+    }
+    @media screen and (max-width:$screen-md ){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        border-bottom:$headerBorderWidth solid #000;
+        min-height: $mobileHeaderHeight + $headerBorderWidth;
         .nav{
             width: 100%;
             top:$mobileHeaderHeight + $headerBorderWidth;
@@ -163,23 +198,21 @@ body{
         .logo, nav{
             position: absolute;
             overflow: hidden;
+            /** ToDO**/
+            left:0;
+            right: 0;
         }
         nav{
             left:0;
             right: 0;
         }
     }
-    @media screen and (max-width:$screen-md){
-        .logo, nav{
-            left:0;
-            right: 0;
-        }
-    }
-    @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+    @media screen and (min-width:$screen-xs) and (max-width:$screen-sm - 1){
         .logo{
             a {
                 background-size: 50% auto;
                 padding-bottom:calc(50% * 1/3);
+
             }
         }
     }

@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
         if ($(".nav li").css("float") == "none") {
             var logoHeight = $('.logo').height();
             var headerHeight = $('#header').height();
-            $('body > main').css('margin-top',headerHeight + logoHeight);
+            $('body:not(.home) > main').css('margin-top',headerHeight + logoHeight);
             }
     }
     //portfolio tweaks
