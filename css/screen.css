@@ -5,6 +5,25 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+body:before {
+  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
+  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
+  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
+  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  opacity: 0.4;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: -1; }
+
 /*** BSP: @extend %reset;***/
 .container:before, #header nav ul:before, .container:after, #header nav ul:after {
   content: "";
@@ -55,7 +74,8 @@ h6 {
   h4, body.home
   h5, body.home
   h6 {
-    color: white !important; }
+    color: white !important;
+    margin: 0; }
   h1.logo span,
   h2.logo span,
   h3.logo span,
@@ -407,8 +427,7 @@ table {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    margin: 0; }
+    width: 48.82117%; }
     article > .post_content:last-child, article > aside:last-child {
       margin-right: 0; } }
 @media screen and (max-width: 736px) {
@@ -483,9 +502,9 @@ body.leistungen article {
     width: 48.82117%; }
     #portfolio .portfolio-item:last-child {
       margin-right: 0; }
-    #portfolio .portfolio-item:nth-child(2n) {
+    #portfolio .portfolio-item:nth-child(3n) {
       margin-right: 0; }
-    #portfolio .portfolio-item:nth-child(2n+1) {
+    #portfolio .portfolio-item:nth-child(3n+1) {
       clear: left; } }
 @media screen and (min-width: 768px) and (max-width: 959px) {
   #portfolio .portfolio-item {
@@ -514,8 +533,7 @@ body.leistungen article {
 
 #header nav {
   text-transform: uppercase;
-  font-size: 1.125rem;
-  margin-top: 44px; }
+  font-size: 1.125rem; }
   @media screen and (max-width: 480px) {
     #header nav {
       top: 0px; } }
@@ -699,6 +717,10 @@ body.home {
     body.home {
       background-size: cover;
       background-position: 50% 25%; } }
+  body.home > .footer {
+    position: absolute;
+    bottom: 2em;
+    width: 100%; }
 @media screen and (min-width: 992px) {
   body:not(.home) > header {
     background: white; } }
@@ -719,8 +741,12 @@ body:not(.home) > .footer {
 body.kontakt > main, body.leistungen > main {
   background: #eee !important;
   padding-top: 5.3em; }
-body.kontakt .intro, body.leistungen .intro {
+body .intro {
   margin-bottom: 30px; }
+  @media screen and (max-width: 992px) {
+    body .intro {
+      padding: 2em;
+      margin: 0; } }
 
 #header .container {
   padding: 0; }
@@ -730,14 +756,31 @@ body.kontakt .intro, body.leistungen .intro {
 .container.related.bottom-fold {
   margin-top: 2em; }
 
+#header .logo a {
+  display: block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+  padding: 0;
+  padding-bottom: calc(100% * 1/3); }
+  body.home #header .logo a {
+    background-image: url("../svg/logo-white.svg"); }
+  body:not(.home) #header .logo a {
+    background-image: url("../svg/logo.svg"); }
+#header .logo span {
+  display: none; }
 @media screen and (max-width: 992px) {
   #header {
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 40px;
+    min-height: 44px;
     width: 100%;
     z-index: 10;
+    border-bottom: 4px solid #000;
     /** white block above **/ }
     #header .container:before {
       content: ' ';
@@ -751,69 +794,30 @@ body.kontakt .intro, body.leistungen .intro {
       border-width: 0 4px;
       border-color: #000;
       border-style: solid; }
-    #header .logo, #header nav {
-      position: absolute;
-      overflow: hidden;
-      left: 0;
-      right: 0;
-      width: 100%; }
-    #header .logo {
-      border-top: 4px solid #000;
-      top: 40px;
-      margin: 0; } }
-@media screen and (max-width: 480px) {
-  #header .logo {
-    z-index: 5;
-    height: 120px; } }
-#header .logo a {
-  display: block;
-  position: relative;
-  /** ToDO**/ }
-  #header .logo a span.name {
-    visibility: hidden;
-    height: 0;
-    line-height: 0; }
-  #header .logo a span.description {
-    position: absolute;
-    letter-spacing: .01em; }
-@media screen and (orientation: portrait) and (max-width: 480px) {
-  #header .logo a span.description {
-    bottom: 0;
-    left: 0;
-    right: 34%;
-    top: 47%;
-    font-size: 8px; } }
-@media screen and (orientation: portrait) and (min-width: 480px) and (max-width: 992px) {
-  #header .logo a span.description {
-    bottom: auto;
-    left: -100px;
-    right: 187px;
-    top: 132px;
-    font-size: 12px; } }
-
-    @media screen and (min-width: 992px) {
-      #header .logo a span.description {
-        right: 125px;
-        bottom: 43px;
-        width: 375px; } }
-  @media screen and (max-width: 480px) {
-    #header .logo a {
+    #header .nav {
       width: 100%;
-      /** ToDO**/ }
-      #header .logo a svg {
-        position: relative;
-        left: auto;
-        top: -1em;
-        right: 1em;
-        /*                    right: .8em;
-                            width: calc(80% - 1.6em);*/ } }
-  @media screen and (min-width: 480px) and (max-width: 992px) {
-    #header .logo a {
-      width: 50%;
-      float: right; }
-      #header .logo a svg {
-        width: 100%;
-        padding: 1em 2em 0 1em; } }
+      top: 44px; }
+    #header .logo {
+      padding: 10px 20px;
+      margin: 44px 0 0 0; } }
+@media screen and (max-width: 992px) {
+  #header .logo, #header nav {
+    position: absolute;
+    overflow: hidden; }
+  #header nav {
+    left: 0;
+    right: 0; } }
+@media screen and (max-width: 992px) {
+  #header .logo, #header nav {
+    left: 0;
+    right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 992px) {
+  #header .logo a {
+    background-size: 50% auto;
+    padding-bottom: calc(50% * 1/3); } }
+@media screen and (min-width: 992px) {
+  #header .logo, #header .nav {
+    margin-top: 32px; } }
 
 @media screen and (max-width: 480px) {
   body.home article h1 {

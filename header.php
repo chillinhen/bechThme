@@ -56,7 +56,6 @@
 
                     <h1 class="logo text-right">
                         <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-                            <svg><use xlink:href="#logo"></use></svg>
                             <span class="name"><?php bloginfo('name'); ?></span>
                             <span class="description"><?php bloginfo('description'); ?></span>
                         </a>

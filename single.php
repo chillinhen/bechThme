@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- section -->
-<section class="top-fold container">
+<section class="container intro">
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('item'); ?>>
     <section class="post_content">

@@ -47,6 +47,11 @@ body{
             background-size:cover;
             background-position:50% 25%;
         }
+        > .footer {
+            position: absolute;
+            bottom: 2em;
+            width: 100%;
+        }
     }
     &:not(.home) {
         > header{
@@ -78,8 +83,12 @@ body{
             background: $base-bg-color!important;
             padding-top:5.3em;
         }
-        .intro{
-            margin-bottom: 1.5 * $vgrid;
+    }
+    .intro{
+        margin-bottom: 1.5 * $vgrid;
+        @media screen and (max-width:$screen-md){
+            padding:2em;
+            margin:0;
         }
     }
 }
@@ -97,13 +106,34 @@ body{
     }
 }
 #header {
-    @media screen and (max-width:$screen-md){
+    .logo {
+        a {
+            display: block;
+            background-color:transparent;
+            background-repeat:no-repeat;
+            background-position: top right;
+            background-size: contain;
+            width:100%;
+            height:0;
+            padding:0;
+            padding-bottom:calc(100% * 1/3);
+            body.home & {
+                background-image: url('../svg/logo-white.svg');
+            }
+            body:not(.home) & {
+                background-image: url('../svg/logo.svg');
+            }
+        }
+        span{display:none;}
+    }
+    @media screen and (max-width:$screen-md ){
         position: fixed;
         top: 0;
         left: 0;
-        min-height: 40px;
+        min-height: $mobileHeaderHeight + $headerBorderWidth;
         width: 100%;
         z-index: 10;
+        border-bottom:$headerBorderWidth solid #000;
         /** white block above **/
         .container:before{
             content:' ';
@@ -115,83 +145,47 @@ body{
             right:40px;
             height:40px;
             border:{
-                width:0 4px;
+                width:0 $headerBorderWidth;
                 color:#000;
                 style:solid;
             }
         }
+        .nav{
+            width: 100%;
+            top:$mobileHeaderHeight + $headerBorderWidth;
+        }
+        .logo{
+            padding:10px 20px;
+            margin:$mobileHeaderHeight + $headerBorderWidth 0 0 0;
+        }
+    }
+    @media screen and (max-width:$screen-md){
         .logo, nav{
             position: absolute;
             overflow: hidden;
+        }
+        nav{
             left:0;
             right: 0;
-            width: 100%;
-        }
-        .logo{
-            border-top:4px solid #000;
-            top:40px;
-            margin:0;
         }
     }
-    .logo {
-        @media screen and (max-width:$screen-xs){
-            z-index: 5;
-            height: 120px;
+    @media screen and (max-width:$screen-md){
+        .logo, nav{
+            left:0;
+            right: 0;
         }
-        a {
-            display: block;
-            position: relative;
-            span.name {
-                visibility: hidden;
-                height:0;
-                line-height: 0;
+    }
+    @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
+        .logo{
+            a {
+                background-size: 50% auto;
+                padding-bottom:calc(50% * 1/3);
             }
-            /** ToDO**/
-            span.description{
-                position: absolute;
-                letter-spacing: .01em;
-                @media screen and (orientation:portrait){
-                    @media screen and (max-width:$screen-xs){
-                        bottom: 0;
-                        left: 0;
-                        right: 34%;
-                        top: 47%;
-                        font-size: $rem-base * 0.5;
-                    }
-                    @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
-                        bottom: auto;
-                        left: -100px;
-                        right: 187px;
-                        top: 132px;
-                        font-size: $rem-base * 0.75;
-                    }
-                }
-                @media screen and (min-width:$screen-md){
-                    right:125px;
-                    bottom: 43px;
-                    width: 375px;
-                }
-            }
-            @media screen and (max-width:$screen-xs){
-                width: 100%;
-                /** ToDO**/
-                svg {
-                    position: relative;
-                    left: auto;
-                    top: -1em;
-                    right:1em;
-                    /*                    right: .8em;
-                                        width: calc(80% - 1.6em);*/
-                }
-            }
-            @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
-                width:50%;
-                float:right;
-                svg {
-                    width: 100%;
-                    padding:1em 2em 0 1em;
-                }
-            }
+        }
+    }
+    @media screen and (min-width:$screen-md ){
+        .logo, .nav {
+            margin-top:32px;
         }
     }
 }

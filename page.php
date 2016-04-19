@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- section -->
-<section class="top-fold container">
+<section class="container intro">
 
 
 
