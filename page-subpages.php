@@ -2,7 +2,7 @@
 
 
 <!-- section -->
-<section class="container">
+<section class="container intro">
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
             <!-- submenu -->

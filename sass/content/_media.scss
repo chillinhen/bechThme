@@ -15,6 +15,9 @@
     > .portfolio_thumbnail{
         @include alpha-background-color(rgba($portfolio-thumb-color, 0.9), white); 
         background-blend-mode: luminosity;
+        img {
+            display:none;
+        }
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -59,6 +62,7 @@
             }
         }
         > .portfolio_thumbnail{
+            @include filter(grayscale(0%));
             border:5px solid $portfolio-bg-color;
             background-blend-mode: normal; 
         }

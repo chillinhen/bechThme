@@ -110,6 +110,7 @@
 nav.nav.open {
     @include transition;
     min-height:340px;
+    overflow:scroll;
         @media screen and (min-width:$screen-xs) and (max-width:$screen-md){
         width:50% !important;
     }

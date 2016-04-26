@@ -16,8 +16,10 @@ jQuery(document).ready(function ($) {
     }
     //portfolio tweaks
     var portfolioItem = $('.portfolio-item');
+    var portfolioIEItem = $('.portfolio-thumbnail > svg');
     var portfolioSize = portfolioItem.width();
     portfolioItem.css('height', portfolioSize);
+    
     
     //use svg as instead of border-bottom or background-images
     $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
