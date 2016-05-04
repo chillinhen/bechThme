@@ -1,87 +1,29 @@
-<symbol id="dotted-line" viewBox="0 0 960 3">
-<g>
-	<circle class="colDarkGrey" cx="1.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="7.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="13.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="19.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="25.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="30.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="36.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="42.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="48.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="54.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="60.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="66.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="72.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="78.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="83.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="89.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="95.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="101.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="107.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="113.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="119.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="125.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="131.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="136.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="142.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="148.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="154.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="160.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="166.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="172.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="178.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="184.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="189.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="195.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="201.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="207.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="213.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="219.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="225.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="231.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="237.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="242.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="248.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="254.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="260.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="266.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="272.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="278.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="284.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="290.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="295.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="301.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="307.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="313.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="319.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="325.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="331.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="337.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="343.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="348.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="354.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="360.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="366.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="372.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="378.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="384.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="390.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="396.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="401.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="407.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="413.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="419.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="425.5" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="431.4" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="437.3" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="443.2" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="449.1" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="454.9" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="460.8" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="466.7" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="472.6" cy="1.5" r="1.5"/>
-	<circle class="colDarkGrey" cx="478.5" cy="1.5" r="1.5"/>
-</g>
+<?php
+if (has_post_thumbnail()) : // Check if thumbnail exists 
+    $thumb_id = get_post_thumbnail_id();
+    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumb-loop', true);
+    $thumb_url = $thumb_url_array[0];
+    $headline = get_field('headline');
+    ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('portfolio-item'); ?>> 
+        <a class="portfolio_thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 400 400" style="background-image:"background-image: url(<?php echo $thumb_url; ?>);">
+                    <defs>
+                        <filter id="filtersPicture">
+                            <feComposite result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />
+                            <feColorMatrix id="filter_38" type="saturate" values="0" data-filterid="38" />
+                        </filter>
+                    </defs>
+                    <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo $thumb_url; ?>" />
+                </svg>
 
-</symbol>
+            <span><?php echo $headline; ?></span>
+        </a>
+        <section class="portfolio_content">
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <svg><use xlink:href="#portfolio-line"></use></svg>
+    <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php  ?>
+        </section>
+
+    </article>
+<?php endif; ?>

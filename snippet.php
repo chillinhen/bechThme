@@ -1,83 +1,12 @@
 
-<circle class="colDarkGrey" cx="1.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="7.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="13.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="19.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="25.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="30.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="36.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="42.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="48.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="54.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="60.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="66.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="72.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="78.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="83.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="89.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="95.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="101.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="107.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="113.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="119.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="125.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="131.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="136.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="142.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="148.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="154.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="160.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="166.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="172.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="178.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="184.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="189.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="195.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="201.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="207.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="213.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="219.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="225.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="231.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="237.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="242.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="248.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="254.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="260.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="266.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="272.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="278.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="284.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="290.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="295.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="301.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="307.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="313.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="319.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="325.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="331.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="337.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="343.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="348.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="354.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="360.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="366.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="372.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="378.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="384.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="390.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="396.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="401.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="407.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="413.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="419.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="425.5" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="431.4" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="437.3" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="443.2" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="449.1" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="454.9" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="460.8" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="466.7" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="472.6" cy="1.5" r="1.5"/>
-<circle class="colDarkGrey" cx="478.5" cy="1.5" r="1.5"/>
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <section class="container">
+            <article id="post-<?php the_ID(); ?>" <?php post_class('text-center'); ?>>
+                <h1><?php the_title(); ?></h1>
+            </article>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <?php get_template_part('partials/article', '404'); ?>
+
+    </section>
+<?php endif; ?>

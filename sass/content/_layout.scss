@@ -14,7 +14,7 @@ body {
     @media screen and (min-width:$screen-sm){
         &.home{
             margin-bottom: $footerHomeHeight;
-            > footer {
+            > .footer {
                 height:$footerHomeHeight;
             }
         }

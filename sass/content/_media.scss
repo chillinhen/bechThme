@@ -12,16 +12,9 @@
         right: 0;
         background: $portfolio-bg-color;
     }
-    > .portfolio_thumbnail{
-        @include alpha-background-color(rgba($portfolio-thumb-color, 0.9), white); 
-        background-blend-mode: luminosity;
-        img {
-            display:none;
-        }
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        span{visibility: hidden;}
+    > .portfolio-thumbnail{
+        background: #000;
+        display: block;
     }
     > .portfolio_content{
         *{color:white !important;}
@@ -61,10 +54,13 @@
                 right:calc(-106% - 10px);
             }
         }
-        > .portfolio_thumbnail{
-            @include filter(grayscale(0%));
-            border:5px solid $portfolio-bg-color;
-            background-blend-mode: normal; 
+        > .portfolio-thumbnail{
+            .grayscale{
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+                border:5px solid #000 !important;
+            }
+            .grayscale-replaced > svg {opacity: 0;}
         }
         @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
             &:nth-child(2n){
@@ -117,6 +113,9 @@
             min-height:100vH;
         }
     }
+    @media screen and (min-width:$screen-sm){
+        margin-bottom: 2 * $vgrid;
+    }
 
 }
 .flex-control-nav{
@@ -144,7 +143,7 @@
         &.flex-prev{
             top:50%;
             bottom:auto;
-                /** ToDO**/
+            /** ToDO**/
             @media screen and (orientation:landscape){
                 .single & {left:0;}
                 [class*="subpages"] & {left:calc(50% + 24px) !important;}   

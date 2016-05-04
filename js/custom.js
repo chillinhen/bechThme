@@ -16,10 +16,16 @@ jQuery(document).ready(function ($) {
     }
     //portfolio tweaks
     var portfolioItem = $('.portfolio-item');
-    var portfolioIEItem = $('.portfolio-thumbnail > svg');
     var portfolioSize = portfolioItem.width();
     portfolioItem.css('height', portfolioSize);
     
+    
+//   $('.attachment-thumb-loop').addClass('grayscale');
+//   $('.attachment-thumb-loop').mouseover(function () {
+//        $(this).removeClass('grayscale');// mouseover event
+//    }).mouseout(function () {
+//        $(this).addClass('grayscale');
+//    });
     
     //use svg as instead of border-bottom or background-images
     $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
@@ -61,7 +67,7 @@ jQuery(document).ready(function ($) {
     
     //responsive hover tweaks
     var tapped=false;
-   // var tapEvent = $('.portfolio_thumbnail');
+    var tapEvent = $('.portfolio_item');
 
     tapEvent.on("touchstart", function (e) {
         if (!tapped) { //if tap is not set, set up single tap

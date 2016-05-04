@@ -30,7 +30,7 @@ $grid-columns: 12;
             }
         }
     }
-    body > footer & {
+    body > .footer & {
         @media screen and (min-width:$screen-xs + 1) and (max-width:$screen-sm){
             padding:0 2em;
         }

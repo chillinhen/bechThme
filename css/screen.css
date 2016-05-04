@@ -183,24 +183,26 @@ p {
   p.lead, blockquote p {
     font-size: 1.125rem;
     line-height: 1.33; }
-  body.home > footer p {
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    font-size: 1.6em;
-    text-transform: uppercase;
-    font-weight: bold !important;
-    line-height: 1;
-    margin-bottom: 0;
-    color: #fff; }
-    @media screen and (max-width: 480px) {
-      body.home > footer p {
-        font-size: 14px; } }
-    @media screen and (min-width: 992px) {
-      body.home > footer p {
-        font-size: 24px; } }
-  body:not(.home) > footer p {
+  body:not(.home) > .footer p {
     padding-top: 1em; }
   body.leistungen > main p {
     text-align: center; }
+
+.container.keywords {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold !important;
+  line-height: 1;
+  margin-bottom: 0;
+  color: #fff; }
+  @media screen and (max-width: 480px) {
+    .container.keywords {
+      font-size: 14px; } }
+  @media screen and (min-width: 992px) {
+    .container.keywords {
+      font-size: 24px; } }
 
 a {
   color: #000; }
@@ -385,15 +387,15 @@ table {
     body > header .container .logo:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  body > footer .container {
+  body > .footer .container {
     padding: 0 2em; } }
 @media screen and (min-width: 960px) {
-  body > footer .container.columns > div {
+  body > .footer .container.columns > div {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    body > footer .container.columns > div:last-child {
+    body > .footer .container.columns > div:last-child {
       margin-right: 0; } }
 @media screen and (max-width: 480px) {
   .container.contact-buttons > div {
@@ -695,7 +697,7 @@ body {
   @media screen and (min-width: 768px) {
     body.home {
       margin-bottom: 87px; }
-      body.home > footer {
+      body.home > .footer {
         height: 87px; }
     body:not(.kontakt) {
       margin-bottom: 66px; }
@@ -941,17 +943,9 @@ body.leistungen article .thumbnail {
     left: 0;
     right: 0;
     background: #000; }
-  .portfolio-item > .portfolio_thumbnail {
-    background-color: #5f686e;
-    background-color: rgba(77, 87, 94, 0.9);
-    background-blend-mode: luminosity;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    .portfolio-item > .portfolio_thumbnail img {
-      display: none; }
-    .portfolio-item > .portfolio_thumbnail span {
-      visibility: hidden; }
+  .portfolio-item > .portfolio-thumbnail {
+    background: #000;
+    display: block; }
   .portfolio-item > .portfolio_content {
     text-align: center;
     padding: 2em; }
@@ -994,11 +988,12 @@ body.leistungen article .thumbnail {
         .portfolio-item:hover > .portfolio_content, .portfolio-item:focus > .portfolio_content {
           left: 100%;
           right: calc(-106% - 10px); } }
-    .portfolio-item:hover > .portfolio_thumbnail, .portfolio-item:focus > .portfolio_thumbnail {
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
-      border: 5px solid #000;
-      background-blend-mode: normal; }
+    .portfolio-item:hover > .portfolio-thumbnail .grayscale, .portfolio-item:focus > .portfolio-thumbnail .grayscale {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      border: 5px solid #000 !important; }
+    .portfolio-item:hover > .portfolio-thumbnail .grayscale-replaced > svg, .portfolio-item:focus > .portfolio-thumbnail .grayscale-replaced > svg {
+      opacity: 0; }
     @media screen and (min-width: 480px) and (max-width: 768px) {
       .portfolio-item:hover:nth-child(2n) .portfolio_content, .portfolio-item:focus:nth-child(2n) .portfolio_content {
         left: calc(-106% - 10px);
@@ -1032,6 +1027,9 @@ body.leistungen article .thumbnail {
   @media screen and (max-width: 480px) {
     .single .flexslider {
       min-height: 100vH; } }
+  @media screen and (min-width: 768px) {
+    .flexslider {
+      margin-bottom: 40px; } }
 
 .flex-control-nav {
   bottom: 1em; }
