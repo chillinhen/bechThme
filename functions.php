@@ -63,9 +63,9 @@ function bechold_theme_setup() {
 
     //new Image Formats
     add_image_size('full', 1680, 1280, array('center', 'center'));
-    add_image_size('thumb-loop', 400, 400, true);
-    add_image_size('thumb-subpages', 500, 645, true);
-    add_image_size('thumb-detail', 570, 455, true);
+    add_image_size('thumb-loop', 400, 400, array('center', 'center'));
+    add_image_size('thumb-subpages', 500, 645, array('center', 'center'));
+    add_image_size('thumb-detail', 570, 455, array('center', 'center'));
 
     // Adding Translation Option
     load_theme_textdomain('bechholdTheme', get_stylesheet_directory_uri() . '/languages');

@@ -18,4 +18,13 @@
     </div>
 </footer>
 <?php wp_footer(); ?>
+<!-- analytics -->
+<?php $analytics = get_field('analytics', 'option');
+if ($analytics):
+    ?>
+    <script>
+    <?php echo strip_tags($analytics); ?>
+    </script>
+<?php endif; ?>
+<!-- analytics --> 
 </body>
