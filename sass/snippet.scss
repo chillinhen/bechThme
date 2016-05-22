@@ -1,10 +1,11 @@
-#header {
+/**** Portfolio ****/
+.portfolio-item{
     
 
-    @media screen and (max-width:$screen-md){
-        .logo, nav{
- 
-        }
-    }
+   
+    &:hover, &:focus{
+       
 
+
+    }
 }

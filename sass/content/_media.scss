@@ -1,95 +1,107 @@
 /**** Portfolio ****/
 .portfolio-item{
-    position: relative;
-    overflow: hidden;
-    margin-bottom:1.33em;
-
-    > [class*="portfolio_"]{
-        position:absolute;
-        top:0;
-        bottom: 0;
-        left:0;
-        right: 0;
-        background: $portfolio-bg-color;
-    }
-    > .portfolio-thumbnail{
-        background: #000;
-        display: block;
-    }
-    > .portfolio_content{
-        *{color:white !important;}
-        text-align: center;
-        padding:2em;
-        h2 {@include ellipsis(100%);}
-        svg {
-            height: 3px;
-            width: 100%;
-            margin-top:1em;
-            margin-bottom: 1em;
-        }
-        p {
-            font-size: 1em;
-            line-height: 1.2;
-        }
-        .view-article{display: none;}
-        @media screen and (max-width:$screen-xs){
-            opacity:0;
-            @include transition(all 2.0s ease-in-out);
-        }
-        @media screen and (min-width:$screen-xs + 1){
-            left:-100%;
-            right:100%;
-        }
-    }
-    &:hover, &:focus{
-        overflow:visible;
-        cursor:pointer;
-        > .portfolio_content{
-            z-index: 99;
-            @media screen and (max-width:$screen-xs){
-                opacity:1;
-            }
-            @media screen and (min-width:$screen-xs + 1){
-                left:100%;
-                right:calc(-106% - 10px);
-            }
-        }
-        > .portfolio-thumbnail{
-            .grayscale{
-                -webkit-filter: grayscale(0);
-                filter: grayscale(0);
-                border:5px solid #000 !important;
-            }
-            .grayscale-replaced > svg {opacity: 0;}
-        }
-        @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
-            &:nth-child(2n){
-                .portfolio_content{
-                    left: calc(-106% - 10px);
-                    right: 100%;
-                }
-            }
-        }
-        @media screen and (min-width:$screen-sm) and (max-width:960px - 1px){
-            &:nth-child(3n){
-                .portfolio_content{
-                    left: calc(-106% - 10px);
-                    right: 100%;
-                }
-            }
-        }
-        @media screen and (min-width:960px){
-            &:nth-child(4n){
-                .portfolio_content{
-                    left: calc(-106% - 10px);
-                    right: 100%;
-                }
-            }
-        }
-    }
+	position: relative;
+	overflow: hidden;
+	margin-bottom:1.33em;
+	border: 0px solid #000;
+	
+	> [class*="portfolio_"]{
+	    position:absolute;
+/*	    top:0;
+	    bottom: 0;*/
+	    left:0;
+	    right: 0;
+	    background: $portfolio-bg-color;
+	}
+	
+	> .portfolio-thumbnail{
+	    background: #000;
+	    display: block;
+	}
+	> .portfolio_content{
+		*{color:white !important;}
+		text-align: center;
+		padding:2em;
+		line-height:0;
+		top:-1px;
+		bottom: 1px;
+		
+		h2 {@include ellipsis(100%);}
+		
+		svg {
+		    height: 3px;
+		    width: 100%;
+		    margin-top:1em;
+		    margin-bottom: 1em;
+		}
+		
+		p {
+		    font-size: 1em;
+		    line-height: 1.2;
+		}
+		
+		.view-article{display: none;}
+		
+		@media screen and (max-width:$screen-xs){
+		    opacity:0;
+		    @include transition(all 2.0s ease-in-out);
+		}
+		@media screen and (min-width:$screen-xs + 1){
+		    left:-100%;
+		    right:100%;
+		}
+	} /** End portfolio-content **/
+	&:hover, &:focus{
+		overflow:visible;
+		cursor:pointer;
+		
+		> .portfolio_content{
+			z-index: 99;
+			@media screen and (max-width:$screen-xs){
+			    opacity:1;
+			}
+			@media screen and (min-width:$screen-xs + 1){
+			    left:100%;
+			    right:calc(-106% - 10px);
+			}
+		}/** End portfolio-content **/
+		> .portfolio-thumbnail{
+			.grayscale{
+			    -webkit-filter: grayscale(0);
+			    filter: grayscale(0);
+			    border:5px solid #000 !important;
+			}
+			.grayscale-replaced > svg {opacity: 0;}
+		}/** End portfolio-thumbnail **/
+		@media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
+		    &:nth-child(2n){
+		        .portfolio_content{
+		            left: calc(-106% - 10px);
+		            right: 100%;
+		        }
+		    }
+		}
+		@media screen and (min-width:$screen-sm) and (max-width:960px - 1px){
+		    &:nth-child(3n){
+		        .portfolio_content{
+		            left: calc(-106% - 10px);
+		            right: 100%;
+		        }
+		    }
+		}
+		@media screen and (min-width:960px){
+		    &:nth-child(4n){
+		        .portfolio_content{
+		            left: calc(-106% - 10px);
+		            right: 100%;
+		        }
+		    }
+		}
+		
+	}/** End hover/focus **/
 }
 
-//Iframe Elastic
+/**Iframe Elastic**/
 .iframe-elastic {
     position: relative;
     padding-bottom: 55%; /* ratio width/height in % Bsp. (450 ÷ 500 = 0.9 = 90%) */
@@ -114,7 +126,7 @@
         }
     }
     @media screen and (min-width:$screen-sm){
-        margin-bottom: 2 * $vgrid;
+        /*margin-bottom: 2 * $vgrid;*/
     }
 
 }
@@ -122,9 +134,9 @@
     bottom:1em;
     body.page & {display:none;}
     &.flex-control-paging li a{
-        background:rgba(255,255,255,.5) !important;
+        background:rgba(0,0,0,.5) !important;
         &.flex-active{
-            background:rgba(255,255,255,1)!important;
+            background:rgba(0,0,0,1)!important;
         }
     }
 }

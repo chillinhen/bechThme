@@ -21,6 +21,24 @@
             <div><?php echo $innung; ?></div>
         <?php endif; ?>
     </div>
+    <div class="container columns">
+    <?php
+    
+    // check if the repeater field has rows of data
+    if( have_rows('editors') ):
+    
+     	// loop through the rows of data
+        while ( have_rows('editors') ) : the_row();?>
+    
+            <div><?php // display a sub field value
+            the_sub_field('content');?></div>
+    
+        <?php endwhile;
+    
+  endif;
+    
+    ?>
+    </div>
     <div class="container">
         <?php $agb = get_field('agb'); ?>
         <?php if ($agb) : ?>

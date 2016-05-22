@@ -62,10 +62,18 @@ function bechold_theme_setup() {
     remove_action('init', 'create_post_type_html5');
 
     //new Image Formats
-    add_image_size('full', 1680, 1280, array('center', 'center'));
-    add_image_size('thumb-loop', 400, 400, array('center', 'center'));
-    add_image_size('thumb-subpages', 500, 645, array('center', 'center'));
-    add_image_size('thumb-detail', 570, 455, array('center', 'center'));
+    #add_theme_support('post-thumbnails');
+    add_image_size('small', 260, 260, array('center', 'center')); // Small Thumbnail
+    add_image_size('medium', 350, 350, array('center', 'center')); // Medium Thumbnail
+    add_image_size('large', 500, 645, array('top', 'center')); // Large Thumbnail
+
+
+    add_image_size('custom-size', 1680, 1280, array('center', 'center')); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    
+    #add_image_size('full', 1680, 1280, array('center', 'center'));
+    #add_image_size('thumb-loop', 400, 400, array('center', 'center'));
+    #add_image_size('thumb-subpages', 500, 645, array('center', 'center'));
+    #add_image_size('thumb-detail', 570, 455, array('center', 'center'));
 
     // Adding Translation Option
     load_theme_textdomain('bechholdTheme', get_stylesheet_directory_uri() . '/languages');

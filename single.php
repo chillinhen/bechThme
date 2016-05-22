@@ -18,31 +18,20 @@
         </article>
     <?php endif; ?>
 </section>
-<?php
-$args = array(
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'category_name' => 'portfolio',
-    'posts_per_page' => -1, // you may edit this number
-    'orderby' => 'rand',
-    'post__not_in' => array($post->ID),
-);
-$related_items = new WP_Query($args);
-// loop over query
-if ($related_items->have_posts()) :
-    ?>
-        <section class="bottom-fold related container">
-        <div id="portfolio">
-            <?php while ($related_items->have_posts()) : $related_items->the_post();
-                ?>
-                <?php get_template_part('partials/loop', 'portfolio'); ?>
-            <?php endwhile;
-            ?>
-        </div>
+<?php 
+
+$posts = get_field('related_posts');
+
+if( $posts ): ?>
+    <section class="bottom-fold related container">
+	    <div id="portfolio">
+	    
+	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+	        <?php setup_postdata($post); ?>
+	        	<?php get_template_part('partials/loop', 'portfolio'); ?>
+	    <?php endforeach; ?>
+	    </div>
     </section>
-<?php
-endif;
-// Reset Post Data
-wp_reset_postdata();
-?>
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif; ?>
 <?php get_footer(); ?>

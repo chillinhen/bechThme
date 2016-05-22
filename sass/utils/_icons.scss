@@ -7,6 +7,12 @@
 .colBG{
     fill:$base-color-white;
 }
+.dots{
+    fill:$primary-color-darker;
+    body.portfolio & {
+        fill:red;
+    }
+}
 
 .colDarkRed{
     fill:$primary-color-darker;
@@ -28,6 +34,7 @@
     margin-right:25px;
 }
 .dots {
+	#pagination & {fill:red;}
     #pfeil-xs &{
         fill:$primary-color;
     }

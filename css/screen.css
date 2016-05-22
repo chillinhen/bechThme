@@ -12,7 +12,7 @@ html {
 .container:after, #header nav ul:after {
   clear: both; }
 
-.post-edit-link > span {
+.post-edit-link > span, #pagination .next, #pagination .prev {
   text-indent: -9999px;
   display: block;
   overflow: hidden; }
@@ -21,6 +21,7 @@ html {
 /**** caret ****/
 /* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
 /* Mediaqueries breakpoints */
+/* Helper Classes */
 html,
 body {
   font-size: 100%;
@@ -81,57 +82,77 @@ h6 {
       h5.logo span,
       h6.logo span {
         font-size: 14px; } }
-  article h1, .page h1, article
+  article h1, .page h1, .portfolio h1, article
   h2, .page
+  h2, .portfolio
   h2, article
   h3, .page
+  h3, .portfolio
   h3, article
   h4, .page
+  h4, .portfolio
   h4, article
   h5, .page
+  h5, .portfolio
   h5, article
   h6, .page
+  h6, .portfolio
   h6 {
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: -.025em;
     font-weight: 900; }
     @media screen and (max-width: 480px) {
-      article h1, .page h1, article
+      article h1, .page h1, .portfolio h1, article
       h2, .page
+      h2, .portfolio
       h2, article
       h3, .page
+      h3, .portfolio
       h3, article
       h4, .page
+      h4, .portfolio
       h4, article
       h5, .page
+      h5, .portfolio
       h5, article
       h6, .page
+      h6, .portfolio
       h6 {
         font-size: 22px; } }
     @media screen and (min-width: 992px) {
-      article h1, .page h1, article
+      article h1, .page h1, .portfolio h1, article
       h2, .page
+      h2, .portfolio
       h2, article
       h3, .page
+      h3, .portfolio
       h3, article
       h4, .page
+      h4, .portfolio
       h4, article
       h5, .page
+      h5, .portfolio
       h5, article
       h6, .page
+      h6, .portfolio
       h6 {
         font-size: 50px; } }
-    article h1 > span, .page h1 > span, article
+    article h1 > span, .page h1 > span, .portfolio h1 > span, article
     h2 > span, .page
+    h2 > span, .portfolio
     h2 > span, article
     h3 > span, .page
+    h3 > span, .portfolio
     h3 > span, article
     h4 > span, .page
+    h4 > span, .portfolio
     h4 > span, article
     h5 > span, .page
+    h5 > span, .portfolio
     h5 > span, article
     h6 > span, .page
+    h6 > span, .portfolio
     h6 > span {
       color: #6D3332; }
   .contact h1, .contact
@@ -166,7 +187,7 @@ h6 {
   h6 {
     color: white;
     font-size: 1.25em;
-    margin: 0 0 1rem; }
+    margin: 40px 0 1rem; }
 
 .copyright {
   color: white;
@@ -286,6 +307,11 @@ table {
 .colBG {
   fill: #fff; }
 
+.dots {
+  fill: #623636; }
+  body.portfolio .dots {
+    fill: red; }
+
 .colDarkRed {
   fill: #623636; }
   body.home .colDarkRed {
@@ -303,6 +329,8 @@ table {
       height: 171px;
       width: 356px; } }
 
+#pagination .dots {
+  fill: red; }
 #pfeil-xs .dots {
   fill: #6D3332; }
 #header nav #pfeil-xs .dots {
@@ -682,6 +710,24 @@ nav.nav.open {
   .navbar-toggle {
     top: 0;
     right: 0; } }
+#pagination {
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+  text-align: center; }
+  #pagination svg {
+    display: block;
+    margin: 1em auto;
+    height: 3px;
+    width: 100%; }
+  #pagination span, #pagination a {
+    font-weight: bold;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    color: #52595F; }
+  #pagination span.current {
+    color: #6D3332; }
+
 /* Sticky Footer */
 html {
   position: relative;
@@ -935,11 +981,14 @@ body.leistungen article .thumbnail {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  margin-bottom: 1.33em; }
+  margin-bottom: 1.33em;
+  border: 0px solid #000;
+  /** End portfolio-content **/
+  /** End hover/focus **/ }
   .portfolio-item > [class*="portfolio_"] {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    /*	    top:0;
+    	    bottom: 0;*/
     left: 0;
     right: 0;
     background: #000; }
@@ -948,7 +997,10 @@ body.leistungen article .thumbnail {
     display: block; }
   .portfolio-item > .portfolio_content {
     text-align: center;
-    padding: 2em; }
+    padding: 2em;
+    line-height: 0;
+    top: -1px;
+    bottom: 1px; }
     .portfolio-item > .portfolio_content * {
       color: white !important; }
     .portfolio-item > .portfolio_content h2 {
@@ -978,7 +1030,9 @@ body.leistungen article .thumbnail {
         right: 100%; } }
   .portfolio-item:hover, .portfolio-item:focus {
     overflow: visible;
-    cursor: pointer; }
+    cursor: pointer;
+    /** End portfolio-content **/
+    /** End portfolio-thumbnail **/ }
     .portfolio-item:hover > .portfolio_content, .portfolio-item:focus > .portfolio_content {
       z-index: 99; }
       @media screen and (max-width: 480px) {
@@ -1007,6 +1061,7 @@ body.leistungen article .thumbnail {
         left: calc(-106% - 10px);
         right: 100%; } }
 
+/**Iframe Elastic**/
 .iframe-elastic {
   position: relative;
   padding-bottom: 55%;
@@ -1029,16 +1084,16 @@ body.leistungen article .thumbnail {
       min-height: 100vH; } }
   @media screen and (min-width: 768px) {
     .flexslider {
-      margin-bottom: 40px; } }
+      /*margin-bottom: 2 * $vgrid;*/ } }
 
 .flex-control-nav {
   bottom: 1em; }
   body.page .flex-control-nav {
     display: none; }
   .flex-control-nav.flex-control-paging li a {
-    background: rgba(255, 255, 255, 0.5) !important; }
+    background: rgba(0, 0, 0, 0.5) !important; }
     .flex-control-nav.flex-control-paging li a.flex-active {
-      background: white !important; }
+      background: black !important; }
 
 [class*="flex-nav"] > a {
   z-index: 0;

@@ -50,7 +50,7 @@ h6{
             font-size: 14px;
         }
     }
-    article &, .page & {
+    article &, .page &, .portfolio & {
         @media screen and (max-width:$screen-xs){
             font-size:$rem-base * 1.375;
         }
@@ -79,7 +79,7 @@ h6{
     .impressum &{
         color:white;
         font-size: 1.25em;
-        margin: 0 0 1 * $paragraph-margin;
+        margin: 2*$vgrid 0 1 * $paragraph-margin;
     }
 }
 .copyright{

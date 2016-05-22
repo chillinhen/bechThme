@@ -7,7 +7,7 @@ if (has_post_thumbnail()) : // Check if thumbnail exists
     ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('portfolio-item'); ?>> 
         <a class="portfolio-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-            <?php the_post_thumbnail('thumb-loop',array('class' => 'grayscale')); ?>
+            <?php the_post_thumbnail('small',array('class' => 'grayscale')); ?>
         </a>
         <section class="portfolio_content">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
