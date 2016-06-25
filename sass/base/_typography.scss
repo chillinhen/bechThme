@@ -88,6 +88,19 @@ h6{
     font-family: $headings-font-family;
     font-weight:600;
 }
+    .link-impressum{
+        color:#fff;
+        font-size: .85em;
+        font-weight:400;
+        float: right;
+        .home & {
+            display: block;
+            text-align: center;
+            float: none;
+            line-height: 2;
+        }
+    }
+    .copyright-text{float: left;}
 // paragraph text
 p {
     margin: 0 0 $paragraph-margin;
@@ -129,7 +142,7 @@ a{
     color:$text-color;
     .logo &{
         color:$dark-color-grey;
-        body.home & {color:#fff;}
+        body.home &, body.home &:hover {color:#fff !important;}
     }
 }
 

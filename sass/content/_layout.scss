@@ -4,12 +4,6 @@ html{
     min-height: 100%;
 }
 body {
-/*    &:not(.home){
-            background:$primary-color;
-            > main {
-                background: white;
-            } 
-    }*/
 
     @media screen and (min-width:$screen-sm){
         &.home{

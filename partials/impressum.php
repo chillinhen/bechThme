@@ -1,4 +1,4 @@
-<section class="impressum">
+<section class="impressum" id="impressum">
     <div class="container columns">
         <h4><?php _e('Impressum', 'bechTheme'); ?></h4>
         <?php $contact = get_field('kontaktdaten'); ?>

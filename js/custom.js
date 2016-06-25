@@ -1,31 +1,36 @@
 jQuery(document).ready(function ($) {
+    function checkSize() {
+        if ($(".nav li").css("float") == "none") {
+            var logoHeight = $('.logo').height();
+            var headerHeight = $('#header').height();
+            $('body:not(.home) > main').css('margin-top', headerHeight + logoHeight);
+            }
+    }
+    function portfolioSizes() {
+        //portfolio tweaks
+        var portfolioItem = $('.portfolio-item');
+        var portfolioSize = portfolioItem.width();
+        portfolioItem.css('height', portfolioSize);
+    }
+
     //alert('hallo');
     //portfolio height
     checkSize();
 
     // run test on resize of the window
     $(window).resize(checkSize);
+    $(window).resize(portfolioSizes);
     //some tweaks for smaller windowa
 
-    function checkSize() {
-        if ($(".nav li").css("float") == "none") {
-            var logoHeight = $('.logo').height();
-            var headerHeight = $('#header').height();
-            $('body:not(.home) > main').css('margin-top',headerHeight + logoHeight);
-            }
-    }
-    //portfolio tweaks
-    var portfolioItem = $('.portfolio-item');
-    var portfolioSize = portfolioItem.width();
-    portfolioItem.css('height', portfolioSize);
-    
-    
+
+
+
     //use svg as instead of border-bottom or background-images
     $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
     $(".nav li.close-menu").append('<svg><use xlink:href="#pfeil-xs"></use></svg></div>');
-    
 
-    if($('body.single').hasClass('portfolio')){
+
+    if ($('body.single').hasClass('portfolio')) {
         $('li.portfolio').addClass('current-menu-item');
     }
     $('.flexslider').flexslider({
@@ -57,9 +62,9 @@ jQuery(document).ready(function ($) {
     //edit post link
     $('.post-edit-link')
             .wrapInner('<span></span>');
-    
+
     //responsive hover tweaks
-    var tapped=false;
+    var tapped = false;
     var tapEvent = $('.portfolio_item');
 
     tapEvent.on("touchstart", function (e) {
@@ -76,4 +81,9 @@ jQuery(document).ready(function ($) {
         }
         e.preventDefault()
     });
+});
+
+$(window).resize(function () {
+    checkSize();
+    portfolioSizes();
 });

@@ -131,14 +131,12 @@ article{
         @include outer-container;
     }
     .portfolio-item{
-        @media screen and (max-width:$screen-xs){
-            margin-bottom:2em;
-        }
-        @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
+        
+        @media screen and (min-width:$screen-xs) and (max-width:$screen-smallPad){
             @include span-columns(6);
             @include omega(2n);
         }
-        @media screen and (min-width:$screen-sm + 1) and (max-width:960px - 1px){
+        @media screen and (min-width:$screen-smallPad + 1) and (max-width:960px - 1px){
             @include span-columns(4);
             @include omega(3n);
         }
