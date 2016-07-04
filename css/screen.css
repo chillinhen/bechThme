@@ -206,7 +206,8 @@ h6 {
     display: block;
     text-align: center;
     float: none;
-    line-height: 2; }
+    line-height: 2;
+    margin-top: 2em; }
 
 .copyright-text {
   float: left; }
@@ -470,11 +471,11 @@ table {
       .container.contact-buttons > div:last-child {
         margin-right: 0; } }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 600px) {
   article > .post_content, article > aside {
     width: 100%;
     vertical-align: top; } }
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 600px) {
   article > .post_content, article > aside {
     float: left;
     display: block;
@@ -482,17 +483,17 @@ table {
     width: 48.82117%; }
     article > .post_content:last-child, article > aside:last-child {
       margin-right: 0; } }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 600px) {
   article > aside {
     overflow: hidden; } }
-  @media screen and (max-width: 736px) and (orientation: portrait) {
+  @media screen and (max-width: 600px) and (orientation: portrait) {
     article > aside {
       height: 50vH; } }
-  @media screen and (max-width: 736px) and (orientation: landscape) {
+  @media screen and (max-width: 600px) and (orientation: landscape) {
     article > aside {
       height: 100vH; } }
 
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 600px) {
   body[class*="subpages"] article > aside {
     float: right;
     margin-right: 0; }
@@ -1130,7 +1131,7 @@ body.leistungen article .thumbnail {
     body.portfolio [class*="flex-nav"] > a.flex-prev, body.portfolio [class*="flex-nav"] > a.flex-next {
       top: 45%; }
     body.team [class*="flex-nav"] > a.flex-prev, body.team [class*="flex-nav"] > a.flex-next {
-      top: 20%; } }
+      top: 10%; } }
   @media screen and (min-width: 480px) and (max-width: 768px) {
     body.portfolio [class*="flex-nav"] > a.flex-prev, body.portfolio [class*="flex-nav"] > a.flex-next {
       top: 45%; }

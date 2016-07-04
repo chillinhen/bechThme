@@ -64,11 +64,11 @@ $grid-columns: 12;
 }
 article{
     > .post_content, > aside{
-        @media screen and (max-width:$screen-maxPhone){
+        @media screen and (max-width:$screen-smallPad){
             @include fill-parent();
             vertical-align:top;
         }
-        @media screen and (min-width:$screen-maxPhone){
+        @media screen and (min-width:$screen-smallPad){
             @include span-columns(6);
         }
     }
@@ -78,7 +78,7 @@ article{
         }
     }
     > aside{
-        @media screen and (max-width:$screen-maxPhone){
+        @media screen and (max-width:$screen-smallPad){
             overflow:hidden;
             @media screen and (orientation:portrait){
                 height:50vH;
@@ -87,7 +87,7 @@ article{
                 height:100vH;
             }
         }
-        @media screen and (min-width:$screen-maxPhone){
+        @media screen and (min-width:$screen-smallPad){
             body[class*="subpages"] &{
                 float: right;
                 @include omega();

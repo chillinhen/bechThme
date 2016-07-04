@@ -165,7 +165,7 @@
         &.flex-prev, &.flex-next{
             @media screen and (max-width:$screen-xs){
                 body.portfolio &{top:45%;}
-                body.team &{top:20%}   
+                body.team &{top:10%}   
             }
             @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
                 body.portfolio &{top:45%;}
