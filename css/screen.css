@@ -712,9 +712,9 @@ nav.nav.open {
     z-index: 999; }
     .home-btn.mobile-layout svg,
     .navbar-toggle svg {
-      height: 40px;
-      width: 40px;
-      padding: .5em;
+      height: 30px;
+      width: 30px;
+      margin: .5em;
       background: #fff; }
 
   .home-btn.mobile-layout {
