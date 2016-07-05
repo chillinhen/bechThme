@@ -200,8 +200,10 @@ h6 {
 .link-impressum {
   color: #fff;
   font-size: .85em;
-  font-weight: 400;
-  float: right; }
+  font-weight: 400; }
+  @media screen and (min-width: 992px) {
+    .link-impressum {
+      float: right; } }
   .home .link-impressum {
     display: block;
     text-align: center;
@@ -382,6 +384,9 @@ table {
   display: block;
   height: 20px;
   width: 20px; }
+
+* {
+  /*    @include box-sizing(border-box);*/ }
 
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .container {
@@ -712,9 +717,9 @@ nav.nav.open {
     z-index: 999; }
     .home-btn.mobile-layout svg,
     .navbar-toggle svg {
-      height: 30px;
-      width: 30px;
-      margin: .5em;
+      height: 40px;
+      width: 40px;
+      padding: .5em;
       background: #fff; }
 
   .home-btn.mobile-layout {
@@ -1086,12 +1091,6 @@ body.leistungen article .thumbnail {
 .flexslider {
   border: 0;
   margin: 0; }
-  @media screen and (max-width: 480px) {
-    .single .flexslider {
-      min-height: 100vH; } }
-  @media screen and (min-width: 768px) {
-    .flexslider {
-      /*margin-bottom: 2 * $vgrid;*/ } }
 
 .flex-control-nav {
   bottom: 1em; }
@@ -1119,24 +1118,15 @@ body.leistungen article .thumbnail {
     height: 100%;
     width: 100%; }
   [class*="flex-nav"] > a.flex-prev {
-    top: 50%;
-    bottom: auto;
     /** ToDO**/ }
     @media screen and (orientation: landscape) {
       .single [class*="flex-nav"] > a.flex-prev {
         left: 0; }
       [class*="subpages"] [class*="flex-nav"] > a.flex-prev {
         left: calc(50% + 24px) !important; } }
-  @media screen and (max-width: 480px) {
-    body.portfolio [class*="flex-nav"] > a.flex-prev, body.portfolio [class*="flex-nav"] > a.flex-next {
-      top: 45%; }
-    body.team [class*="flex-nav"] > a.flex-prev, body.team [class*="flex-nav"] > a.flex-next {
-      top: 10%; } }
-  @media screen and (min-width: 480px) and (max-width: 768px) {
-    body.portfolio [class*="flex-nav"] > a.flex-prev, body.portfolio [class*="flex-nav"] > a.flex-next {
-      top: 45%; }
-    body.team [class*="flex-nav"] > a.flex-prev, body.team [class*="flex-nav"] > a.flex-next {
-      top: 40%; } }
+  [class*="flex-nav"] > a.flex-prev, [class*="flex-nav"] > a.flex-next {
+    top: 50%;
+    bottom: auto; }
   [class*="flex-nav"] > a.flex-prev:before {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);

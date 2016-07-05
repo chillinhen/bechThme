@@ -24,7 +24,8 @@
                         <div class="flexslider">
                             <ul class="slides">
                                 <?php while ($subLoop->have_posts()) : $subLoop->the_post(); ?>
-                                    <li><?php get_template_part('partials/article', 'flexslider'); ?></li>
+                                    <li><?php 
+                                    get_template_part('partials/article', 'flexslider'); ?></li>
                                     <?php
                                 endwhile;
                                 wp_reset_postdata();

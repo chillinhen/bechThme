@@ -11,10 +11,12 @@ $images = get_field('gallery');?>
              <?php if ($images):?></li>
             <?php foreach ($images as $image): ?>
                 <li class="item-img">
-                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img src="<?php echo $image['sizes']['large']; ?>"  srcset="<?php echo $image['sizes']['small']; ?> 320w, <?php echo $image['sizes']['medium']; ?> 600w, <?php echo $image['sizes']['large']; ?> 900w" alt="<?php echo $image['alt']; ?>" />
                     <p><?php echo $image['caption']; ?></p>
                 </li>
             <?php endforeach; ?>
         </ul>
     </div>
 <?php endif; ?>
+
+<!--<img src="small.jpg" srcset="small.jpg 320w, medium.jpg 600w, large.jpg 900w" alt="">-->

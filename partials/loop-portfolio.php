@@ -9,7 +9,7 @@ if (has_post_thumbnail()) : // Check if thumbnail exists
     $thumb_url_array_large = wp_get_attachment_image_src($thumb_id, 'large', true);
     $thumb_url_large = $thumb_url_array_large[0];
     $headline = get_field('headline');
-    $thumb_img = get_post_meta( get_post_thumbnail_id() ); 
+    $thumb_img = get_post_meta( get_post_thumbnail_id() );
 ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('portfolio-item'); ?>> 
         <a class="portfolio-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

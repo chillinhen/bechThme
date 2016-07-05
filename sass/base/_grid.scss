@@ -3,6 +3,10 @@ $column: 68px;
 $gutter: 30px;
 $grid-columns: 12;
 
+* {
+/*    @include box-sizing(border-box);*/
+}
+
 .container {
 
     @extend %clearfix;

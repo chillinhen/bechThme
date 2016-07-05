@@ -1,9 +1,19 @@
+
 jQuery(document).ready(function ($) {
+    function test() {
+        alert('TEST');
+    }
+    function resize() {
+        alert('TEST Responsive');
+    }
+    function responsiveHeader() {
+        var logoHeight = $('.logo').height();
+        var headerHeight = $('#header').height();
+        $('body:not(.home) > main').css('margin-top', headerHeight + logoHeight + 10);
+    }
     function checkSize() {
         if ($(".nav li").css("float") == "none") {
-            var logoHeight = $('.logo').height();
-            var headerHeight = $('#header').height();
-            $('body:not(.home) > main').css('margin-top', headerHeight + logoHeight);
+            responsiveHeader();
             }
     }
     function portfolioSizes() {
@@ -12,6 +22,13 @@ jQuery(document).ready(function ($) {
         var portfolioSize = portfolioItem.width();
         portfolioItem.css('height', portfolioSize);
     }
+    if (window.innerHeight > window.innerWidth) {
+        //alert("Please use Landscape!");
+        //test();
+        responsiveHeader();
+    }
+    //test();
+
 
     //alert('hallo');
     //portfolio height
@@ -19,6 +36,8 @@ jQuery(document).ready(function ($) {
 
     // run test on resize of the window
     $(window).resize(checkSize);
+//    $(window).resize(resize);
+//    $(window).resize(test);
     $(window).resize(portfolioSizes);
     //some tweaks for smaller windowa
 
@@ -81,9 +100,4 @@ jQuery(document).ready(function ($) {
         }
         e.preventDefault()
     });
-});
-
-$(window).resize(function () {
-    checkSize();
-    portfolioSizes();
 });
