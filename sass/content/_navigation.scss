@@ -143,6 +143,21 @@ nav.nav {
             padding:.5em;
             background:$base-color-white;
         }
+        .fallback{
+            display: none;
+
+        }
+        .no-svg & svg{display:none;}
+    }
+    .no-svg .fallback{
+              @include size(40px);
+              display: block;
+    }
+    .no-svg .home-btn.mobile-layout .fallback{
+        background: $base-color-white url('../img/home-btn.gif') center center no-repeat / auto 25px;
+    }
+    .no-svg .navbar-toggle .fallback{
+        background: $base-color-white url('../img/menu-bars.gif') center center no-repeat / auto 25px;
     }
     .home-btn.mobile-layout{
         top:0;

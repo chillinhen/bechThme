@@ -86,9 +86,11 @@ article{
             overflow:hidden;
             @media screen and (orientation:portrait){
                 height:50vH;
+                height:50%;
             }
             @media screen and (orientation:landscape){
                 height:100vH;
+                height:100%;
             }
         }
         @media screen and (min-width:$screen-smallPad){

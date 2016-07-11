@@ -2,19 +2,29 @@ article{
     body.home &{
         @media screen and (max-width:$screen-smallPad){
             @media screen and (orientation:portrait){
-                h1 { margin-top:50vH;}
+                h1 { 
+                    margin-top:50%;
+                    margin-top:50vH;
+                    
+                }
             }
             @media screen and (orientation:landscape){
                 h1 { 
+                    margin-top:45%;
                     margin-top:45vH;
+                    
                     font-size: 1rem;
                 }
             }
         }
         @media screen and (min-width:$screen-smallPad) and (max-width:$screen-sm){
-            h1 { margin-top:25vH;}
+            h1 { 
+                margin-top:25%;
+                margin-top:25vH;
+            }
             @media screen and (orientation:landscape){
                 h1 { 
+                    margin-top:50%;
                     margin-top:50vH;
                     font-size: 1.2rem;
                 }
@@ -28,12 +38,16 @@ article{
         }
         @media screen and (min-width:$screen-sm) and (max-width:$screen-md){
             h1 { 
+                margin:45% 15%;
                 margin:45vH 15vW;
                 font-size: 1.6em;
             }
         }
         @media screen and (min-width:$screen-md){
-            h1 { margin:12vH 3em;}
+            h1 { 
+                margin:12% 3em;
+                margin:12vH 3em;
+            }
         }
     }
 

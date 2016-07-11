@@ -42,6 +42,7 @@
                 <div class="home-btn mobile-layout">
                     <a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>">
                         <svg><use xlink:href="#homeBtn"></use></svg>
+                        <span class="fallback"></span>
                     </a>          
                 </div>
                 <!-- nav -->
@@ -51,6 +52,7 @@
                 <!-- /nav -->
                 <div class="navbar-toggle">
                     <svg><use xlink:href="#menu"></use></svg>
+                    <span class="fallback"></span>
                 </div>
                 <!-- logo -->
 
