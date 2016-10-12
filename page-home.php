@@ -12,4 +12,5 @@
         <?php get_template_part('partials/article', '404'); ?>
     <?php endif; ?>
 </section>
+<?php #get_template_part('partials/one-pager');?>
 <?php get_footer(); ?>

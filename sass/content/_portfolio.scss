@@ -1,0 +1,90 @@
+/**** Portfolio ****/
+.portfolio-item{
+    position: relative;
+    overflow: hidden;
+    margin-bottom:1.33em;
+    position:relative;
+    /*border: 0px solid #000;*/
+
+    > [class*="portfolio_"]{
+        position:absolute;
+        left:0;
+        right: 0;
+        top:0;
+        bottom:0;
+        opacity: 0;
+        background: $portfolio-bg-color;
+    }
+    > .portfolio-thumbnail{
+        background: #000;
+        display: block;
+    }
+    > .portfolio_content{
+        *{color:white !important;}
+        text-align: center;
+        padding:2em;
+        line-height:0;
+
+
+        h2 {@include ellipsis(100%);}
+        svg {
+            height: 3px;
+            width: 100%;
+            margin-top:1em;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.2;
+        }
+
+        .view-article{display: none;}
+        @media screen and (max-width:$screen-xs){
+            opacity:0;
+            @include transition(all 2.0s ease-in-out);
+        }
+        @media screen and (min-width:$screen-xs + 1){
+            left:-100%;
+            right:100%;
+        }
+    }
+    /** End portfolio-content **/
+    &:hover, &:focus{
+        overflow:visible;
+        cursor:pointer;
+
+        > .portfolio_content{
+            z-index: 99;
+            opacity: 1;
+            @media screen and (min-width:$screen-xs + 1){
+            left:100%;
+            right:-107%;
+            }
+        }
+        > .portfolio-thumbnail{
+            border:.5em solid $portfolio-bg-color;
+            .grayscale{
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+            .grayscale-replaced > svg {opacity: 0;}
+        }
+        @media screen and (min-width:$screen-xs) and (max-width:$screen-sm){
+		    &:nth-child(2n){
+		        .portfolio_content{
+		            left: -107%;
+		            right: 100%;
+		        }
+		    }
+		}
+		@media screen and (min-width:$screen-sm){
+		    &:nth-child(3n){
+		        .portfolio_content{
+		            left: -107%;
+		            right: 100%;
+		        }
+		    }
+		}
+    }
+}
