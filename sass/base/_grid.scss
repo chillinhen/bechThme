@@ -146,9 +146,5 @@ article{
             @include span-columns(4);
             @include omega(3n);
         }
-/*        @media screen and (min-width:960px){
-            @include span-columns(3);
-            @include omega(4n);
-        }*/
     }
 }

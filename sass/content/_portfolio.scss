@@ -18,6 +18,7 @@
     > .portfolio-thumbnail{
         background: #000;
         display: block;
+        padding:0;
     }
     > .portfolio_content{
         *{color:white !important;}
@@ -53,7 +54,7 @@
     &:hover, &:focus{
         overflow:visible;
         cursor:pointer;
-
+        @include transition(all 2.0s ease-in-out);
         > .portfolio_content{
             z-index: 99;
             opacity: 1;
@@ -63,7 +64,7 @@
             }
         }
         > .portfolio-thumbnail{
-            border:.5em solid $portfolio-bg-color;
+            padding:.5em;
             .grayscale{
                 -webkit-filter: grayscale(0);
                 filter: grayscale(0);
