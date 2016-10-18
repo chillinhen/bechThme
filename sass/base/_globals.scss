@@ -1,4 +1,10 @@
 * {@include box-sizing;}
+
+/*** Transitions ***/
+/** {
+    @include transition(all 800ms ease-in-out);
+}*/
+
 .leftalign{
     float:left;
 }

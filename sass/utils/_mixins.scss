@@ -7,3 +7,17 @@
         @include flex(1);
     }
 }
+@mixin grey-background{
+    background: $base-bg-color!important;
+    padding-top:10vH;
+}
+
+@mixin footer-background{
+    background:$primary-color;
+    * {color:$base-color-white;}
+}
+@mixin columns{
+    @media screen and (min-width:960px){
+        > div {@include span-columns(3);}
+    }
+}

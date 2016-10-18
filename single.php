@@ -18,20 +18,5 @@
         </article>
     <?php endif; ?>
 </section>
-<?php 
 
-$posts = get_field('related_posts');
-
-if( $posts ): ?>
-    <section class="bottom-fold related container">
-	    <div id="portfolio">
-	    
-	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-	        <?php setup_postdata($post); ?>
-	        	<?php get_template_part('partials/loop', 'portfolio'); ?>
-	    <?php endforeach; ?>
-	    </div>
-    </section>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
 <?php get_footer(); ?>

@@ -27,15 +27,8 @@
         </script>
 
     </head>
-    <?php if (is_front_page()) : ?>
-        <?php if (get_theme_mod('bechhold_BG')) : ?>
-            <body <?php body_class(); ?> style="background-image: url(<?php echo esc_url(get_theme_mod('bechhold_BG')); ?>)">
-            <?php endif; ?>
-        <?php else : ?>
-        <body <?php body_class(); ?>>
-        <?php endif; ?>
-
-        <?php get_template_part('svg/inline', 'icons.svg'); ?>
+    <body <?php body_class(); ?>>
+    <?php get_template_part('svg/inline', 'icons.svg'); ?>
         <!-- header -->
         <header id="header" class="row" role="banner">
             <div class="container">
@@ -67,4 +60,4 @@
             </div>
         </header>
         <!-- /header -->
-        <main role="main" class="row">
+        <main role="main">

@@ -2,22 +2,22 @@
 $column: 68px;
 $gutter: 30px;
 $grid-columns: 12;
-
-* {
-/*    @include box-sizing(border-box);*/
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
 }
 
 .container {
-
     @extend %clearfix;
+
     @media screen and (min-width:$screen-smallPad) and (max-width:$screen-lg){
         @include outer-container(900px);
     }
-    
+
     @media screen and (min-width:$screen-lg){
         @include outer-container(1024px);   
     }
-
     body > header & {
         nav, .logo{}
         @media screen and (min-width:$screen-md) and (max-width:$screen-lg){
@@ -28,7 +28,10 @@ $grid-columns: 12;
 
         }
         @media screen and (min-width:$screen-lg){
-            nav{@include span-columns(7);}
+            nav{
+                @include span-columns(7);
+                margin-right: 0;
+            }
             .logo{
                 @include span-columns(5);
             }
@@ -38,11 +41,9 @@ $grid-columns: 12;
         @media screen and (min-width:$screen-xs + 1) and (max-width:$screen-sm){
             padding:0 2em;
         }
-        
+
         &.columns{
-            @media screen and (min-width:960px){
-                > div {@include span-columns(3);}
-            }
+            @include columns;
         }
     }
     &.contact-buttons {
@@ -64,7 +65,6 @@ $grid-columns: 12;
             > div {@include span-columns(4);}
         }
     }
-
 }
 article{
     > .post_content, > aside{
@@ -74,11 +74,6 @@ article{
         }
         @media screen and (min-width:$screen-smallPad){
             @include span-columns(6);
-        }
-    }
-    > .post_content{
-        @media screen and (min-width:$screen-maxPhone){
-
         }
     }
     > aside{
@@ -94,14 +89,16 @@ article{
             }
         }
         @media screen and (min-width:$screen-smallPad){
-            body[class*="subpages"] &{
+            body[class*="subpages"] &,
+            body.home #team &{
                 float: right;
                 @include omega();
                 img {float:right;}
             }
         }
     }
-    body.leistungen & {
+    
+    body.leistungen &, #leistungen & {
         text-align: center;
         .post_content {margin-bottom: 1.5 * $vgrid;}
         @media screen and (max-width:$screen-xs){
@@ -129,7 +126,8 @@ article{
         }
     }
 }
-#portfolio{
+
+#portfolio-liste{
     @media screen and (min-width:$screen-xs) and (max-width:960px){
         @include outer-container;
     }
@@ -137,14 +135,18 @@ article{
         @include outer-container;
     }
     .portfolio-item{
-        
+
         @media screen and (min-width:$screen-xs) and (max-width:$screen-smallPad){
             @include span-columns(6);
             @include omega(2n);
         }
-        @media screen and (min-width:$screen-smallPad + 1){
+        @media screen and (min-width:$screen-smallPad + 1) and (max-width:960px - 1px){
             @include span-columns(4);
             @include omega(3n);
+        }
+        @media screen and (min-width:960px){
+            @include span-columns(3);
+            @include omega(4n);
         }
     }
 }

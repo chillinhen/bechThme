@@ -1,58 +1,21 @@
-<main id="primary" role="main">
-    <section id="portfolio">
-        <?php
-        $query = new WP_Query('pagename=portfolio');
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                echo '<div class="container">';
-                the_content();
-                echo '</div>';
-            }
-        }
-        wp_reset_postdata();
+<?php
+// get only first 3 results
+$ids = get_field('one-pager-items', false, false);
+
+$onePageQuery = new WP_Query(array(
+    'post_type' => 'page',
+    'posts_per_page' => -1,
+    'post__in' => $ids,
+    'post_status' => 'any',
+    'orderby' => 'post__in',
+        ));
+if ($onePageQuery->have_posts()):while ($onePageQuery->have_posts()) : $onePageQuery->the_post();
         ?>
-    </section>
-    <section id="team">
+
+    <?php get_template_part('partials/section','onepager');?>
+
         <?php
-        $query = new WP_Query('pagename=team');
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                echo '<div class="container">';
-                the_content();
-                echo '</div>';
-            }
-        }
-        wp_reset_postdata();
-        ?>
-    </section>
-    <section id="leistungen">
-        <?php
-        $query = new WP_Query('pagename=leistungen');
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                echo '<div class="container">';
-                the_content();
-                echo '</div>';
-            }
-        }
-        wp_reset_postdata();
-        ?>
-    </section>
-    <section id="kontakt">
-        <?php
-        $query = new WP_Query('pagename=kontakt');
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                echo '<div class="container">';
-                the_content();
-                echo '</div>';
-            }
-        }
-        wp_reset_postdata();
-        ?>
-    </section>
-</main>
+    endwhile;
+    wp_reset_postdata();
+endif;
+?>

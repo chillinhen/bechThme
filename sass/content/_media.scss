@@ -17,6 +17,8 @@
 .flexslider{
     border:0;
     margin:0;
+    
+    aside img {width:100%;max-width:none;height:auto;}
 }
 .flex-control-nav{
     bottom:1em;
@@ -31,7 +33,7 @@
 [class*="flex-nav"]{
     > a{
         z-index:0;
-        @media screen and (max-width:$screen-md){}
+        
         &:before{
             content:'' !important;
             background: rgba(255,255,255,.5) url("../svg/flex-nav.svg") no-repeat center center;
@@ -48,7 +50,8 @@
             }
         }
         &.flex-prev, &.flex-next{
-            top:50%;
+            @media screen and (max-width:$screen-md - 1){top:50%;}
+            @media screen and (min-width:$screen-md){top:320px;}
             bottom:auto;
         }
         &.flex-prev:before{

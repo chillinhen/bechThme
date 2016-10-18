@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     if (window.innerHeight > window.innerWidth) {
         //alert("Please use Landscape!");
         //test();
-        responsiveHeader();
+        //responsiveHeader(); ToDO
     }
     //test();
 
@@ -41,7 +41,21 @@ jQuery(document).ready(function ($) {
     $(window).resize(portfolioSizes);
     //some tweaks for smaller windowa
 
+    var navigation = $('body.home > #header');
+    //var stickyNavTop = navigation.offset().top;
 
+    var stickyNav = function () {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 800) {
+            navigation.addClass('sticky');
+        } else {
+            navigation.removeClass('sticky');
+        }
+    };
+
+    stickyNav();
+    $(window).scroll(stickyNav);
 
 
     //use svg as instead of border-bottom or background-images
@@ -52,9 +66,17 @@ jQuery(document).ready(function ($) {
     if ($('body.single').hasClass('portfolio')) {
         $('li.portfolio').addClass('current-menu-item');
     }
-    $('.flexslider').flexslider({
-        animation: "slide"
+
+    $('body.single .flexslider').flexslider({
+        animation: "slide",
+        animationSpeed: 800,
     });
+    
+    $('body.page .flexslider').flexslider({
+        animation: "slide",
+        animationSpeed: Modernizr.touch ? 800 : 2400
+    });
+
 
     //Navbar tweaks
     $('.navbar-toggle').click(function () {
