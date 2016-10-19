@@ -8,6 +8,7 @@
         <?php the_content(); ?>
      </section>
      <aside>
+         <?php #get_template_part('snippet_02');?>
         <?php get_template_part('partials/gallery', 'carousel'); ?>
      </aside>
 </article>

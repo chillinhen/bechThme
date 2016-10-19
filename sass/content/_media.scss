@@ -51,7 +51,7 @@
         }
         &.flex-prev, &.flex-next{
             @media screen and (max-width:$screen-md - 1){top:50%;}
-            @media screen and (min-width:$screen-md){top:320px;}
+            @media screen and (min-width:$screen-md){top:50%;}
             bottom:auto;
         }
         &.flex-prev:before{

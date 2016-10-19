@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
     var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
 
-        if (scrollTop > 800) {
+        if (scrollTop > 768) {
             navigation.addClass('sticky');
         } else {
             navigation.removeClass('sticky');
@@ -70,11 +70,15 @@ jQuery(document).ready(function ($) {
     $('body.single .flexslider').flexslider({
         animation: "slide",
         animationSpeed: 800,
+        animationLoop:	true,
+        slideshowSpeed:	7000
     });
     
     $('body.page .flexslider').flexslider({
         animation: "slide",
-        animationSpeed: Modernizr.touch ? 800 : 2400
+        animationSpeed: Modernizr.touch ? 800 : 2400,
+        animationLoop:	true,
+        slideshowSpeed:	7000
     });
 
 
