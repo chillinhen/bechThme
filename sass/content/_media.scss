@@ -76,7 +76,8 @@
         &.flex-prev, &.flex-next{
             .portfolio & {}
             [class*="subpages"] & {
-                @media screen and (max-width:$screen-md - 1){top:40%;}
+                @media screen and (max-width:$screen-smallPad){top:65vH;}
+                @media screen and (min-width:$screen-smallPad + 1) and (max-width:$screen-md - 1){top:40%;}
                 @media screen and (min-width:$screen-md){top:40%;}
             }
             

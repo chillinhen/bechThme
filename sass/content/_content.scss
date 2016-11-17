@@ -43,11 +43,13 @@ article{
                 font-size: 1.6em;
             }
         }
-        @media screen and (min-width:$screen-md){
+        @media screen and (min-width:$screen-md) and (max-width:$screen-lg - 1) {
             h1 { 
-                margin:12% 3em;
-                margin:20vH 3em;
+                margin:15vH 0;
             }
+        }
+        @media screen and (min-width:$screen-lg){
+            margin:20vH 3em;
         }
     }
 

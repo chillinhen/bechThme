@@ -86,10 +86,11 @@ body {
     }
 }
 article{
-    @media screen and (max-width:$screen-smallPad){
-        @include display(flex);
-        @include flex-direction(column-reverse);
-        @include justify-content(flex-start);
+    @media screen and (max-width:$screen-sm){
+        &.has-post-thumbnail{
+            @include display(flex);
+            @include flex-direction(column);    
+        }
     }
 
     > .post_content, > aside{
@@ -122,7 +123,12 @@ article{
                 height:100%;
             }
         }
-        @media screen and (min-width:$screen-smallPad){
+        @media screen and (max-width:$screen-sm){
+            [class*="subpages"] &{
+                float:none;
+            }
+        }
+        @media screen and (min-width:$screen-sm + 1){
             [class*="subpages"] &{
                 float: right;
                 @include omega();

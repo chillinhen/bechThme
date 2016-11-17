@@ -7,13 +7,15 @@ body{
             & ~ #ueber-uns{
                 padding:100px 0;
             }
+            background-repeat: no-repeat;
+            background-color: $portfolio-bg-color;
             height:100vH;
             padding-top:$desktopHeaderHeight;
             position:relative;
             @media screen and (max-width:$screen-smallPad){
                 @media screen and (orientation:portrait){
                     background-size:contain;
-                    background-position:50% 70%; 
+                    background-position:50% 50%;
                 }
                 @media screen and (orientation:landscape){
                     background-size:cover;
@@ -96,6 +98,9 @@ body{
 }
 #impressum{
     @include footer-background;
+    @media screen and (max-width:$screen-sm){
+            padding:0 2em;
+        }
     .columns {
         @include columns;
     }
@@ -110,9 +115,6 @@ body{
             padding:0 2em;
         }
     }
-    /*    &.related.bottom-fold {
-            margin-top:2em;
-        }*/
 }
 
 #header {
@@ -129,6 +131,10 @@ body{
         &.sticky {
             background:white;
             @include transition(all 800ms ease-in-out);
+            .logo{
+               background:white; 
+               @include transition(all 800ms ease-in-out);
+            }
         }
     }
 
