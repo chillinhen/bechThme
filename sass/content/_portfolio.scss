@@ -40,7 +40,7 @@
             line-height: 1.2;
         }
 
-        .view-article{display: none;}
+        .view-article, .more-link{display: none;}
         @media screen and (max-width:$screen-xs){
             opacity:0;
             @include transition(all 2.0s ease-in-out);

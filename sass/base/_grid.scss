@@ -2,6 +2,25 @@
 $column: 68px;
 $gutter: 30px;
 $grid-columns: 12;
+
+/** Sticky footer **/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 66px;
+
+    > footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 66px;
+    }
+}
+
+
+
 * { 
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
@@ -67,13 +86,28 @@ $grid-columns: 12;
     }
 }
 article{
+    @media screen and (max-width:$screen-smallPad){
+        @include display(flex);
+        @include flex-direction(column-reverse);
+        @include justify-content(flex-start);
+    }
+
     > .post_content, > aside{
         @media screen and (max-width:$screen-smallPad){
             @include fill-parent();
             vertical-align:top;
         }
-        @media screen and (min-width:$screen-smallPad){
-            @include span-columns(6);
+    }
+    @media screen and (min-width:$screen-md){
+
+        > .post_content{
+            @include span-columns(5);
+            > * {
+                padding-right: 5%;
+            }
+        }
+        > aside{
+            @include span-columns(7);
         }
     }
     > aside{
@@ -89,15 +123,14 @@ article{
             }
         }
         @media screen and (min-width:$screen-smallPad){
-            body[class*="subpages"] &,
-            body.home #team &{
+            [class*="subpages"] &{
                 float: right;
                 @include omega();
                 img {float:right;}
             }
         }
     }
-    
+
     body.leistungen &, #leistungen & {
         text-align: center;
         .post_content {margin-bottom: 1.5 * $vgrid;}

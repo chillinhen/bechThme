@@ -4,9 +4,10 @@ $images = get_field('gallery');?>
        <?php if ($images):?>
         <ul class="slides">
             
-            <li><?php endif; ?>
+            <li class="item-img"><?php endif; ?>
             <?php if (has_post_thumbnail()) : // Check if thumbnail exists ?>
-                <?php the_post_thumbnail('thumb-subpages-large'); // Declare pixel size you need inside the array  ?>
+                <div>
+                <?php the_post_thumbnail('thumb-subpages-large'); // Declare pixel size you need inside the array  ?></div>
             <?php endif; ?>
              <?php if ($images):?></li>
             <?php foreach ($images as $image): ?>

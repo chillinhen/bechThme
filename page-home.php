@@ -32,7 +32,7 @@
 <?php get_template_part('partials/section-onepager', 'leistungen'); ?>
 <!-- end Leistungen -->
 <!-- Team -->
-<?php get_template_part('partials/section-onepager', 'team'); ?>
+<?php get_template_part('partials/section-onepager', 'ueber-uns'); ?>
 <!-- end Team -->
 <!-- Kontakt -->
 <?php get_template_part('partials/section-onepager', 'kontakt'); ?>

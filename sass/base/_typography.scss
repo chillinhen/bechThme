@@ -35,7 +35,7 @@ h6{
     font-weight:400;
     color: $heading-text-color;
     @media screen and (min-width:$screen-md){
-        margin: 0 0 3 * $paragraph-margin;   
+        margin: 0 0 $paragraph-margin;   
     }
     #home &{
         color:white !important;
@@ -52,18 +52,27 @@ h6{
         }
     }
     article &, .page &, .portfolio & {
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing:$letter-spacing;
+        font-weight:900;
+        > span {color:$primary-color;}
+    }
+    article &, .page &, .portfolio & {
         @media screen and (max-width:$screen-xs){
             font-size:$rem-base * 1.375;
         }
+    }
+    article &, .page &, .portfolio & {
 
         @media screen and (min-width:$screen-md){
             font-size:$rem-base * 3.125;
         }
-        text-transform: uppercase;
-        line-height: 1;
-        letter-spacing:.025em;
-        font-weight:900;
-        > span {color:$primary-color;}
+    }
+    .single.portfolio & {
+        @media screen and (min-width:$screen-md){
+            font-size:$rem-base * 2.5 !important;
+        }
     }
     .contact &{
         text-align: center;
@@ -90,15 +99,16 @@ h6{
     font-size: 1.25em;
     font-family: $headings-font-family;
     font-weight:600;
+    margin-bottom:0;
 }
-    .link-impressum{
-        color:#fff;
-        font-size: .85em;
-        font-weight:400;
-        @media screen and (min-width:$screen-md){float: right;}
-        
-    }
-    .copyright-text{float: left;}
+.link-impressum{
+    color:#fff;
+    font-size: .85em;
+    font-weight:400;
+    @media screen and (min-width:$screen-md){float: right;}
+
+}
+.copyright-text{float: left;}
 // paragraph text
 p {
     margin: 0 0 $paragraph-margin;
@@ -114,28 +124,29 @@ p {
 
     body:not(.home) > .footer & {
         padding-top:1em;
+        margin-bottom: 0;
     }
     body.leistungen > main &{
         text-align: center;
     }
 }
-.container.keywords {
-        font-family: $headings-font-family;
-        font-size: 1.6em;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: bold !important;
-        line-height: 1;
-        margin-bottom: 0;
-        color:$base-color-white;
-        letter-spacing:.055em;
-        @media screen and (max-width:$screen-xs){
-            font-size:$rem-base * 0.875;
-        }
-        @media screen and (min-width:$screen-md){
-            font-size:$rem-base * 1.5;
-        }
+.container.keywords p{
+    font-family: $headings-font-family;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold !important;
+    line-height: 1;
+    margin-bottom: 0;
+    color:$base-color-white;
+    letter-spacing:$letter-spacing;
+    @media screen and (max-width:$screen-xs){
+        font-size:$rem-base * 0.875;
     }
+    @media screen and (min-width:$screen-md){
+        font-size:$rem-base * 1.5;
+    }
+}
 
 a{
     color:$text-color;
@@ -213,6 +224,8 @@ blockquote {
 
 .text-muted { color: $text-muted-color; }
 .text-smaller {font-size: smaller;}
+
+.view-article, .more-link {font-weight:600;}
 
 /*** tables ****/
 table {

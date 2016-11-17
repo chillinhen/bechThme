@@ -1,5 +1,19 @@
 
 jQuery(document).ready(function ($) {
+    //scroll top top
+    jQuery(window).scroll(function(){
+		if (jQuery(this).scrollTop() > 100) {
+			jQuery('.scroll-to-top').fadeIn();
+		} else {
+			jQuery('.scroll-to-top').fadeOut();
+		}
+	});
+	
+	//Click event to scroll to top
+	jQuery('.scroll-to-top').click(function(){
+		jQuery('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
     function test() {
         alert('TEST');
     }
@@ -25,7 +39,7 @@ jQuery(document).ready(function ($) {
     if (window.innerHeight > window.innerWidth) {
         //alert("Please use Landscape!");
         //test();
-        //responsiveHeader(); ToDO
+        //responsiveHeader(); //ToDO
     }
     //test();
 
@@ -47,7 +61,7 @@ jQuery(document).ready(function ($) {
     var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
 
-        if (scrollTop > 768) {
+        if (scrollTop > 500) {
             navigation.addClass('sticky');
         } else {
             navigation.removeClass('sticky');
@@ -61,7 +75,17 @@ jQuery(document).ready(function ($) {
     //use svg as instead of border-bottom or background-images
     $(".nav li:not(.close-menu)").append('<svg><use xlink:href="#dotted-line"></use></svg>');
     $(".nav li.close-menu").append('<svg><use xlink:href="#pfeil-xs"></use></svg></div>');
-
+    
+    // hide portfolio-content which is larger than 500px
+    $contentHeight = $('.post_content > div').height();
+    //alert($contentHeight);
+    if ($contentHeight >= 480){
+        $('.post_content > div').addClass('hide');
+        $('.post_content').append('<div class="btn"> </div>');
+        $('.btn').click(function(){
+            $(this).siblings('.post_content > div').toggleClass('hide');
+        });
+    };
 
     if ($('body.single').hasClass('portfolio')) {
         $('li.portfolio').addClass('current-menu-item');
@@ -78,6 +102,7 @@ jQuery(document).ready(function ($) {
         animation: "slide",
         animationSpeed: Modernizr.touch ? 800 : 2400,
         animationLoop:	true,
+        pauseOnHover: true,
         slideshowSpeed:	7000
     });
 

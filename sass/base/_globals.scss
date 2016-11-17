@@ -1,10 +1,5 @@
 * {@include box-sizing;}
 
-/*** Transitions ***/
-/** {
-    @include transition(all 800ms ease-in-out);
-}*/
-
 .leftalign{
     float:left;
 }
@@ -21,7 +16,6 @@
         display:none;
     }
 }
-*:hover, *:focus {cursor: pointer;}
 
 .post-edit-link{
     background: transparent url(../svg/pen.svg) no-repeat left center;
@@ -29,5 +23,33 @@
     @include size(20px);
     > span {
         @extend %text-indent;
+    }
+}
+.scroll-to-top {
+    background: $primary-color url(../svg/flex-nav.svg) no-repeat center center / 30%;
+    bottom: .5em;
+    cursor: pointer;
+    display: none;
+   @media screen and (max-width:$screen-md - 1){
+        @include circle(60px);
+    }
+    @media screen and (min-width:$screen-md){
+        @include circle(50px);
+    }
+    
+    @include transform(rotate(-90deg));
+    position: fixed;
+    @media screen and (max-width:$screen-md - 1){
+       right: .5em; 
+    }
+    @media screen and (min-width:$screen-md){
+        right: 3em;
+    }
+    
+    transition: background-color 0.1s linear 0s;
+    z-index: 9999;
+
+    &:hover {
+        opacity: 0.8;
     }
 }

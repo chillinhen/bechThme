@@ -82,10 +82,10 @@ li.menu-item{
             border-top:3px solid transparent;
         }
         @media screen and (min-width:$screen-md)and (max-width:$screen-lg){
-            padding:1rem .6em 0 .6em;
+            padding:1rem .5em 0 .5em;
         }
         @media screen and (min-width:$screen-lg){
-            padding:1rem 1.2em 0 1.2em;
+            padding:1rem 1em 0 1em;
         }
         @media screen and (min-width:$screen-md){
             body.home #header:not(.sticky) &, body.home #header:not(.sticky) &:hover {

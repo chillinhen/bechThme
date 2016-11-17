@@ -7,6 +7,7 @@
     </p>
     <?php #endif;?>
 </footer>
+<div class="scroll-to-top"> </div>
 <?php wp_footer(); ?>
 <!-- analytics -->
 <?php

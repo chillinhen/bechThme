@@ -1,8 +1,8 @@
 <?php
-$query = new WP_Query('pagename=team');
+$query = new WP_Query('pagename=ueber-uns');
 if ($query->have_posts()) :
     ?>
-    <section id="team">
+    <section id="ueber-uns" class="subpages">
         <div class="container intro">
             <?php
             while ($query->have_posts()) : $query->the_post();
