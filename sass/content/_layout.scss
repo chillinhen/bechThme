@@ -9,37 +9,11 @@ body{
             }
             background-repeat: no-repeat;
             background-color: $portfolio-bg-color;
+            background-size:cover;
+            background-position:50% 50%;
             height:100vH;
-            padding-top:$desktopHeaderHeight;
             position:relative;
-            @media screen and (max-width:$screen-smallPad){
-                @media screen and (orientation:portrait){
-                    background-size:contain;
-                    background-position:50% 50%;
-                }
-                @media screen and (orientation:landscape){
-                    background-size:cover;
-                    background-position:50% 0%; 
-                }
-            }
-            @media screen and (min-width:$screen-smallPad) and (max-width:$screen-sm){
-                @media screen and (orientation:landscape){
-                    background-size:cover;
-                    background-position:50% 0%;
-                }
-                @media screen and (orientation:portrait){
-                    background-size:contain;
-                    background-position:50% 50%;
-                }
-            }
-            @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-md){
-                background-size:cover;
-                background-position:50% 50%;
-            }
-            @media screen and (min-width:$screen-md){
-                background-size:cover;
-                background-position:50% 25%;
-            }
+            @media screen and (min-width:$screen-md){padding-top:$desktopHeaderHeight;}
         }
         .footer-home{
             position: absolute;

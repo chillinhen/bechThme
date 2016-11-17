@@ -1,32 +1,29 @@
 article{
     #home &{
         @media screen and (max-width:$screen-smallPad){
-            @media screen and (orientation:portrait){
-                h1 { 
-                    margin-top:50%;
-                    margin-top:50vH;
-
-                }
-            }
+                    h1 { 
+                            margin-top:35%;
+                            margin-top:35vH;
+        
+                        }
             @media screen and (orientation:landscape){
-                h1 { 
-                    margin-top:45%;
-                    margin-top:45vH;
+                h1 {
 
-                    font-size: 1rem;
+                    font-size: 1.4rem;
                 }
             }
         }
         @media screen and (min-width:$screen-smallPad) and (max-width:$screen-sm){
+            @media screen and (orientation:portrait){
             h1 { 
-                margin-top:25%;
-                margin-top:25vH;
+                margin-top:20%;
+                margin-top:20vH;
+            }
             }
             @media screen and (orientation:landscape){
                 h1 { 
-                    margin-top:50%;
-                    margin-top:50vH;
-                    font-size: 1.2rem;
+                    margin-top:35%;
+                    margin-top:35vH;
                 }
             }
         }
@@ -38,18 +35,17 @@ article{
         }
         @media screen and (min-width:$screen-sm) and (max-width:$screen-md){
             h1 { 
-                margin:45% 15%;
-                margin:45vH 15vW;
-                font-size: 1.6em;
+                margin:0% 15%;
+                margin:0vH 15vW;
             }
         }
         @media screen and (min-width:$screen-md) and (max-width:$screen-lg - 1) {
             h1 { 
-                margin:15vH 0;
+                margin:5vH 0;
             }
         }
         @media screen and (min-width:$screen-lg){
-            margin:20vH 3em;
+            margin:5vH 3em;
         }
     }
 
