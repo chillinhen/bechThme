@@ -13,11 +13,14 @@
                     <?php the_content(); ?>
                 </section>
                 <aside>
-                    <?php get_template_part('partials/gallery', 'carousel'); ?>
+                    <?php if (has_post_thumbnail()) : // Check if thumbnail exists ?>
+                        <?php the_post_thumbnail('large'); // Declare pixel size you need inside the array ?>
+                    <?php endif; ?>
                 </aside>
             </article>
             <!-- /article -->
             <?php edit_post_link(); ?>
+            <?php wp_link_pages(); ?>
 
         <?php endwhile; ?>
 

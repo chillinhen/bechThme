@@ -1,6 +1,6 @@
 <section class="impressum" id="impressum">
     <div class="container columns">
-        <h4><?php _e('Impressum', 'bechTheme'); ?></h4>
+        <h4 ><?php _e('Impressum', 'bechholdTheme'); ?></h4>
         <?php $contact = get_field('kontaktdaten'); ?>
         <?php if ($contact) : ?>
             <div><?php echo $contact; ?></div>
@@ -43,9 +43,18 @@
         <?php $agb = get_field('agb'); ?>
         <?php if ($agb) : ?>
             <div>
-                <h4><?php _e('AGB', 'bechTheme'); ?></h4>
+                <h4><?php _e('AGB', 'bechholdTheme'); ?></h4>
                 <?php echo $agb; ?>
             </div>
         <?php endif; ?>
+    </div>
+    <div class="container">
+    	<?php $data = get_field('datenschutz'); ?>
+    	<?php if ($data) : ?>
+    	    <div>
+    	        <h4 id="datenschutz"><?php _e('Datenschutz', 'bechholdTheme'); ?></h4>
+    	        <?php echo $data; ?>
+    	    </div>
+    	<?php endif; ?>
     </div>
 </section>

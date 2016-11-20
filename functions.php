@@ -7,7 +7,7 @@ require_once('inc/customizer.php');
 if (function_exists('acf_add_options_page')) {
 
     acf_add_options_page(array(
-        'page_title' => 'Theme General Settings',
+        'page_title' => 'Allgemeine Theme Settings',
         'menu_title' => 'Theme Settings',
         'menu_slug' => 'theme-general-settings',
         'position' => '63.3',
@@ -85,6 +85,24 @@ function bechold_theme_setup() {
     add_image_size('thumb-loop', 400, 400, array('center', 'center'));
     #add_image_size('thumb-subpages', 500, 645, array('center', 'center'));
     #add_image_size('thumb-detail', 570, 455, array('center', 'center'));
+    #
+    #
+        //Theme Support for title
+    add_theme_support('title-tag');
+    function filter_the_document_title(){
+    //$title=$custom_generated_title;
+              //return $title;
+    }
+    //add_filter( 'pre_get_document_title', 'filter_the_document_title',10);
+    function my_document_title_separator($sep){
+        // change separator for singular blog post
+        if( is_singular( array( 'post', 'page' )  ) ){ 
+            $sep = '|';
+        }
+        
+        return $sep; 
+    }
+    add_filter('document_title_separator', 'my_document_title_separator',10);
     // Adding Translation Option
     load_theme_textdomain('bechholdTheme', get_stylesheet_directory_uri() . '/languages');
 
@@ -144,7 +162,7 @@ function bechold_theme_setup() {
         wp_register_style('gray', get_stylesheet_directory_uri() . '/css/gray.min.css', array(), '1.0', 'all');
         wp_enqueue_style('gray');
 
-        wp_register_style('child-style', get_stylesheet_directory_uri() . '/css/screen.css', array('parent-style', 'flexslider', 'fontawseome'), '1.0', 'all');
+        wp_register_style('child-style', get_stylesheet_directory_uri() . '/css/screen.min.css', array('parent-style', 'flexslider', 'fontawseome'), '1.0', 'all');
         wp_enqueue_style('child-style'); // Enqueue it!
 //
 //        wp_enqueue_style('ie', get_stylesheet_directory_uri() . "/css/ie.css", array('child-style'));

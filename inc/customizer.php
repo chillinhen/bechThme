@@ -29,7 +29,7 @@ function bechhold_theme_customizer( $wp_customize ) {
 
     // Background Image upload
     $wp_customize->add_section( 'bechhold_BG_section' , array(
-	    'title'       => __( 'Background Image', 'becholdTheme' ),
+	    'title'       => __( 'Background Image', 'bechholdTheme' ),
 	    'priority'    => 30,
 	    'description' => 'Upload a bg to replace the default site name and description in the header',
 	) );
@@ -39,7 +39,7 @@ function bechhold_theme_customizer( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bechhold_BG', array(
-		'label'    => __( 'Background Image', 'becholdTheme' ),
+		'label'    => __( 'Background Image', 'bechholdTheme' ),
 		'section'  => 'bechhold_BG_section',
 		'settings' => 'bechhold_BG',
 	) ) );

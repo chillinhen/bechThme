@@ -2,11 +2,14 @@
 <html <?php language_attributes(); ?> class="no-js">
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
-        <title><?php wp_title(''); ?><?php
-            if (wp_title('', false)) {
-                echo ' :';
-            }
-            ?> <?php bloginfo('name'); ?></title>
+     	<?php if ( ! function_exists( '_wp_render_title_tag' ) ) :
+		         function theme_slug_render_title() {
+		     ?>
+		     <title><?php wp_title( '|', true, 'right' ); ?></title>
+		     <?php
+		         }
+		         add_action( 'wp_head', 'theme_slug_render_title' );
+		     endif;?>
 
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">

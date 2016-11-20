@@ -76,8 +76,8 @@
                              
 
                                  <h1>
-                                     <?php _e( 'Page not found', 'html5blank' ); ?><br/>
-                                     <span><a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a></span>
+                                     <?php _e( 'Page not found', 'bechholdTheme' ); ?><br/>
+                                     <span><a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'bechholdTheme' ); ?></a></span>
                                  </h1>
 
 			</article>

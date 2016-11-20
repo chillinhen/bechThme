@@ -26,6 +26,8 @@
 <!-- /section -->
 
 <?php get_template_part('partials/contact', 'buttons'); ?>
-<?php get_template_part('partials/contact', 'map'); 
-get_template_part('partials/impressum');?>
+<?php 
+get_template_part('partials/contact', 'map'); 
+get_template_part('partials/impressum');
+?>
 <?php get_footer(); ?>

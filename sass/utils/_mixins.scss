@@ -21,3 +21,11 @@
         > div {@include span-columns(3);}
     }
 }
+@mixin anchor($height){
+    &:target:before{
+        content: '';
+        height:$height;
+        margin-top: -$height;
+        display:block;
+    }
+}

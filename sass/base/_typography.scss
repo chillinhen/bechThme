@@ -37,6 +37,9 @@ h6{
     @media screen and (min-width:$screen-md){
         margin: 0 0 $paragraph-margin;   
     }
+    &{
+        @include anchor(2em);
+    }
     #home &{
         color:white !important;
         margin:0;

@@ -1,4 +1,36 @@
 * {@include box-sizing;}
+div {
+    @include anchor(2em);
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    white-space: nowrap;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    &:focus {
+        background-color: $base-bg_color;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: $primary-color;
+        display: block;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding:calc(1em + 1) 2em 1em;
+        text-decoration: none;
+        top: .5em;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}
+
 
 .leftalign{
     float:left;
