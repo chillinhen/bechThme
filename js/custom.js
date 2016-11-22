@@ -14,12 +14,7 @@ jQuery(document).ready(function ($) {
 		jQuery('html, body').animate({scrollTop : 0},800);
 		return false;
 	});
-    function test() {
-        alert('TEST');
-    }
-    function resize() {
-        alert('TEST Responsive');
-    }
+
     function responsiveHeader() {
         var logoHeight = $('.logo').height();
         var headerHeight = $('#header').height();
@@ -50,8 +45,7 @@ jQuery(document).ready(function ($) {
 
     // run test on resize of the window
     $(window).resize(checkSize);
-//    $(window).resize(resize);
-//    $(window).resize(test);
+
     $(window).resize(portfolioSizes);
     //some tweaks for smaller windowa
 
@@ -118,10 +112,10 @@ jQuery(document).ready(function ($) {
 
     //elastic iframes
     $('iframe').wrap('<div class="iframe-elastic"></div>');
-    $('.page-template-page-contact iframe').attr('id', 'map');
+    $('.page-template-page-home-php iframe, .page-template-page-contact iframe').attr('id', 'map');
 
     //enable pointer events by clicking on parent
-    $('.iframe-elastic').click(function () {
+    $('.iframe-elastic').bind('touchstart click', function(){
         $('#map').css('pointer-events', 'all');
     });
     // you want to disable pointer events when the mouse leave the canvas area;

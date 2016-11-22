@@ -17,7 +17,7 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php get_template_part('inc/meta');?>
+        <meta name="google-site-verification" content="3S_YienLK476tH7o6nefmZqxjLpFV9dxblhQsGs9EGI" />
 
         <?php wp_head(); ?>
         <script>

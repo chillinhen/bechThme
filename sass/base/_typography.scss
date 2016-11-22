@@ -112,6 +112,9 @@ h6{
 
 }
 .copyright-text{float: left;}
+a {
+	#impressum & {text-decoration: underline;}
+	}
 // paragraph text
 p {
     margin: 0 0 $paragraph-margin;

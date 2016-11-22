@@ -78,15 +78,11 @@ function bechold_theme_setup() {
     add_image_size('thumb-subpages-small', 320, 250, array('top', 'center'));
     add_image_size('thumb-subpages-medium', 420, 328, array('top', 'center'));
     add_image_size('thumb-subpages-large', 640, 500, array('top', 'center'));
-
-
-    add_image_size('custom-size', 1680, 1280, array('center', 'center')); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-    #add_image_size('full', 1680, 1280, array('center', 'center'));
     add_image_size('thumb-loop', 400, 400, array('center', 'center'));
-    #add_image_size('thumb-subpages', 500, 645, array('center', 'center'));
-    #add_image_size('thumb-detail', 570, 455, array('center', 'center'));
-    #
-    #
+
+
+    add_image_size('custom-size', 1680, 1280, array('center', 'center')); // Custom Thumbnail Size call 
+
         //Theme Support for title
     add_theme_support('title-tag');
     function filter_the_document_title(){
@@ -136,7 +132,7 @@ function bechold_theme_setup() {
             wp_register_script('webfontloader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js', array('jquery'), false, false);
             wp_enqueue_script('webfontloader');
 
-            wp_register_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array('flexslider'), '1.2', true); // Custom Script
+            wp_register_script('custom', get_stylesheet_directory_uri() . '/js/custom.min.js', array('flexslider'), '1.3', true); // Custom Script
             wp_enqueue_script('custom'); // Enqueue it!
         }
     }
@@ -163,10 +159,8 @@ function bechold_theme_setup() {
         wp_enqueue_style('gray');
 
         wp_register_style('child-style', get_stylesheet_directory_uri() . '/css/screen.min.css', array('parent-style', 'flexslider', 'fontawseome'), '1.0', 'all');
+                wp_register_style('child-style', get_stylesheet_directory_uri() . '/css/screen.min.css', array('parent-style', 'flexslider', 'fontawseome'), '1.0', 'all');
         wp_enqueue_style('child-style'); // Enqueue it!
-//
-//        wp_enqueue_style('ie', get_stylesheet_directory_uri() . "/css/ie.css", array('child-style'));
-//        $wp_styles->add_data('ie', 'conditional', 'IE');
     }
 
     add_action('wp_enqueue_scripts', 'theme_styles');
