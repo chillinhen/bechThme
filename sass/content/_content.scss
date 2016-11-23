@@ -122,6 +122,9 @@ article{
             pointer-events: none;
         }
     }
+    #map:hover{
+        cursor:pointer;
+    }
 }
 .contact-buttons{
     text-align: center;

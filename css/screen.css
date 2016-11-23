@@ -113,6 +113,16 @@ h6 {
     h5,
     h6 {
       margin: 0 0 1rem; } }
+  h1:target:before,
+  h2:target:before,
+  h3:target:before,
+  h4:target:before,
+  h5:target:before,
+  h6:target:before {
+    content: '';
+    height: 2em;
+    margin-top: -2em;
+    display: block; }
   #home h1, #home
   h2, #home
   h3, #home
@@ -284,6 +294,9 @@ h6 {
 .copyright-text {
   float: left; }
 
+#impressum a {
+  text-decoration: underline; }
+
 p {
   margin: 0 0 1rem;
   font-family: inherit;
@@ -436,6 +449,40 @@ table {
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+div:target:before {
+  content: '';
+  height: 2em;
+  margin-top: -2em;
+  display: block; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #eee;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #6D3332;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: calc(1em + 1) 2em 1em;
+    text-decoration: none;
+    top: .5em;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
 
 .leftalign {
   float: left; }
@@ -947,9 +994,9 @@ body.home .footer-home {
   right: 0; }
 @media screen and (min-width: 992px) {
   body:not(.home) > header {
-    background: white; } }
+    background: orange; } }
 body:not(.home) > header .logo {
-  background: white; }
+  background: red; }
 @media screen and (min-width: 992px) {
   body:not(.home) > main {
     margin: 20px 0;
@@ -1210,6 +1257,8 @@ body.leistungen article .thumbnail, #leistungen article .thumbnail {
 
 .contact-map .iframe-elastic iframe {
   pointer-events: none; }
+.contact-map #map:hover {
+  cursor: pointer; }
 
 .contact-buttons {
   text-align: center; }

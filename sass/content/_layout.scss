@@ -25,10 +25,10 @@ body{
     &:not(.home) {
         > header{
             @media screen and (min-width:$screen-md){
-                background: white;
+                background: orange;
             }
             .logo {
-                background: white; 
+                background: red; 
             }
         }
         > main {
