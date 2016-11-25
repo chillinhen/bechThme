@@ -18,26 +18,56 @@
     border:0;
     margin:0;
     @include border-radius(0);
-    
+    .flex-viewport{
+        @media screen and (max-width:$screen-xs){
+            max-height:350vH;
+            height:auto;
+        }
+    }
+
+
     aside img {width:100%;max-width:none;height:auto;}
-    
+
     .portfolio & {
         overflow:hidden;
         @media screen and (max-width:$screen-xs){
-            height: 250px;
+            &, img {
+                height: 250px;
+            }
+
         }
         @media screen and (min-width:$screen-xs + 1) and (max-width:$screen-md - 1){
-            height: 328px;
+            &, img {
+                height: 328px;
+            }
+
         }
         @media screen and (min-width:$screen-md){
-            height: 480px;
+            &, img {
+                height: 480px;
+            }
         }
-        
-        overflow: hidden;
+
+    }
+    li.item-img div{
+        height:auto;
+        max-width:100%;
+        @include display(flex);
+        @include justify-content(center);
+        @include align-items(center);
+        background:$base-bg_color;
+        @media screen and (max-width:$screen-smallPad){
+            background:darken($base-bg_color, 25%);
+        }
     }
 }
 .flex-control-nav{
     text-align: left;
+    @media screen and (max-width:$screen-xs){
+        bottom:0;
+        left:5%;
+        width:90%;
+    }
     @media screen and (min-width:$screen-md){
         bottom:5%;
         left:5%;
@@ -57,7 +87,7 @@
 [class*="flex-nav"]{
     > a{
         z-index:0;
-        
+
         &:before{
             content:'' !important;
             @include circle(60px);
@@ -80,7 +110,7 @@
                 @media screen and (min-width:$screen-smallPad + 1) and (max-width:$screen-md - 1){top:40%;}
                 @media screen and (min-width:$screen-md){top:40%;}
             }
-            
+
             bottom:auto;
         }
         &.flex-prev:before{
@@ -90,7 +120,7 @@
             background-position: 50% 40% !important;
         }
         @include circle(50px);
-/*        font-size: 0px;*/
+        /*        font-size: 0px;*/
         line-height: 0;
     }
 }

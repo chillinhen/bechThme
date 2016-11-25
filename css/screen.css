@@ -651,6 +651,9 @@ body {
       .container.contact-buttons > div:last-child {
         margin-right: 0; } }
 
+@media screen and (max-width: 480px) {
+  .safari article .post_content {
+    /*            margin-top: 250px;*/ } }
 @media screen and (max-width: 768px) {
   article.has-post-thumbnail {
     display: -webkit-box;
@@ -663,13 +666,13 @@ body {
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column; } }
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse; } }
 @media screen and (max-width: 600px) {
   article > .post_content, article > aside {
     width: 100%;
@@ -693,7 +696,7 @@ body {
       margin-right: 0; } }
 @media screen and (max-width: 600px) {
   article > aside {
-    overflow: hidden; } }
+    /*            overflow:hidden;*/ } }
   @media screen and (max-width: 600px) and (orientation: portrait) {
     article > aside {
       height: 50vH;
@@ -994,9 +997,9 @@ body.home .footer-home {
   right: 0; }
 @media screen and (min-width: 992px) {
   body:not(.home) > header {
-    background: orange; } }
+    background: white; } }
 body:not(.home) > header .logo {
-  background: red; }
+  background: white; }
 @media screen and (min-width: 992px) {
   body:not(.home) > main {
     margin: 20px 0;
@@ -1182,10 +1185,10 @@ body .footer {
     margin: 40vH 15vW; } }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   #home article h1 {
-    margin: 5vH 0; } }
+    margin: 10vH 0; } }
 @media screen and (min-width: 1200px) {
   #home article {
-    margin: 5vH 3em; } }
+    margin: 12vH 3em; } }
 body.leistungen article .thumbnail, #leistungen article .thumbnail {
   background: transparent;
   border: 0;
@@ -1255,10 +1258,10 @@ body.leistungen article .thumbnail, #leistungen article .thumbnail {
       -o-transform: rotate(90deg);
       transform: rotate(90deg); } }
 
+.contact-map .iframe-elastic:hover {
+  cursor: pointer; }
 .contact-map .iframe-elastic iframe {
   pointer-events: none; }
-.contact-map #map:hover {
-  cursor: pointer; }
 
 .contact-buttons {
   text-align: center; }
@@ -1380,16 +1383,15 @@ body.leistungen article .thumbnail, #leistungen article .thumbnail {
     max-width: none;
     height: auto; }
   .portfolio .flexslider {
-    overflow: hidden;
     overflow: hidden; }
     @media screen and (max-width: 480px) {
-      .portfolio .flexslider {
+      .portfolio .flexslider, .portfolio .flexslider img {
         height: 250px; } }
     @media screen and (min-width: 481px) and (max-width: 991px) {
-      .portfolio .flexslider {
+      .portfolio .flexslider, .portfolio .flexslider img {
         height: 328px; } }
     @media screen and (min-width: 992px) {
-      .portfolio .flexslider {
+      .portfolio .flexslider, .portfolio .flexslider img {
         height: 480px; } }
 
 .flex-control-nav {

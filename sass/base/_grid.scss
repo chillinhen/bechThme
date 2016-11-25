@@ -9,7 +9,8 @@ html {
     min-height: 100%;
 }
 body {
-    margin-bottom: 66px;
+@media screen and (min-width:$screen-md){
+        margin-bottom: 66px;
 
     > footer {
         position: absolute;
@@ -18,6 +19,8 @@ body {
         height: 66px;
     }
 }
+}
+
 
 
 
@@ -88,10 +91,15 @@ body {
     }
 }
 article{
+    @media screen and (max-width:$screen-xs){
+        .safari & .post_content{
+/*            margin-top: 250px;*/
+        }
+    }
     @media screen and (max-width:$screen-sm){
         &.has-post-thumbnail{
             @include display(flex);
-            @include flex-direction(column);    
+            @include flex-direction(column-reverse);
         }
     }
 
@@ -113,9 +121,16 @@ article{
             @include span-columns(7);
         }
     }
+/*    .subpages &.page >*/
     > aside{
-        @media screen and (max-width:$screen-smallPad){
-            overflow:hidden;
+       @media screen and (max-width:$screen-xs){
+           @media screen and (orientation:portrait){
+               max-height:600px;
+           }
+            
+        }
+        @media screen and (min-width:$screen-xs + 1) and (max-width:$screen-smallPad){
+/*            overflow:hidden;*/
             @media screen and (orientation:portrait){
                 height:50vH;
                 height:50%;

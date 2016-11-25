@@ -18,14 +18,16 @@ if (has_post_thumbnail()) : // Check if thumbnail exists
             <img src="<?php echo $thumb_url_medium; ?>" alt="<?php echo $thumb_img['_wp_attachment_image_alt']['0']; ?> - &copy; <?php echo date('Y'); ?> Tischlerei Bechhold" class="grayscale"/>
         </a>
         <section class="portfolio_content">
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <svg><use xlink:href="#portfolio-line"></use></svg>
-            <?php
-            if ($teaserText):
-                echo $teaserText;
-            else : html5wp_excerpt('html5wp_index');
-            endif;
-            ?>
+            <a href="<?php the_permalink(); ?>">
+                <h2><?php the_title(); ?></h2>
+                <svg><use xlink:href="#portfolio-line"></use></svg>
+                <?php
+                if ($teaserText):
+                    echo $teaserText;
+                else : html5wp_excerpt('html5wp_index');
+                endif;
+                ?>
+            </a>
         </section>
 
     </article>

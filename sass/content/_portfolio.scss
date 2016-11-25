@@ -20,7 +20,7 @@
         display: block;
         padding:0;
     }
-    > .portfolio_content{
+    > .portfolio_content, > portfolio_content.show{
         *{color:white !important;}
         text-align: center;
         padding:2em;
@@ -42,8 +42,13 @@
 
         .view-article, .more-link{display: none;}
         @media screen and (max-width:$screen-xs){
-            opacity:0;
-            @include transition(all 2.0s ease-in-out);
+            
+        }
+        @media screen and (max-width:$screen-xs) and (orientation:portrait){
+            opacity:.5;
+            padding:1em 2em;
+            top:80%;
+            bottom:auto;
         }
         @media screen and (min-width:$screen-xs + 1){
             left:-100%;
@@ -55,7 +60,7 @@
         overflow:visible;
         cursor:pointer;
         @include transition(all 2.0s ease-in-out);
-        > .portfolio_content{
+        > .portfolio_content, > .portfolio_content.show{
             z-index: 99;
             opacity: 1;
             @media screen and (min-width:$screen-xs + 1){

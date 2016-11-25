@@ -1,8 +1,0 @@
-li.item-img div{
-    height:auto;
-    max-width:100%;
-    background:$base-bg_color;
-    @include display(flex);
-    @include justify-content(center);
-    @include align-items(center);
-}

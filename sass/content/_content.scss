@@ -41,11 +41,11 @@ article{
         }
         @media screen and (min-width:$screen-md) and (max-width:$screen-lg - 1) {
             h1 { 
-                margin:5vH 0;
+                margin:10vH 0;
             }
         }
         @media screen and (min-width:$screen-lg){
-            margin:5vH 3em;
+            margin:12vH 3em;
         }
     }
 
@@ -118,12 +118,12 @@ article{
 }
 .contact-map{
     .iframe-elastic{
+        &:hover {
+            cursor:pointer;
+        }
         iframe{
             pointer-events: none;
         }
-    }
-    #map:hover{
-        cursor:pointer;
     }
 }
 .contact-buttons{

@@ -75,8 +75,8 @@ function bechold_theme_setup() {
     add_image_size('small', 350, 350, array('center', 'center')); // Small Thumbnail
     add_image_size('medium', 400, 400, array('center', 'center')); // Medium Thumbnail
     add_image_size('large', 500, 645, array('top', 'center')); // Large Thumbnail
-    add_image_size('thumb-subpages-small', 320, 250, array('top', 'center'));
-    add_image_size('thumb-subpages-medium', 420, 328, array('top', 'center'));
+    add_image_size('thumb-subpages-small', 375, 295, array('top', 'center'));
+    add_image_size('thumb-subpages-medium', 450, 354, array('top', 'center'));
     add_image_size('thumb-subpages-large', 640, 500, array('top', 'center'));
     add_image_size('thumb-loop', 400, 400, array('center', 'center'));
 

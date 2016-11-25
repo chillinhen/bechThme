@@ -32,15 +32,9 @@ jQuery(document).ready(function ($) {
         portfolioItem.css('height', portfolioSize);
     }
     if (window.innerHeight > window.innerWidth) {
-        //alert("Please use Landscape!");
-        //test();
-        //responsiveHeader(); //ToDO
+        checkSize();
     }
-    //test();
 
-
-    //alert('hallo');
-    //portfolio height
     checkSize();
 
     // run test on resize of the window
@@ -135,7 +129,7 @@ jQuery(document).ready(function ($) {
         if (!tapped) { //if tap is not set, set up single tap
             tapped = setTimeout(function () {
                 e.preventDefault();
-                $(this).siblings('.portfolio_content').addClass('show');
+                $(this).children('.portfolio_content').addClass('show');
                 //insert things you want to do when single tapped
             }, 300);   //wait 300ms then run single click code
         } else {    //tapped within 300ms of last tap. double tap
